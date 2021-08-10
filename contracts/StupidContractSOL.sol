@@ -80,7 +80,7 @@ contract StupidContractSOL {
       latest_change: block.timestamp
     });
 
-    structArray[0] = structInstance;
+    structArray.push(structInstance);
   }
 
   function add0ToStuctToArrayStructInitWithUpdate(address addressToAdd) public {

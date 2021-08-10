@@ -7,7 +7,7 @@
     "test": "yarn ts-node ./scripts/simple-stupid-contract-interaction/index.ts",
     "types": "yarn typechain --target ethers-v5 --out-dir types/contracts 'artifacts/contracts/**/*.json'",
     "compile": "yarn hardhat compile",
-    "build": "yarn compile; rm -f **/*.dbg.json; yarn types",
+    "build": "yarn compile; yarn rimraf **/*.dbg.json; yarn types",
     "deploy": "yarn ts-node ./scripts/simple-stupid-contract-interaction/deploy.ts"
   },
   "author": "",
@@ -15,15 +15,16 @@
   "dependencies": {
     "@polyjuice-provider/ethers": "^0.0.1-rc7",
     "@polyjuice-provider/web3": "^0.0.1-rc7",
-    "ethers": "^5.4.4",
-    "ts-generator": "^0.1.1",
-    "typechain": "^5.1.2",
-    "hardhat-typechain": "^0.3.5",
     "@typechain/ethers-v5": "^7.0.1",
-    "@typechain/hardhat": "^2.0.0"
+    "@typechain/hardhat": "^2.0.0",
+    "ethers": "^5.4.4",
+    "hardhat-typechain": "^0.3.5",
+    "ts-generator": "^0.1.1",
+    "typechain": "^5.1.2"
   },
   "devDependencies": {
     "hardhat": "^2.6.0",
+    "rimraf": "^3.0.2",
     "ts-node": "^10.2.0",
     "typescript": "^4.3.5"
   }

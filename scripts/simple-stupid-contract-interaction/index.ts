@@ -6,7 +6,7 @@ export const simpleAddress = '0x67CD6D98bdcDD50E2E5Dd192d7733323A931D4F4'
 
 async function test() {
   await testDirectCalls()
-  await testInterContractCalls()
+  // await testInterContractCalls()
 }
 
 test()

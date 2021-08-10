@@ -10,6 +10,93 @@ const ADDRESS = '0x57b7F4bD6a0373A3B8327bfEd4FBB02BEd5B82Ba'
 const PUBLIC_ADDRESS = '0xB01316C53c91dA3CCD593c040916151938868519'
 
 
+export async function testInitStupidArrays() {
+  try {
+    // try {
+    //   /*
+    //     FAILING: no internal private array init => status code 2
+    //   */
+    //   console.log('init add 0 stupid addresses without internal init')
+    //   const transactionAdd0Address =  await stupid.add0AddressNoAddressesInit(ADDRESS, transactionOverrides)
+  
+    //   await transactionAdd0Address.wait()
+  
+    //   console.log('added address', ADDRESS)
+    // } catch(error) {
+    //   console.log('add 0 address without of prior internal private address array init')
+    //   console.error(error)
+    // }
+
+    try {
+      console.log('init add 0 stupid addresses with init')
+      const transactionAdd0AddressWithAddressesInit =
+        await stupid.add0AddressWithAddressesInit(ADDRESS, transactionOverrides)
+  
+      await transactionAdd0AddressWithAddressesInit.wait()
+  
+      console.log('added address', ADDRESS)
+    } catch(error) {
+      console.log('add 0 address without of prior internal private address array init')
+      console.error(error)
+    }
+
+    try {
+      console.log('init push stupid addresses')
+      const transactionPushAddress =  await stupid.pushAddress(ADDRESS, transactionOverrides)
+
+      await transactionPushAddress.wait()
+
+      console.log('added address', ADDRESS)
+    } catch(error) {
+      console.log('push to addresses array without init')
+      console.error(error)
+    }
+
+    try {
+      console.log('init stupid public addresses add 0')
+      const transactionPublicAddress =  await stupid.addPublicAddress(PUBLIC_ADDRESS, transactionOverrides)
+
+      await transactionPublicAddress.wait()
+
+      console.log('added public address', PUBLIC_ADDRESS)
+    } catch(error) {
+      console.log('add public address with internal init')
+      console.error(error)
+    }
+
+    try {
+      console.log('init stupid public addresses push')
+      const transactionPublicAddress =  await stupid.pushPublicAddress(PUBLIC_ADDRESS, transactionOverrides)
+
+      await transactionPublicAddress.wait()
+
+      console.log('added public address', PUBLIC_ADDRESS)
+    } catch(error) {
+      console.log('add public address with internal init')
+      console.error(error)
+    }
+
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+async function testCreateArrayPure() {
+  const address0 = '0xB01316C53c91dA3CCD593c040916151938868519'
+  console.log('with init')
+  const addressArray0 = await stupid.createArrayWithInit(address0, transactionOverrides)
+
+  console.log('array with init')
+  console.log(addressArray0)
+
+  // Failed
+  // console.log('no init')
+  // const addressArray1 = await stupid.createArrayNoInit(address0, transactionOverrides)
+
+  // console.log('array no init')
+  // console.log(addressArray1)
+}
+
 async function addAddressToStupidMapping(newAddress: string, oldAddress: string) {
   console.log('add address to stupid mapping', newAddress, oldAddress)
 
@@ -49,7 +136,7 @@ async function testStructNoInitFailed() {
   const address0 = '0xB01316C53c91dA3CCD593c040916151938868519'
   const address1 = '0x695Fac3006C042D1B26Fa338470C2941DbA38Cd6'
 
-  console.log('add address to struct stupid mapping', address0)
+  console.log('add address to struct stupid array', address0)
   const transaction = await stupid.add0ToStuctToArrayNoStructInit(address0, transactionOverrides);
   
   await transaction.wait()
@@ -58,12 +145,12 @@ async function testStructNoInitFailed() {
   console.log('struct from mapping', structFromMapping)
 }
 
-async function testStructWithInit() {
+async function testStructWithInitSuccess() {
   /* mapping don't need manual init */ 
   const address0 = '0xB01316C53c91dA3CCD593c040916151938868519'
   const address1 = '0x695Fac3006C042D1B26Fa338470C2941DbA38Cd6'
   
-  console.log('add address to struct stupid mapping', address0)
+  console.log('add address to struct stupid array', address0)
   const transaction = await stupid.add0ToStuctToArrayStructInit(address0, transactionOverrides);
   
   await transaction.wait()
@@ -73,20 +160,6 @@ async function testStructWithInit() {
   console.log('struct from mapping', structFromMapping)
 }
 
-async function testGetArray() {
-  const address0 = '0xB01316C53c91dA3CCD593c040916151938868519'
-  console.log('with init')
-  const addressArray0 = await stupid.createArrayWithInit(address0, transactionOverrides)
-
-  console.log('array with init')
-  console.log(addressArray0)
-
-  console.log('no init')
-  const addressArray1 = await stupid.createArrayNoInit(address0, transactionOverrides)
-
-  console.log('array no init')
-  console.log(addressArray1)
-}
 
 async function testGetEmptyStructSuccess() {
   const [structAddress, latest_change] = await stupid.createEmptyStruct(transactionOverrides)
@@ -134,6 +207,8 @@ async function getStructAndModify2Success() {
 
 async function testAddToStructMappingNoInitFailed() {
   // Failing when key not previously added
+  // status_code => 2
+
   console.log(' test add struct no init')
 
   const address0 = '0xB01316C53c91dA3CCD593c040916151938868519'
@@ -156,32 +231,47 @@ export async function testAddToStructMappingWithInitSuccess(address0: string, ad
   console.log('struct', struct)
 }
 
-export async function testDirectCalls() {
-  console.log('\ntest direct calls')
+export async function testArrayField() {
+  await testCreateArrayPure()
+
+  await testInitStupidArrays()
+}
+
+export async function testMappingField() {
+  await testMappingSuccess()
+}
+
+
+export async function testStructs() {
   const address0 = '0xB01316C53c91dA3CCD593c040916151938868519'
   const address1 = '0x695Fac3006C042D1B26Fa338470C2941DbA38Cd6'
 
+  // Pure Struct Create
+  // await testGetEmptyStructSuccess()
+  // await testGetStruct()
+  // await testGetStructReturnStruct()
 
-  await testMappingSuccess()
+  // Initialize Struct First with empty value's, then update values and return
+  // await getStructAndModify1Success()
+  // await getStructAndModify2Success()
 
-  await testGetArray()
+  // await testAddToStructMappingWithInitSuccess(address0, address1)
+  // await testAddToStructMappingNoInitFailed()
 
-  // [Struct]
-  await testGetEmptyStructSuccess()
-  await testGetStruct()
-  await testGetStructReturnStruct()
+  await testStructWithInitSuccess()
+  // await testStructNoInitFailed()
 
-  await getStructAndModify1Success()
-  await getStructAndModify2Success()
+}
 
+export async function testDirectCalls() {
+  console.log('\ntest direct calls')
 
-  // [Struct][State Change]
-  await testAddToStructMappingWithInitSuccess(address0, address1)
-  await testAddToStructMappingNoInitFailed()
+  // await testArrayField()
 
+  // await testMappingField()
 
-  await testStructNoInitFailed()
-  await testStructWithInit()
+  await testStructs()
+
 
   console.log('\n')
 }

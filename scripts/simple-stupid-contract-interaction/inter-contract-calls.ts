@@ -1,6 +1,6 @@
 import { transactionOverrides } from '../deployment'
 import { connectSimple, connectStupid } from './connect'
-import { testAddToStructMappingWithInitSuccess } from './direct-calls'
+import { testAddToStructMappingWithInitSuccess, testInitStupidArrays } from './direct-calls'
 
 import { stupidAddress, simpleAddress } from './index'
 
@@ -11,76 +11,6 @@ const ADDRESS = '0x57b7F4bD6a0373A3B8327bfEd4FBB02BEd5B82Ba'
 const PUBLIC_ADDRESS = '0xB01316C53c91dA3CCD593c040916151938868519'
 
 
-async function initStupid() {
-  try {
-    // try {
-    //   /*
-    //     FAILING: no internal private array init => status code 2
-    //   */
-    //   console.log('init add 0 stupid addresses without internal init')
-    //   const transactionAdd0Address =  await stupid.add0AddressNoAddressesInit(ADDRESS, transactionOverrides)
-  
-    //   await transactionAdd0Address.wait()
-  
-    //   console.log('added address', ADDRESS)
-    // } catch(error) {
-    //   console.log('add 0 address without of prior internal private address array init')
-    //   console.error(error)
-    // }
-
-    try {
-      console.log('init add 0 stupid addresses with init')
-      const transactionAdd0AddressWithAddressesInit =
-        await stupid.add0AddressWithAddressesInit(ADDRESS, transactionOverrides)
-  
-      await transactionAdd0AddressWithAddressesInit.wait()
-  
-      console.log('added address', ADDRESS)
-    } catch(error) {
-      console.log('add 0 address without of prior internal private address array init')
-      console.error(error)
-    }
-
-    try {
-      console.log('init push stupid addresses')
-      const transactionPushAddress =  await stupid.pushAddress(ADDRESS, transactionOverrides)
-
-      await transactionPushAddress.wait()
-
-      console.log('added address', ADDRESS)
-    } catch(error) {
-      console.log('push to addresses array without init')
-      console.error(error)
-    }
-
-    try {
-      console.log('init stupid public addresses add 0')
-      const transactionPublicAddress =  await stupid.addPublicAddress(PUBLIC_ADDRESS, transactionOverrides)
-
-      await transactionPublicAddress.wait()
-
-      console.log('added public address', PUBLIC_ADDRESS)
-    } catch(error) {
-      console.log('add public address with internal init')
-      console.error(error)
-    }
-
-    try {
-      console.log('init stupid public addresses push')
-      const transactionPublicAddress =  await stupid.pushPublicAddress(PUBLIC_ADDRESS, transactionOverrides)
-
-      await transactionPublicAddress.wait()
-
-      console.log('added public address', PUBLIC_ADDRESS)
-    } catch(error) {
-      console.log('add public address with internal init')
-      console.error(error)
-    }
-
-  } catch (error) {
-    console.log(error)
-  }
-}
 
 async function callStupid() {
   console.log('direct stupid call')
@@ -125,7 +55,7 @@ async function simpleCallStupid() {
 
 async function testNestedCallsSuccess() {
   /* Simple Contract call to Stupid Contract to get data from Array */
-  await initStupid()
+  await testInitStupidArrays()
 
   await callStupid()
 
