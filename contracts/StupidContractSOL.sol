@@ -11,6 +11,8 @@ contract StupidContractSOL {
 
   address[] public publicAddresses;
 
+  address[3] public fixedSizeArray;
+
   // No Init for mapping
   mapping(address => address) public addressMapping;
 

@@ -81,6 +81,38 @@ export async function testInitStupidArrays() {
   }
 }
 
+async function readFromPublicArrayByIndex() {
+  try {
+    console.log('init stupid public addresses add 0')
+    const transactionPublicAddress =  await stupid.addPublicAddress(PUBLIC_ADDRESS, transactionOverrides)
+
+    await transactionPublicAddress.wait()
+
+    console.log('added public address', PUBLIC_ADDRESS)
+  } catch(error) {
+    console.log('add public address with internal init')
+    console.error(error)
+  }
+
+  const publicAddress = await stupid.publicAddresses(0, transactionOverrides)
+
+  console.log('read public address', publicAddress, PUBLIC_ADDRESS)
+}
+
+// Correct Behavior. Trying to access not initialized element from storage array
+async function readFromPublicArrayByIndexOutOfBoundFailure() {
+  const publicAddress = await stupid.publicAddresses(4, transactionOverrides)
+
+  console.log('read public address', publicAddress, PUBLIC_ADDRESS)
+}
+
+// Correct Behavior. Trying to access not initialized element from storage array
+async function readFromFixedArrayByIndexNoInitFailure() {
+  const fixeSizeAddress = await stupid.fixedSizeArray(0, transactionOverrides)
+
+  console.log('read address from fixed size array', fixeSizeAddress, PUBLIC_ADDRESS)
+}
+
 async function testCreateArrayPure() {
   const address0 = '0xB01316C53c91dA3CCD593c040916151938868519'
   console.log('with init')
@@ -145,7 +177,7 @@ async function testStructNoInitFailed() {
   console.log('struct from mapping', structFromMapping)
 }
 
-async function testStructWithInitSuccess() {
+async function testStructWithInitFailed() {
   /* mapping don't need manual init */ 
   const address0 = '0xB01316C53c91dA3CCD593c040916151938868519'
   const address1 = '0x695Fac3006C042D1B26Fa338470C2941DbA38Cd6'
@@ -234,6 +266,10 @@ export async function testAddToStructMappingWithInitSuccess(address0: string, ad
 export async function testArrayField() {
   await testCreateArrayPure()
 
+  await readFromPublicArrayByIndex()
+  // await readFromPublicArrayByIndexOutOfBoundFailure()
+  // await readFromFixedArrayByIndexNoInitFailure()
+
   await testInitStupidArrays()
 }
 
@@ -247,18 +283,18 @@ export async function testStructs() {
   const address1 = '0x695Fac3006C042D1B26Fa338470C2941DbA38Cd6'
 
   // Pure Struct Create
-  // await testGetEmptyStructSuccess()
-  // await testGetStruct()
-  // await testGetStructReturnStruct()
+  await testGetEmptyStructSuccess()
+  await testGetStruct()
+  await testGetStructReturnStruct()
 
   // Initialize Struct First with empty value's, then update values and return
-  // await getStructAndModify1Success()
-  // await getStructAndModify2Success()
+  await getStructAndModify1Success()
+  await getStructAndModify2Success()
 
-  // await testAddToStructMappingWithInitSuccess(address0, address1)
+  await testAddToStructMappingWithInitSuccess(address0, address1)
   // await testAddToStructMappingNoInitFailed()
 
-  await testStructWithInitSuccess()
+  // await testStructWithInitFailed()
   // await testStructNoInitFailed()
 
 }
@@ -266,9 +302,9 @@ export async function testStructs() {
 export async function testDirectCalls() {
   console.log('\ntest direct calls')
 
-  // await testArrayField()
+  await testArrayField()
 
-  // await testMappingField()
+  await testMappingField()
 
   await testStructs()
 
