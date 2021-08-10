@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "strict": true,
+    "target": "ESNext",
+    "noEmit": true,
+    "rootDir": "."
+  },
+  "include": [
+    "scripts",
+    "contracts"
+  ],
+  "exclude": [
+    "node_modules",
+    "cache",
+    "artifacts",
+  ]
+}

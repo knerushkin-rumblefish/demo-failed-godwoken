@@ -1,0 +1,29 @@
+{
+  "name": "failed-init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn ts-node ./scripts/simple-stupid-contract-interaction/stupid-contract.ts",
+    "types": "yarn typechain --target ethers-v5 --out-dir types/contracts 'artifacts/contracts/**/*.json'",
+    "compile": "yarn hardhat compile",
+    "deploy": "yarn ts-node ./scripts/simple-stupid-contract-interaction/deploy.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@polyjuice-provider/ethers": "^0.0.1-rc7",
+    "@polyjuice-provider/web3": "^0.0.1-rc7",
+    "ethers": "^5.4.4",
+    "ts-generator": "^0.1.1",
+    "typechain": "^5.1.2",
+    "hardhat-typechain": "^0.3.5",
+    "@typechain/ethers-v5": "^7.0.1",
+    "@typechain/hardhat": "^2.0.0"
+  },
+  "devDependencies": {
+    "hardhat": "^2.6.0",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  }
+}

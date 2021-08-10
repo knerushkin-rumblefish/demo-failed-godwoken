@@ -1,0 +1,32 @@
+{
+  "nervos": {
+    "ckb": {
+      "url": "http://localhost:8114"
+    },
+    "godwoken": {
+      "rpcUrl": "http://localhost:8024",
+      "networkId": "0x3"
+    },
+    "indexer": {
+      "url": "http://localhost:8116"
+    },
+    "rollupTypeHash": "0x7f59f6be6d87d5346c9a749f10ce3a899b959d52c63102605297b3aab850e7f1",
+    "rollupTypeScript": {
+      "codeHash": "0x71a40bb96e49af3b1a04af22aaa0052e5a3023c365724bae76fed585b0ac7f79",
+      "hashType": "type",
+      "args": "0x8e2483927e4c4cb01d59c8c19a5305538c4f096235ada77d2854864a1a47543a"
+    },
+    "ethAccountLockCodeHash": "0x2cf55023e2bfdbb86e0d95320f7d2f15393a76a830d5bb5e687e0c780d90134d",
+    "depositLockScriptTypeHash": "0x861c1ca9fdc1324ca36cc3b3a55342fdaaf52e1e7cfefe7c0cfd0e3537b380c1",
+    "portal_wallet_lock_hash": ""
+  },
+  "ethereum": {
+    "networkId": "0x4",
+    "fallback": {
+      "rpcUrl": "http://localhost:7545",
+      "infura": {
+        "apiKey": "808015861a3048648a41e56b23038945"
+      }
+    }
+  }
+}
