@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "yarn ts-node ./scripts/simple-stupid-contract-interaction/stupid-contract.ts",
+    "test": "yarn ts-node ./scripts/simple-stupid-contract-interaction/index.ts",
     "types": "yarn typechain --target ethers-v5 --out-dir types/contracts 'artifacts/contracts/**/*.json'",
     "compile": "yarn hardhat compile",
+    "build": "yarn compile; rm -f **/*.dbg.json; yarn types",
     "deploy": "yarn ts-node ./scripts/simple-stupid-contract-interaction/deploy.ts"
   },
   "author": "",

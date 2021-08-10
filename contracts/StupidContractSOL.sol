@@ -72,16 +72,29 @@ contract StupidContractSOL {
   }
 
   function add0ToStuctToArrayStructInit(address addressToAdd) public {
+    address[] memory structAddressInit = new address[](1);
+    structAddressInit[0] = addressToAdd;
+
     ArrayAndNumber memory structInstance = ArrayAndNumber({
-      structAddress: new address[](0),
+      structAddress: structAddressInit,
       latest_change: block.timestamp
     });
 
     structArray[0] = structInstance;
-    structArray[0].structAddress.push(addressToAdd);
   }
 
-  function createArray(address addressToAdd) public pure returns (address[] memory) {
+  function add0ToStuctToArrayStructInitWithUpdate(address addressToAdd) public {
+    address[] memory structAddressInit = new address[](1);
+    ArrayAndNumber memory structInstance = ArrayAndNumber({
+      structAddress: structAddressInit,
+      latest_change: block.timestamp
+    });
+
+    structArray[0] = structInstance;
+    structArray[0].structAddress[0] = addressToAdd;
+  }
+
+  function createArrayWithInit(address addressToAdd) public pure returns (address[] memory) {
 
     address[] memory addressesToAdd = new address[](1);
     addressesToAdd[0] = addressToAdd;
@@ -89,6 +102,14 @@ contract StupidContractSOL {
     return addressesToAdd;
   }
   
+  function createArrayNoInit(address addressToAdd) public pure returns (address[] memory) {
+
+    address[] memory addressesToAdd;
+    addressesToAdd[0] = addressToAdd;
+
+    return addressesToAdd;
+  }
+
   function createStruct(address addressToAdd) public view returns (address[] memory, uint256) {
     address[] memory structAddressesToAdd = new address[](1);
     structAddressesToAdd[0] = addressToAdd;

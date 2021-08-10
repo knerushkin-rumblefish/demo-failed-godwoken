@@ -32,7 +32,6 @@ export async function deploySimple(
 
   const interCallContractAddress = receipt.contractAddress
   
-  console.log('address', interCallContractAddress)
   return interCallContractAddress
 }
 
@@ -66,7 +65,6 @@ export async function deployStupid(
 
   const interCallContractAddress = receipt.contractAddress
   
-  console.log('address', interCallContractAddress)
   return interCallContractAddress
 }
 
@@ -83,11 +81,13 @@ export function connectStupid(address: string) {
 
 
 async function deploy() {
-  console.log('stupid')
-  await deployStupid(deployer)
+  console.log('deploy')
+  const stupidAddress = await deployStupid(deployer)
 
-  console.log('simple')
-  await deploySimple(deployer)
+  const simpleAddress = await deploySimple(deployer)
+
+  console.log('stupid', stupidAddress)
+  console.log('simple', simpleAddress)
 }
 
 deploy()
