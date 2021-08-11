@@ -7,7 +7,7 @@ pragma solidity ^0.8.0;
 contract StupidContractSOL {
 
   // Init/No Init for array
-  address[] private  addresses;
+  address[] addresses;
 
   address[] public publicAddresses;
 
@@ -58,6 +58,19 @@ contract StupidContractSOL {
     require(addresses.length > index, 'out of address array');
 
     return addresses[index];
+  }
+
+  function getAddressesLength() public view returns (uint256) {
+    return addresses.length;
+  }
+
+
+  function getAddressUnsf(uint256 index) public view returns (address) {
+    return addresses[index];
+  }
+
+  function getPublicAddressesLength() public view returns (uint256) {
+    return publicAddresses.length;
   }
 
   function add0ToMappingNoInit(address newAddress, address oldAddress) public {

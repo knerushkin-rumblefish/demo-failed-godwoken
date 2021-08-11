@@ -3,8 +3,8 @@ import { testInterContractCalls } from './inter-contract-calls'
 
 
 async function test() {
-  await testDirectCalls()
-  // await testInterContractCalls()
+  // await testDirectCalls()
+  await testInterContractCalls()
 }
 
 test()

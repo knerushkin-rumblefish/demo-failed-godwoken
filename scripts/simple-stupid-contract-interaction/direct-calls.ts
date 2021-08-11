@@ -110,6 +110,25 @@ async function readFromPublicArrayByIndex() {
   console.log('read public address', publicAddress, PUBLIC_ADDRESS)
 }
 
+async function readFromArrayByIndex() {
+  try {
+    console.log('init stupid public addresses add 0')
+    const transactionPublicAddress =  await stupid.add0AddressWithAddressesInit(ADDRESS, transactionOverrides)
+
+    await transactionPublicAddress.wait()
+
+    console.log('added public address', ADDRESS)
+  } catch(error) {
+    console.log('add public address with internal init')
+    console.error(error)
+  }
+
+  const address = await stupid.publicAddresses(0, transactionOverrides)
+
+  console.log('read public address', address, ADDRESS)
+}
+
+
 // Correct Behavior. Trying to access not initialized element from storage array
 async function readFromPublicArrayByIndexOutOfBoundFailure() {
   const publicAddress = await stupid.publicAddresses(10, transactionOverrides)
@@ -124,6 +143,14 @@ async function readFromFixedArrayByIndexNoInit() {
   console.log('read address from fixed size array', fixeSizeAddress, PUBLIC_ADDRESS)
 }
 
+async function testReadStupidArrays() {
+  await readFromArrayByIndex()
+  await readFromPublicArrayByIndex()
+
+  // await readFromPublicArrayByIndexOutOfBoundFailure()
+  await readFromFixedArrayByIndexNoInit()
+}
+
 /*
   Different behavior on Ganache/Godwoken
 */
@@ -132,21 +159,23 @@ export async function execDiff() {
   await addIndex0NoArrayInit()
 }
 
-export async function testInitStupidArrays() {
+export async function initStupid() {
+  await pushNoArrayInit()
+  await pushPublicNoArrayInit()
+}
+
+export async function testStupidArrays() {
   try {
-    // await addIndex0NoArrayInit() // FAILING ON GODWOKEN
-    // await addIndex0WithExplicitArrayInit()
+    // await addIndex0NoArrayInit() // FAILING ON BOTH WITH NO INIT
+    await addIndex0WithExplicitArrayInit()
 
-    // await pushNoArrayInit()
+    await pushNoArrayInit()
 
-    // await add0PublicWithExplicitArrayInit()
+    await add0PublicWithExplicitArrayInit()
 
-    // await pushPublicNoArrayInit()
+    await pushPublicNoArrayInit()
 
-    // await readFromPublicArrayByIndex()
-    // await readFromPublicArrayByIndexOutOfBoundFailure() // FAILING CORRECT BEHAVIOR
-
-    await readFromFixedArrayByIndexNoInit()
+    await testReadStupidArrays()
   } catch (error) {
     console.log(error)
   }
@@ -313,11 +342,7 @@ export async function testAddToStructMappingWithInitSuccess(address0: string, ad
 export async function testArrayField() {
   // await testCreateArrayPure()
 
-  // await readFromPublicArrayByIndex()
-  // await readFromPublicArrayByIndexOutOfBoundFailure()
-  // await readFromFixedArrayByIndexNoInitFailure()
-
-  // await testInitStupidArrays()
+  await testStupidArrays()
 }
 
 export async function testMappingField() {
