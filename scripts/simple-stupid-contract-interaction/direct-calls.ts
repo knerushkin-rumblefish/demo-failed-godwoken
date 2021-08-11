@@ -128,6 +128,7 @@ async function readFromFixedArrayByIndexNoInit() {
   Different behavior on Ganache/Godwoken
 */
 export async function execDiff() {
+  await addIndex0WithExplicitArrayInit()
   await addIndex0NoArrayInit()
 }
 
@@ -349,7 +350,7 @@ export async function testDirectCalls() {
   console.log('\ntest direct calls')
 
   await execDiff()
-  
+
   // await testArrayField()
 
   // await testMappingField()
