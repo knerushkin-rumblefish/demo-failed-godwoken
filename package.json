@@ -8,7 +8,8 @@
     "types": "yarn typechain --target ethers-v5 --out-dir types/contracts 'artifacts/contracts/**/*.json'",
     "compile": "yarn hardhat compile",
     "build": "yarn compile; yarn rimraf **/*.dbg.json; yarn types",
-    "deploy": "yarn ts-node ./scripts/simple-stupid-contract-interaction/deploy.ts"
+    "deploy": "yarn ts-node ./scripts/simple-stupid-contract-interaction/deploy.ts",
+    "ganache": "ganache-cli --accounts 10 --hardfork istanbul --gasLimit 12000000 --gasPrice 0 --mnemonic brownie --port 7545"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "typechain": "^5.1.2"
   },
   "devDependencies": {
+    "ganache-cli": "^6.12.2",
     "hardhat": "^2.6.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.2.0",
