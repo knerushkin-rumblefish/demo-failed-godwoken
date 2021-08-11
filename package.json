@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "yarn ts-node ./scripts/simple-stupid-contract-interaction/index.ts",
-    "types": "yarn typechain --target ethers-v5 --out-dir types/contracts 'artifacts/contracts/**/*.json'",
+    "types": "yarn typechain --target ethers-v5 --out-dir types/contracts 'artifacts/sol_contracts/**/*.json'",
     "compile": "yarn hardhat compile",
     "build": "yarn compile; yarn rimraf **/*.dbg.json; yarn types",
     "deploy": "yarn ts-node ./scripts/simple-stupid-contract-interaction/deploy.ts",

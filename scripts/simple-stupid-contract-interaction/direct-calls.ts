@@ -10,74 +10,85 @@ const ADDRESS = '0x57b7F4bD6a0373A3B8327bfEd4FBB02BEd5B82Ba'
 const PUBLIC_ADDRESS = '0xB01316C53c91dA3CCD593c040916151938868519'
 
 
-export async function testInitStupidArrays() {
+export async function addIndex0NoArrayInit() {
   try {
-    try {
-      /*
-        FAILING: no internal private array init => status code 2
-      */
-      console.log('init add 0 stupid addresses without internal init')
-      const transactionAdd0Address =  await stupid.add0AddressNoAddressesInit(ADDRESS, transactionOverrides)
-  
-      await transactionAdd0Address.wait()
-  
-      console.log('added address', ADDRESS)
-    } catch(error) {
-      console.log('add 0 address without of prior internal private address array init')
-      console.error(error)
-    }
+    /*
+      FAILING: no internal private array init => status code 2
+    */
+    console.log('init add 0 stupid addresses without internal init')
+    const transactionAdd0Address =  await stupid.add0AddressNoAddressesInit(ADDRESS, transactionOverrides)
 
-    try {
-      console.log('init add 0 stupid addresses with init')
-      const transactionAdd0AddressWithAddressesInit =
-        await stupid.add0AddressWithAddressesInit(ADDRESS, transactionOverrides)
-  
-      await transactionAdd0AddressWithAddressesInit.wait()
-  
-      console.log('added address', ADDRESS)
-    } catch(error) {
-      console.log('add 0 address without of prior internal private address array init')
-      console.error(error)
-    }
+    await transactionAdd0Address.wait()
 
-    try {
-      console.log('init push stupid addresses')
-      const transactionPushAddress =  await stupid.pushAddress(ADDRESS, transactionOverrides)
+    console.log('added address', ADDRESS)
+  } catch(error) {
+    console.log('add 0 address without of prior internal private address array init')
+    console.error(error)
+  }
 
-      await transactionPushAddress.wait()
+}
 
-      console.log('added address', ADDRESS)
-    } catch(error) {
-      console.log('push to addresses array without init')
-      console.error(error)
-    }
+export async function addIndex0WithExplicitArrayInit() {
+  try {
+    console.log('init add 0 stupid addresses with init')
+    const transactionAdd0AddressWithAddressesInit =
+      await stupid.add0AddressWithAddressesInit(ADDRESS, transactionOverrides)
 
-    try {
-      console.log('init stupid public addresses add 0')
-      const transactionPublicAddress =  await stupid.addPublicAddress(PUBLIC_ADDRESS, transactionOverrides)
+    await transactionAdd0AddressWithAddressesInit.wait()
 
-      await transactionPublicAddress.wait()
+    console.log('added address', ADDRESS)
+  } catch(error) {
+    console.log('add 0 address without of prior internal private address array init')
+    console.error(error)
+  }
+}
 
-      console.log('added public address', PUBLIC_ADDRESS)
-    } catch(error) {
-      console.log('add public address with internal init')
-      console.error(error)
-    }
+/* Working same on Godwoken/Ganache */
+export async function pushNoArrayInit() {
 
-    try {
-      console.log('init stupid public addresses push')
-      const transactionPublicAddress =  await stupid.pushPublicAddress(PUBLIC_ADDRESS, transactionOverrides)
+  try {
+    console.log('init add 0 stupid addresses with init')
+    const transactionAdd0AddressWithAddressesInit =
+      await stupid.add0AddressWithAddressesInit(ADDRESS, transactionOverrides)
 
-      await transactionPublicAddress.wait()
+    await transactionAdd0AddressWithAddressesInit.wait()
 
-      console.log('added public address', PUBLIC_ADDRESS)
-    } catch(error) {
-      console.log('add public address with internal init')
-      console.error(error)
-    }
+    console.log('added address', ADDRESS)
+  } catch(error) {
+    console.log('add 0 address without of prior internal private address array init')
+    console.error(error)
+  }
+}
 
-  } catch (error) {
-    console.log(error)
+/* Working same on Godwoken/Ganache */
+export async function add0PublicWithExplicitArrayInit() {
+
+  try {
+    console.log('init add 0 stupid addresses with init')
+    const transactionAdd0AddressWithAddressesInit =
+      await stupid.add0AddressWithAddressesInit(ADDRESS, transactionOverrides)
+
+    await transactionAdd0AddressWithAddressesInit.wait()
+
+    console.log('added address', ADDRESS)
+  } catch(error) {
+    console.log('add 0 address without of prior internal private address array init')
+    console.error(error)
+  }
+}
+
+/* Working same on Godwoken/Ganache */
+export async function pushPublicNoArrayInit() {
+  try {
+    console.log('init stupid public addresses push')
+    const transactionPublicAddress =  await stupid.pushPublicAddress(PUBLIC_ADDRESS, transactionOverrides)
+
+    await transactionPublicAddress.wait()
+
+    console.log('added public address', PUBLIC_ADDRESS)
+  } catch(error) {
+    console.log('add public address with internal init')
+    console.error(error)
   }
 }
 
@@ -101,17 +112,47 @@ async function readFromPublicArrayByIndex() {
 
 // Correct Behavior. Trying to access not initialized element from storage array
 async function readFromPublicArrayByIndexOutOfBoundFailure() {
-  const publicAddress = await stupid.publicAddresses(4, transactionOverrides)
+  const publicAddress = await stupid.publicAddresses(10, transactionOverrides)
 
   console.log('read public address', publicAddress, PUBLIC_ADDRESS)
 }
 
 // Correct Behavior. Trying to access not initialized element from storage array
-async function readFromFixedArrayByIndexNoInitFailure() {
+async function readFromFixedArrayByIndexNoInit() {
   const fixeSizeAddress = await stupid.fixedSizeArray(0, transactionOverrides)
 
   console.log('read address from fixed size array', fixeSizeAddress, PUBLIC_ADDRESS)
 }
+
+/*
+  Different behavior on Ganache/Godwoken
+*/
+export async function execDiff() {
+  await addIndex0NoArrayInit()
+}
+
+export async function testInitStupidArrays() {
+  try {
+    // await addIndex0NoArrayInit() // FAILING ON GODWOKEN
+    // await addIndex0WithExplicitArrayInit()
+
+    // await pushNoArrayInit()
+
+    // await add0PublicWithExplicitArrayInit()
+
+    // await pushPublicNoArrayInit()
+
+    // await readFromPublicArrayByIndex()
+    // await readFromPublicArrayByIndexOutOfBoundFailure() // FAILING CORRECT BEHAVIOR
+
+    await readFromFixedArrayByIndexNoInit()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
+
 
 async function testCreateArrayPure() {
   try {
@@ -275,7 +316,7 @@ export async function testArrayField() {
   // await readFromPublicArrayByIndexOutOfBoundFailure()
   // await readFromFixedArrayByIndexNoInitFailure()
 
-  await testInitStupidArrays()
+  // await testInitStupidArrays()
 }
 
 export async function testMappingField() {
@@ -307,7 +348,9 @@ export async function testStructs() {
 export async function testDirectCalls() {
   console.log('\ntest direct calls')
 
-  await testArrayField()
+  await execDiff()
+  
+  // await testArrayField()
 
   // await testMappingField()
 

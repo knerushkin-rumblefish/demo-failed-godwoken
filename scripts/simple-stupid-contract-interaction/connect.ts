@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 
-import * as SimpleContractSOL_JSON from '../../artifacts/contracts/SimpleContractSOL.sol/SimpleContractSOL.json'
-import * as StupidContractSOL_JSON from '../../artifacts/contracts/StupidContractSOL.sol/StupidContractSOL.json'
+import * as SimpleContractSOL_JSON from '../../artifacts/sol_contracts/SimpleContractSOL.sol/SimpleContractSOL.json'
+import * as StupidContractSOL_JSON from '../../artifacts/sol_contracts/StupidContractSOL.sol/StupidContractSOL.json'
 import {
   SimpleContractSOL,
   StupidContractSOL,
