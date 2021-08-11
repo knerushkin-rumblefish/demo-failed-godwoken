@@ -1,13 +1,16 @@
 import { ethers } from 'ethers';
 
-import * as SimpleContractSOL_JSON from '../../artifacts/sol_contracts/SimpleContractSOL.sol/SimpleContractSOL.json'
-import * as StupidContractSOL_JSON from '../../artifacts/sol_contracts/StupidContractSOL.sol/StupidContractSOL.json'
+import * as SimpleContractSOL_JSON from '../../../sol_artifacts/sol_contracts/SimpleContractSOL.sol/SimpleContractSOL.json'
+import * as StupidContractSOL_JSON from '../../../sol_artifacts/sol_contracts/StupidContractSOL.sol/StupidContractSOL.json'
 import {
   SimpleContractSOL,
   StupidContractSOL,
-} from '../../types/contracts';
+} from '../../../types/sol_contracts';
 
-import { deployer, transactionOverrides } from '../deployment'
+
+import { deployer } from '../../deployment'
+
+import { stupidAddress, simpleAddress } from '../../address.sol'
 
 export function connectSimple(address: string) {
 
@@ -31,3 +34,6 @@ export function connectStupid(address: string) {
   return contract
 }
 
+
+export const connectedStupid = connectStupid(stupidAddress)
+export const connectedSimple = connectSimple(simpleAddress)

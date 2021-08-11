@@ -2,16 +2,16 @@ import fs from 'fs'
 import path from 'path'
 import { BigNumber, ContractFactory, ethers, Signer } from 'ethers';
 
-import * as SimpleContractSOL_JSON from '../../artifacts/sol_contracts/SimpleContractSOL.sol/SimpleContractSOL.json'
-import * as StupidContractSOL_JSON from '../../artifacts/sol_contracts/StupidContractSOL.sol/StupidContractSOL.json'
+import * as SimpleContractSOL_JSON from '../../../sol_artifacts/sol_contracts/SimpleContractSOL.sol/SimpleContractSOL.json'
+import * as StupidContractSOL_JSON from '../../../sol_artifacts/sol_contracts/StupidContractSOL.sol/StupidContractSOL.json'
 import {
   SimpleContractSOL,
   StupidContractSOL,
   SimpleContractSOL__factory,
   StupidContractSOL__factory,
-} from '../../types/contracts';
+} from '../../../types/sol_contracts';
 
-import { deployer, transactionOverrides } from '../deployment'
+import { deployer, transactionOverrides } from '../../deployment'
 
 export async function deploySimple(
   deployer: Signer
@@ -33,17 +33,6 @@ export async function deploySimple(
   const interCallContractAddress = receipt.contractAddress
   
   return interCallContractAddress
-}
-
-export function connectSimple(address: string) {
-
-  const contract = new ethers.Contract(
-    address,
-    SimpleContractSOL_JSON.abi,
-    deployer.provider
-  ).connect(deployer) as SimpleContractSOL;
-
-  return contract
 }
 
 export async function deployStupid(
@@ -68,20 +57,7 @@ export async function deployStupid(
   return interCallContractAddress
 }
 
-export function connectStupid(address: string) {
-
-  const contract = new ethers.Contract(
-    address,
-    StupidContractSOL_JSON.abi,
-    deployer.provider
-  ).connect(deployer) as StupidContractSOL;
-
-  return contract
-}
-
-
-async function deploy() {
-  console.log('deploy')
+export async function deploy() {
   const stupidAddress = await deployStupid(deployer)
 
   const simpleAddress = await deploySimple(deployer)
@@ -89,5 +65,3 @@ async function deploy() {
   console.log('stupid', stupidAddress)
   console.log('simple', simpleAddress)
 }
-
-deploy()

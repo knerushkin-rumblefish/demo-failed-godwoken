@@ -1,0 +1,1664 @@
+{
+  "abi": [
+    {
+      "gas": 1390,
+      "inputs": [
+        {
+          "name": "stupidContract",
+          "type": "address"
+        },
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getStupidAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 1420,
+      "inputs": [
+        {
+          "name": "stupidContract",
+          "type": "address"
+        },
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getStupidPublicAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "vy_contracts/SimpleContractVY.vy"
+  },
+  "ast": {
+    "ast_type": "Module",
+    "body": [
+      {
+        "ast_type": "InterfaceDef",
+        "body": [
+          {
+            "args": {
+              "args": [
+                {
+                  "annotation": {
+                    "ast_type": "Name",
+                    "col_offset": 25,
+                    "end_col_offset": 32,
+                    "end_lineno": 4,
+                    "id": "uint256",
+                    "lineno": 4,
+                    "node_id": 5,
+                    "src": "71:7:0"
+                  },
+                  "arg": "i",
+                  "ast_type": "arg",
+                  "col_offset": 22,
+                  "end_col_offset": 32,
+                  "end_lineno": 4,
+                  "lineno": 4,
+                  "node_id": 4,
+                  "src": "68:10:0"
+                }
+              ],
+              "ast_type": "arguments",
+              "col_offset": 22,
+              "default": null,
+              "defaults": [],
+              "end_col_offset": 32,
+              "end_lineno": 4,
+              "lineno": 4,
+              "node_id": 3,
+              "src": "68:10:0"
+            },
+            "ast_type": "FunctionDef",
+            "body": [
+              {
+                "ast_type": "Expr",
+                "col_offset": 46,
+                "end_col_offset": 50,
+                "end_lineno": 4,
+                "lineno": 4,
+                "node_id": 7,
+                "src": "92:4:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 46,
+                  "end_col_offset": 50,
+                  "end_lineno": 4,
+                  "id": "view",
+                  "lineno": 4,
+                  "node_id": 8,
+                  "src": "92:4:0"
+                }
+              }
+            ],
+            "col_offset": 2,
+            "decorator_list": [],
+            "doc_string": null,
+            "end_col_offset": 50,
+            "end_lineno": 4,
+            "lineno": 4,
+            "name": "publicAddresses",
+            "node_id": 2,
+            "pos": null,
+            "returns": {
+              "ast_type": "Name",
+              "col_offset": 37,
+              "end_col_offset": 44,
+              "end_lineno": 4,
+              "id": "address",
+              "lineno": 4,
+              "node_id": 10,
+              "src": "83:7:0"
+            },
+            "src": "48:48:0"
+          },
+          {
+            "args": {
+              "args": [
+                {
+                  "annotation": {
+                    "ast_type": "Name",
+                    "col_offset": 20,
+                    "end_col_offset": 27,
+                    "end_lineno": 5,
+                    "id": "uint256",
+                    "lineno": 5,
+                    "node_id": 15,
+                    "src": "117:7:0"
+                  },
+                  "arg": "i",
+                  "ast_type": "arg",
+                  "col_offset": 17,
+                  "end_col_offset": 27,
+                  "end_lineno": 5,
+                  "lineno": 5,
+                  "node_id": 14,
+                  "src": "114:10:0"
+                }
+              ],
+              "ast_type": "arguments",
+              "col_offset": 17,
+              "default": null,
+              "defaults": [],
+              "end_col_offset": 27,
+              "end_lineno": 5,
+              "lineno": 5,
+              "node_id": 13,
+              "src": "114:10:0"
+            },
+            "ast_type": "FunctionDef",
+            "body": [
+              {
+                "ast_type": "Expr",
+                "col_offset": 41,
+                "end_col_offset": 45,
+                "end_lineno": 5,
+                "lineno": 5,
+                "node_id": 17,
+                "src": "138:4:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 41,
+                  "end_col_offset": 45,
+                  "end_lineno": 5,
+                  "id": "view",
+                  "lineno": 5,
+                  "node_id": 18,
+                  "src": "138:4:0"
+                }
+              }
+            ],
+            "col_offset": 2,
+            "decorator_list": [],
+            "doc_string": null,
+            "end_col_offset": 45,
+            "end_lineno": 5,
+            "lineno": 5,
+            "name": "getAddress",
+            "node_id": 12,
+            "pos": null,
+            "returns": {
+              "ast_type": "Name",
+              "col_offset": 32,
+              "end_col_offset": 39,
+              "end_lineno": 5,
+              "id": "address",
+              "lineno": 5,
+              "node_id": 20,
+              "src": "129:7:0"
+            },
+            "src": "99:43:0"
+          }
+        ],
+        "col_offset": 0,
+        "end_col_offset": 45,
+        "end_lineno": 5,
+        "lineno": 3,
+        "name": "IStupidContract",
+        "node_id": 1,
+        "src": "19:123:0"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 37,
+                "end_col_offset": 44,
+                "end_lineno": 9,
+                "id": "address",
+                "lineno": 9,
+                "node_id": 25,
+                "src": "197:7:0"
+              },
+              "arg": "stupidContract",
+              "ast_type": "arg",
+              "col_offset": 21,
+              "end_col_offset": 44,
+              "end_lineno": 9,
+              "lineno": 9,
+              "node_id": 24,
+              "src": "181:23:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 53,
+                "end_col_offset": 60,
+                "end_lineno": 9,
+                "id": "uint256",
+                "lineno": 9,
+                "node_id": 28,
+                "src": "213:7:0"
+              },
+              "arg": "index",
+              "ast_type": "arg",
+              "col_offset": 46,
+              "end_col_offset": 60,
+              "end_lineno": 9,
+              "lineno": 9,
+              "node_id": 27,
+              "src": "206:14:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 21,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 60,
+          "end_lineno": 9,
+          "lineno": 9,
+          "node_id": 23,
+          "src": "181:39:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Return",
+            "col_offset": 2,
+            "end_col_offset": 58,
+            "end_lineno": 11,
+            "lineno": 11,
+            "node_id": 30,
+            "src": "240:56:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 52,
+                  "end_col_offset": 57,
+                  "end_lineno": 11,
+                  "id": "index",
+                  "lineno": 11,
+                  "node_id": 39,
+                  "src": "290:5:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 9,
+              "end_col_offset": 58,
+              "end_lineno": 11,
+              "func": {
+                "ast_type": "Attribute",
+                "attr": "getAddress",
+                "col_offset": 9,
+                "end_col_offset": 51,
+                "end_lineno": 11,
+                "lineno": 11,
+                "node_id": 32,
+                "src": "247:42:0",
+                "value": {
+                  "args": [
+                    {
+                      "ast_type": "Name",
+                      "col_offset": 25,
+                      "end_col_offset": 39,
+                      "end_lineno": 11,
+                      "id": "stupidContract",
+                      "lineno": 11,
+                      "node_id": 36,
+                      "src": "263:14:0"
+                    }
+                  ],
+                  "ast_type": "Call",
+                  "col_offset": 9,
+                  "end_col_offset": 40,
+                  "end_lineno": 11,
+                  "func": {
+                    "ast_type": "Name",
+                    "col_offset": 9,
+                    "end_col_offset": 24,
+                    "end_lineno": 11,
+                    "id": "IStupidContract",
+                    "lineno": 11,
+                    "node_id": 34,
+                    "src": "247:15:0"
+                  },
+                  "keyword": null,
+                  "keywords": [],
+                  "lineno": 11,
+                  "node_id": 33,
+                  "src": "247:31:0"
+                }
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 11,
+              "node_id": 31,
+              "src": "247:49:0"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 5,
+            "end_lineno": 7,
+            "id": "view",
+            "lineno": 7,
+            "node_id": 41,
+            "src": "145:4:0"
+          },
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 8,
+            "id": "external",
+            "lineno": 8,
+            "node_id": 43,
+            "src": "151:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 58,
+        "end_lineno": 11,
+        "lineno": 9,
+        "name": "getStupidAddress",
+        "node_id": 22,
+        "pos": null,
+        "returns": {
+          "ast_type": "Name",
+          "col_offset": 66,
+          "end_col_offset": 73,
+          "end_lineno": 9,
+          "id": "address",
+          "lineno": 9,
+          "node_id": 45,
+          "src": "226:7:0"
+        },
+        "src": "160:136:0"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 43,
+                "end_col_offset": 50,
+                "end_lineno": 16,
+                "id": "address",
+                "lineno": 16,
+                "node_id": 50,
+                "src": "358:7:0"
+              },
+              "arg": "stupidContract",
+              "ast_type": "arg",
+              "col_offset": 27,
+              "end_col_offset": 50,
+              "end_lineno": 16,
+              "lineno": 16,
+              "node_id": 49,
+              "src": "342:23:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 59,
+                "end_col_offset": 66,
+                "end_lineno": 16,
+                "id": "uint256",
+                "lineno": 16,
+                "node_id": 53,
+                "src": "374:7:0"
+              },
+              "arg": "index",
+              "ast_type": "arg",
+              "col_offset": 52,
+              "end_col_offset": 66,
+              "end_lineno": 16,
+              "lineno": 16,
+              "node_id": 52,
+              "src": "367:14:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 27,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 66,
+          "end_lineno": 16,
+          "lineno": 16,
+          "node_id": 48,
+          "src": "342:39:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Return",
+            "col_offset": 2,
+            "end_col_offset": 63,
+            "end_lineno": 18,
+            "lineno": 18,
+            "node_id": 55,
+            "src": "401:61:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 57,
+                  "end_col_offset": 62,
+                  "end_lineno": 18,
+                  "id": "index",
+                  "lineno": 18,
+                  "node_id": 64,
+                  "src": "456:5:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 9,
+              "end_col_offset": 63,
+              "end_lineno": 18,
+              "func": {
+                "ast_type": "Attribute",
+                "attr": "publicAddresses",
+                "col_offset": 9,
+                "end_col_offset": 56,
+                "end_lineno": 18,
+                "lineno": 18,
+                "node_id": 57,
+                "src": "408:47:0",
+                "value": {
+                  "args": [
+                    {
+                      "ast_type": "Name",
+                      "col_offset": 25,
+                      "end_col_offset": 39,
+                      "end_lineno": 18,
+                      "id": "stupidContract",
+                      "lineno": 18,
+                      "node_id": 61,
+                      "src": "424:14:0"
+                    }
+                  ],
+                  "ast_type": "Call",
+                  "col_offset": 9,
+                  "end_col_offset": 40,
+                  "end_lineno": 18,
+                  "func": {
+                    "ast_type": "Name",
+                    "col_offset": 9,
+                    "end_col_offset": 24,
+                    "end_lineno": 18,
+                    "id": "IStupidContract",
+                    "lineno": 18,
+                    "node_id": 59,
+                    "src": "408:15:0"
+                  },
+                  "keyword": null,
+                  "keywords": [],
+                  "lineno": 18,
+                  "node_id": 58,
+                  "src": "408:31:0"
+                }
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 18,
+              "node_id": 56,
+              "src": "408:54:0"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 5,
+            "end_lineno": 14,
+            "id": "view",
+            "lineno": 14,
+            "node_id": 66,
+            "src": "300:4:0"
+          },
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 15,
+            "id": "external",
+            "lineno": 15,
+            "node_id": 68,
+            "src": "306:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 63,
+        "end_lineno": 18,
+        "lineno": 16,
+        "name": "getStupidPublicAddress",
+        "node_id": 47,
+        "pos": null,
+        "returns": {
+          "ast_type": "Name",
+          "col_offset": 72,
+          "end_col_offset": 79,
+          "end_lineno": 16,
+          "id": "address",
+          "lineno": 16,
+          "node_id": 70,
+          "src": "387:7:0"
+        },
+        "src": "315:147:0"
+      }
+    ],
+    "col_offset": 0,
+    "doc_string": null,
+    "end_col_offset": 63,
+    "end_lineno": 18,
+    "lineno": 1,
+    "name": "vy_contracts/SimpleContractVY.vy",
+    "node_id": 0,
+    "src": "0:462:0"
+  },
+  "bytecode": "0x6100ef56600436101561000d576100e5565b600035601c52600051341561002157600080fd5b637cb0c7358114156100825760043560a01c1561003d57600080fd5b60206101c0602463b93f9b0a610140526024356101605261015c6004355afa61006557600080fd5b601f3d1161007257600080fd5b6000506101c05160005260206000f35b63ef1aad488114156100e35760043560a01c1561009e57600080fd5b60206101c0602463e209c7a3610140526024356101605261015c6004355afa6100c657600080fd5b601f3d116100d357600080fd5b6000506101c05160005260206000f35b505b60006000fd5b6100046100ef036100046000396100046100ef036000f3",
+  "bytecodeSha1": "9dfb300b566ef8a339d559fcbf37efc5125aba74",
+  "compiler": {
+    "evm_version": "istanbul",
+    "version": "0.2.12"
+  },
+  "contractName": "SimpleContractVY",
+  "coverageMap": {
+    "branches": {
+      "0": {}
+    },
+    "statements": {
+      "0": {
+        "SimpleContractVY.getStupidAddress": {
+          "0": [
+            240,
+            296
+          ]
+        },
+        "SimpleContractVY.getStupidPublicAddress": {
+          "1": [
+            401,
+            462
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "0x600436101561000d576100e5565b600035601c52600051341561002157600080fd5b637cb0c7358114156100825760043560a01c1561003d57600080fd5b60206101c0602463b93f9b0a610140526024356101605261015c6004355afa61006557600080fd5b601f3d1161007257600080fd5b6000506101c05160005260206000f35b63ef1aad488114156100e35760043560a01c1561009e57600080fd5b60206101c0602463e209c7a3610140526024356101605261015c6004355afa6100c657600080fd5b601f3d116100d357600080fd5b6000506101c05160005260206000f35b505b60006000fd",
+  "deployedSourceMap": "-1:-1:0:-;;;;;:::-;;:::-;:::-;;;;;;;;;;:::-;;;;:::-;160:136;;;;;:::-;-1:-1;;;;;160:136;:::-;;;;:::-;247:49;;;-1:-1;;;290:5;-1:-1;;;;263:14;247:49;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;240:56;;;;;;160:136::-;315:147;;;;;:::-;-1:-1;;;;;315:147;:::-;;;;:::-;408:54;;;-1:-1;;;456:5;-1:-1;;;;424:14;408:54;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;401:61;;;;;;315:147::-;-1:-1;:::-;;;;",
+  "language": "Vyper",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    0,
+    463
+  ],
+  "opcodes": "PUSH1 0x4 CALLDATASIZE LT ISZERO PUSH2 0x0D JUMPI PUSH2 0x0E5 JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0x1C MSTORE PUSH1 0x0 MLOAD CALLVALUE ISZERO PUSH2 0x021 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH4 0x7CB0C735 DUP2 EQ ISZERO PUSH2 0x082 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x03D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x20 PUSH2 0x1C0 PUSH1 0x24 PUSH4 0xB93F9BA PUSH2 0x140 MSTORE PUSH1 0x24 CALLDATALOAD PUSH2 0x160 MSTORE PUSH2 0x15C PUSH1 0x4 CALLDATALOAD GAS STATICCALL PUSH2 0x065 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1F RETURNDATASIZE GT PUSH2 0x072 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1C0 MLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xEF1AAD48 DUP2 EQ ISZERO PUSH2 0x0E3 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x09E JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x20 PUSH2 0x1C0 PUSH1 0x24 PUSH4 0xE29C7A3 PUSH2 0x140 MSTORE PUSH1 0x24 CALLDATALOAD PUSH2 0x160 MSTORE PUSH2 0x15C PUSH1 0x4 CALLDATALOAD GAS STATICCALL PUSH2 0x0C6 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1F RETURNDATASIZE GT PUSH2 0x0D3 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1C0 MLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST POP JUMPDEST PUSH1 0x0 PUSH1 0x0 REVERT",
+  "pcMap": {
+    "0": {
+      "offset": [
+        0,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "2": {
+      "op": "CALLDATASIZE"
+    },
+    "3": {
+      "op": "LT"
+    },
+    "4": {
+      "op": "ISZERO"
+    },
+    "5": {
+      "op": "PUSH2",
+      "value": "0x0D"
+    },
+    "8": {
+      "op": "JUMPI"
+    },
+    "9": {
+      "op": "PUSH2",
+      "value": "0x0E5"
+    },
+    "12": {
+      "op": "JUMP"
+    },
+    "13": {
+      "op": "JUMPDEST"
+    },
+    "14": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "16": {
+      "op": "CALLDATALOAD"
+    },
+    "17": {
+      "op": "PUSH1",
+      "value": "0x1C"
+    },
+    "19": {
+      "op": "MSTORE"
+    },
+    "20": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "22": {
+      "op": "MLOAD"
+    },
+    "23": {
+      "op": "CALLVALUE"
+    },
+    "24": {
+      "op": "ISZERO"
+    },
+    "25": {
+      "op": "PUSH2",
+      "value": "0x021"
+    },
+    "28": {
+      "op": "JUMPI"
+    },
+    "29": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "31": {
+      "offset": [
+        0,
+        0
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "32": {
+      "dev": "Cannot send ether to nonpayable function",
+      "op": "REVERT"
+    },
+    "33": {
+      "op": "JUMPDEST"
+    },
+    "34": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x7CB0C735"
+    },
+    "39": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "40": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "41": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "42": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x082"
+    },
+    "45": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "46": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "48": {
+      "op": "CALLDATALOAD"
+    },
+    "49": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "51": {
+      "op": "SHR"
+    },
+    "52": {
+      "op": "ISZERO"
+    },
+    "53": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x03D"
+    },
+    "56": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "57": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "59": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "60": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "61": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "62": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x20"
+    },
+    "64": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1C0"
+    },
+    "67": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "69": {
+      "op": "PUSH4",
+      "value": "0xB93F9BA"
+    },
+    "74": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "77": {
+      "op": "MSTORE"
+    },
+    "78": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        290,
+        295
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "80": {
+      "op": "CALLDATALOAD"
+    },
+    "81": {
+      "op": "PUSH2",
+      "value": "0x160"
+    },
+    "84": {
+      "op": "MSTORE"
+    },
+    "85": {
+      "op": "PUSH2",
+      "value": "0x15C"
+    },
+    "88": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        263,
+        277
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "90": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "91": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "GAS",
+      "path": "0"
+    },
+    "92": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "STATICCALL",
+      "path": "0"
+    },
+    "93": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x065"
+    },
+    "96": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "97": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "99": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "100": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "101": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "102": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "104": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "105": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "106": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x072"
+    },
+    "109": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "110": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "112": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "113": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "114": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "115": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "117": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "118": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        247,
+        296
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1C0"
+    },
+    "121": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        240,
+        296
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "122": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        240,
+        296
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "124": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        240,
+        296
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "125": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        240,
+        296
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "127": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        240,
+        296
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "129": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        240,
+        296
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "130": {
+      "fn": "SimpleContractVY.getStupidAddress",
+      "offset": [
+        160,
+        296
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "131": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xEF1AAD48"
+    },
+    "136": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "137": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "138": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "139": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x0E3"
+    },
+    "142": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "143": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "145": {
+      "op": "CALLDATALOAD"
+    },
+    "146": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "148": {
+      "op": "SHR"
+    },
+    "149": {
+      "op": "ISZERO"
+    },
+    "150": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x09E"
+    },
+    "153": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "154": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "156": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "157": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "158": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "159": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x20"
+    },
+    "161": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1C0"
+    },
+    "164": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "166": {
+      "op": "PUSH4",
+      "value": "0xE29C7A3"
+    },
+    "171": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "174": {
+      "op": "MSTORE"
+    },
+    "175": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        456,
+        461
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "177": {
+      "op": "CALLDATALOAD"
+    },
+    "178": {
+      "op": "PUSH2",
+      "value": "0x160"
+    },
+    "181": {
+      "op": "MSTORE"
+    },
+    "182": {
+      "op": "PUSH2",
+      "value": "0x15C"
+    },
+    "185": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        424,
+        438
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "187": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "188": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "GAS",
+      "path": "0"
+    },
+    "189": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "STATICCALL",
+      "path": "0"
+    },
+    "190": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x0C6"
+    },
+    "193": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "194": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "196": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "197": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "198": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "199": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "201": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "202": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "203": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x0D3"
+    },
+    "206": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "207": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "209": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "210": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "211": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "212": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "214": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "215": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        408,
+        462
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1C0"
+    },
+    "218": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        401,
+        462
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "219": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        401,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "221": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        401,
+        462
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "222": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        401,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "224": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        401,
+        462
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "226": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        401,
+        462
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "227": {
+      "fn": "SimpleContractVY.getStupidPublicAddress",
+      "offset": [
+        315,
+        462
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "228": {
+      "op": "POP"
+    },
+    "229": {
+      "op": "JUMPDEST"
+    },
+    "230": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "232": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "234": {
+      "op": "REVERT"
+    }
+  },
+  "sha1": "a164f9e0c5a639546e21df26c596ef7e5124a482",
+  "source": "# @version 0.2.12\n\ninterface IStupidContract:\n  def publicAddresses(i: uint256) -> address: view\n  def getAddress(i: uint256) -> address: view\n\n@view\n@external\ndef getStupidAddress(stupidContract: address, index: uint256 ) -> address:\n  \n  return IStupidContract(stupidContract).getAddress(index)\n\n\n@view\n@external\ndef getStupidPublicAddress(stupidContract: address, index: uint256 ) -> address:\n  \n  return IStupidContract(stupidContract).publicAddresses(index)\n",
+  "sourceMap": "",
+  "sourcePath": "vy_contracts/SimpleContractVY.vy",
+  "type": "contract"
+}

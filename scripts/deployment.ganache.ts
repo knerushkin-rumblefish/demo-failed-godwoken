@@ -1,6 +1,11 @@
 import { providers, Wallet } from "ethers";
 
-const DEPLOYER_PRIVATE_KEY = '0xbbfbee4961061d506ffbb11dfea64eba16355cbf1d9c29613126ba7fec0aed5d';
+
+if(!process.env.DEPLOYER_PRIVATE_KEY) {
+  throw new Error('Set env variable DEPLOYER_PRIVATE_KEY')
+}
+
+const DEPLOYER_PRIVATE_KEY = process.env.DEPLOYER_PRIVATE_KEY;
 
 const localProvider = new providers.JsonRpcProvider(
   "http://localhost:7545",

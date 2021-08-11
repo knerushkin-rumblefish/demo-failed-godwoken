@@ -1,0 +1,7 @@
+project_structure:
+    build: vy_artifacts
+    contracts: vy_contracts
+    interfaces: vy_interfaces
+    reports: vy_reports
+    scripts: vy_scripts
+    tests: vy_tests

@@ -1,0 +1,80 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IStupidContract",
+  "sourceName": "sol_contracts/SimpleContractSOL.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "searchedAddress",
+          "type": "address"
+        }
+      ],
+      "name": "getStructFromMapping",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address[]",
+              "name": "structAddress",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256",
+              "name": "latest_change",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ArrayAndNumber",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "publicAddresses",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

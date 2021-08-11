@@ -14,13 +14,9 @@
     "noEmit": true,
     "rootDir": "."
   },
-  "include": [
-    "scripts",
-    "contracts"
-  ],
   "exclude": [
     "node_modules",
     "cache",
-    "artifacts",
+    "*artifacts",
   ]
 }

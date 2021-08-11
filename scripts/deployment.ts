@@ -1,5 +1,5 @@
 import { Overrides, providers, Wallet } from 'ethers'
-import { DEPLOYMENT_ENVS } from './address'
+import { DEPLOYMENT_ENVS } from './address.sol'
 
 import {
   provider as gnProvider,

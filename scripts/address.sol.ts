@@ -1,5 +1,5 @@
-import { simpleAddress as gnSimpleAddress, stupidAddress as gnStupidAddress } from './address.ganache'
-import { simpleAddress as gwSimpleAddress, stupidAddress as gwStupidAddress } from './address.godwoken'
+import { simpleAddress as gnSimpleAddress, stupidAddress as gnStupidAddress } from './address.ganache.sol'
+import { simpleAddress as gwSimpleAddress, stupidAddress as gwStupidAddress } from './address.godwoken.sol'
 
 export enum DEPLOYMENT_ENVS {
   Ganache = 'ganache', 

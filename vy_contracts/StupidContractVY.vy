@@ -12,6 +12,8 @@ addresses: address[65536]
 addressesLength: uint256
 
 
+fixedSizeArray: public(address[3])
+
 publicAddresses: public(address[65536])
 publicAddressesLength: uint256
 
