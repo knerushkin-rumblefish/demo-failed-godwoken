@@ -45,13 +45,12 @@ export async function addIndex0WithExplicitArrayInit() {
 
 /* Working same on Godwoken/Ganache */
 export async function pushNoArrayInit() {
-
   try {
     console.log('init add 0 stupid addresses with init')
-    const transactionAdd0AddressWithAddressesInit =
-      await stupid.add0AddressWithAddressesInit(ADDRESS, transactionOverrides)
+    const transactionPushNoAddressInit =
+      await stupid.pushAddress(ADDRESS, transactionOverrides)
 
-    await transactionAdd0AddressWithAddressesInit.wait()
+    await transactionPushNoAddressInit.wait()
 
     console.log('added address', ADDRESS)
   } catch(error) {
