@@ -778,7 +778,7 @@ def _get_new_pool_coins(
         if i == _n_coins:
             break
 
-        # coin = CurvePool(_pool).coins(i)
+        coin = CurvePool(_pool).coins(i)
         self.pool_data[_pool].coins[i] = coin
         coin_list[i] = coin
 
