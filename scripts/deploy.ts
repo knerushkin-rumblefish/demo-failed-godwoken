@@ -1,8 +1,8 @@
-import { deploy as hadoukenDeploy } from './hadouken/deploy'
+import { deploy as poolContractDeploy } from './hadouken/deploy'
 
 async function deploy() {
   console.log('deploy')
-  await hadoukenDeploy()
+  await poolContractDeploy()
 }
 
 deploy()

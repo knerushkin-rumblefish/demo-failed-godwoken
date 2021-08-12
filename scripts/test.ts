@@ -1,5 +1,5 @@
-import { testRegistry } from './hadouken/tests/registry-test'
-import { testPool } from './hadouken/tests/pool-test'
+import { testRegistry } from './poolContract/tests/registry-test'
+import { testPool } from './poolContract/tests/pool-test'
 
 export async function test() {
   console.log('test')
