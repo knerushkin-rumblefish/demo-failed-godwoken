@@ -8,7 +8,7 @@ import {
 export async function testRegistry() {
   console.log('test registry')
 
-  // await addPoolToRegistry()
+  await addPoolToRegistry()
 
   await readRegistryPools()
 

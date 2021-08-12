@@ -4,6 +4,7 @@ import { BigNumber, ContractFactory, ethers, Signer, constants } from 'ethers';
 
 import { prepare_contract_abi } from '../../vy_utils/prepare_contracts'
 import { deployer, transactionOverrides } from '../deployment'
+import { overrideAddresses } from './utils'
 
 import * as ERC20_JSON from '../../vy_artifacts/contracts/ERC20.json'
 import * as StableSwap3Pool_JSON from '../../vy_artifacts/contracts/StableSwap3Pool.json'
@@ -123,4 +124,15 @@ export async function deploy() {
 
   const pool = await deployPool(tokens)
   console.log('pool', pool)
+
+  const addresses = {
+    addressProvider,
+    registry,
+    pool,
+    tokenA: tokens[0],
+    tokenB: tokens[1],
+    tokenC: tokens[2],
+  }
+
+  overrideAddresses(addresses, `addresses.${process.env.DEPLOYMENT_ENV}.json`)
 }

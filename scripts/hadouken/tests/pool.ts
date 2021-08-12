@@ -1,8 +1,8 @@
 import { transactionOverrides } from '../../deployment'
-import { pool as poolAddress } from '../addresses'
+import addresses from '../addresses'
 import { connectPool } from '../connect'
 
-const pool = connectPool(poolAddress)
+const pool = connectPool(addresses.pool)
 
 export async function readPoolBalances() {
   try {
