@@ -10,7 +10,7 @@ import {
 
 import { deployer } from '../../deployment'
 
-import { stupidAddress, simpleAddress } from '../../address.sol'
+import { stupidAddress, simpleAddress } from '../address.sol'
 
 export function connectSimple(address: string) {
 

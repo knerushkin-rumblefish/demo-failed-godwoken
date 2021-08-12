@@ -1,10 +1,7 @@
-import { simpleAddress as gnSimpleAddress, stupidAddress as gnStupidAddress } from './address.ganache.sol'
-import { simpleAddress as gwSimpleAddress, stupidAddress as gwStupidAddress } from './address.godwoken.sol'
+import { DEPLOYMENT_ENVS } from '../deployment'
 
-export enum DEPLOYMENT_ENVS {
-  Ganache = 'ganache', 
-  Godwoken = 'godwoken'
-}
+import { simpleAddress as gnSimpleAddress, stupidAddress as gnStupidAddress } from './address.ganache.vy'
+import { simpleAddress as gwSimpleAddress, stupidAddress as gwStupidAddress } from './address.godwoken.vy'
 
 const DEPLOYMENT_ENV = process.env.DEPLOYMENT_ENV;
 

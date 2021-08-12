@@ -1,5 +1,4 @@
 import { Overrides, providers, Wallet } from 'ethers'
-import { DEPLOYMENT_ENVS } from './address.sol'
 
 import {
   provider as gnProvider,
@@ -10,6 +9,12 @@ import {
   provider as gwProvider,
   deployer as gwDeployer
 } from './deployment.godwoken'
+
+
+export enum DEPLOYMENT_ENVS {
+  Ganache = 'ganache', 
+  Godwoken = 'godwoken'
+}
 
 export const GAS_PRICE = 0
 export const GAS_LIMIT = 12000000

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "yarn ts-node ./scripts/simple-stupid-contract-interaction/tests/index.ts",
+    "test": "yarn ts-node ./scripts/test.ts",
     "types:sol": "yarn typechain --target ethers-v5 --out-dir types/sol_contracts 'sol_artifacts/sol_contracts/**/*.json'",
     "types:vy": "yarn typechain --target ethers-v5 --out-dir types/vy_contracts 'vy_artifacts/contracts/**/*.json'",
     "types": "yarn types:sol; yarn types:vy",
@@ -12,7 +12,7 @@
     "compile:vy": "brownie compile",
     "compile": "yarn compile:sol; yarn compile:vy",
     "build": "yarn compile; yarn rimraf **/*.dbg.json; yarn types",
-    "deploy": "yarn ts-node ./scripts/simple-stupid-contract-interaction/deploy/deploy.ts",
+    "deploy": "yarn ts-node ./scripts/deploy.ts",
     "ganache": "ganache-cli --accounts 10 --hardfork istanbul --gasLimit 12000000 --gasPrice 0 --mnemonic brownie --port 7545"
   },
   "author": "",

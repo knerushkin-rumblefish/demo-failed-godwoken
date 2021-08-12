@@ -13,7 +13,7 @@ import { prepare_contract_abi } from '../../../vy_utils/prepare_contracts'
 
 import { deployer } from '../../deployment'
 
-import { stupidAddress, simpleAddress } from '../../address.vy'
+import { stupidAddress, simpleAddress } from '../address.vy'
 
 
 export function connectSimple(address: string) {

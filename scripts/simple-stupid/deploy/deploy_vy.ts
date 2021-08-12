@@ -12,7 +12,7 @@ import {
   StupidContractVY__factory,
 } from '../../../types/vy_contracts';
 
-import { prepare_contract_abi, prepare_contract_json } from '../../../vy_utils/prepare_contracts'
+import { prepare_contract_abi } from '../../../vy_utils/prepare_contracts'
 
 import { deployer, transactionOverrides } from '../../deployment'
 
