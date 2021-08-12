@@ -12,7 +12,8 @@ addresses: address[65536]
 addressesLength: uint256
 
 
-fixedSizeArray: public(address[3])
+fixedSizeArray: public(address[MAX_COINS])
+fixedSizeLength: public(uint256)
 
 publicAddresses: public(address[65536])
 publicAddressesLength: uint256
@@ -42,6 +43,13 @@ def pushPublicAddress(newAddress: address):
   self.publicAddresses[length] = newAddress
 
   self.publicAddressesLength = length + 1
+
+@external
+def pushFixedSize(newAddress: address):
+  length: uint256 = self.fixedSizeLength
+  self.fixedSizeArray[length] = newAddress
+
+  self.fixedSizeLength = length + 1
 
 @view
 @external

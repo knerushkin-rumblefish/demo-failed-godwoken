@@ -1,10 +1,13 @@
 import { testDirectCalls } from './direct-calls'
-import { testInterContractCalls } from './inter-contract-calls'
+import { testInterContractCalls as testInterContractCallsVY } from './inter-contract-calls.vy'
+import { testInterContractCalls as testInterContractCallsSOL } from './inter-contract-calls.sol'
 
 
-async function test() {
+export async function test() {
   // await testDirectCalls()
-  await testInterContractCalls()
-}
+  console.log('vy')
+  await testInterContractCallsVY()
 
-test()
+  console.log('sol')
+  await testInterContractCallsSOL()
+}

@@ -11,7 +11,8 @@ contract StupidContractSOL {
 
   address[] public publicAddresses;
 
-  address[3] public fixedSizeArray;
+  address[8] public fixedSizeArray;
+  uint256 public fixedSizeLength;
 
   // No Init for mapping
   mapping(address => address) public addressMapping;
@@ -52,6 +53,14 @@ contract StupidContractSOL {
 
   function pushPublicAddress(address newAddress) public {
     publicAddresses.push(newAddress);
+  }
+
+  function pushFixedSize(address newAddress) public {
+    uint256 length = fixedSizeLength;
+    
+    fixedSizeArray[length] = newAddress;
+
+    fixedSizeLength = length + 1;
   }
 
   function getAddress(uint256 index) public view returns (address) {

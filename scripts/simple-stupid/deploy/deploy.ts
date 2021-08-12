@@ -1,3 +1,4 @@
+import { overrideAddresses } from '../utils'
 import { deploy as deploySol } from './deploy_sol'
 import { deploy as deployVy } from './deploy_vy'
 
@@ -9,19 +10,18 @@ const MESSAGE = [
   SIGN.repeat(25),
 ].join('')
 
-async function deploy() {
+export async function deploy() {
 
   console.log(MESSAGE)
 
   console.log('sol')
-  await deploySol()
+  const addressesSol = await deploySol()
+  overrideAddresses(addressesSol, `addresses.${process.env.DEPLOYMENT_ENV}.sol.json`)
 
   console.log('vy')
-  await deployVy()
-
+  const addressesVy = await deployVy()
+  overrideAddresses(addressesVy, `addresses.${process.env.DEPLOYMENT_ENV}.vy.json`)
   console.log(
     SIGN.repeat(MESSAGE.length),
   )
 }
-
-deploy()

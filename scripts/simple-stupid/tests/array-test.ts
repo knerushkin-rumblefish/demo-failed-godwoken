@@ -1,4 +1,4 @@
-import * as array from './array'
+import * as array from './array.vy'
 
 
 async function testReadStupidArrays() {

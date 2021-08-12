@@ -10,7 +10,7 @@ if(!DEPLOYMENT_ENV || Object.keys(DEPLOYMENT_ENVS).includes(DEPLOYMENT_ENV)) {
 }
 
 
-let addresses: typeof gwAddresses = gnAddresses;
+let addresses: typeof gwAddresses = gnAddresses
 
 if(DEPLOYMENT_ENV === DEPLOYMENT_ENVS.Ganache) {
   addresses = gnAddresses

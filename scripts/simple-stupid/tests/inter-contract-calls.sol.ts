@@ -1,12 +1,12 @@
 import { transactionOverrides } from '../../deployment'
 import { testAddToStructMappingWithInitSuccess } from './direct-calls'
 
-import { initStupidArrays } from './array'
+import { initStupidArrays } from './array.sol'
 
 import {
   connectedSimple as simple,
   connectedStupid as stupid,
-} from '../connect/connect_vy'
+} from '../connect/connect_sol'
 
 
 async function simpleCallStupid() {
@@ -39,15 +39,41 @@ async function simpleCallStupid() {
   }
 }
 
+
+async function simpleCallFixedByConstArrayAddress() {
+  console.log('simple call stupid fixed with const variable array')
+  try {
+    const fixedSizeArrayAddress = await simple.getStupidFixedSizeArrayAddress(stupid.address, 0, transactionOverrides)
+    console.log('stupid fixed size array address', fixedSizeArrayAddress.toString())
+
+  } catch (error) {
+    console.error('simple call stupid fixed with const variable array error', error)
+  }
+}
+
+async function simpleCallFixedByConstArrayAddresses() {
+  console.log('simple call stupid fixed with const variable array')
+  try {
+    const fixedSizeArrayAddress = await simple.getStupidFixedSizeArrayAddresses(stupid.address, 8, transactionOverrides)
+    console.log('stupid fixed size array address', fixedSizeArrayAddress.toString())
+
+  } catch (error) {
+    console.error('simple call stupid fixed with const variable array error', error)
+  }
+}
+
 async function testNestedCallsSuccess() {
   /* Simple Contract call to Stupid Contract to get data from Array */
   console.log('init stupid arrays')
   await initStupidArrays()
 
+  await simpleCallFixedByConstArrayAddress()
+  await simpleCallFixedByConstArrayAddresses()
+
   // await testStupidArrays()
 
-  console.log('test simple call stupid')
-  await simpleCallStupid()
+  // console.log('test simple call stupid')
+  // await simpleCallStupid()
 }
 
 // async function testSimpleGetStupidStruct(address0: string, address1: string) {

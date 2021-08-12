@@ -58,10 +58,15 @@ export async function deployStupid(
 }
 
 export async function deploy() {
-  const stupidAddress = await deployStupid(deployer)
+  const stupid = await deployStupid(deployer)
 
-  const simpleAddress = await deploySimple(deployer)
+  const simple = await deploySimple(deployer)
 
-  console.log('stupid', stupidAddress)
-  console.log('simple', simpleAddress)
+  console.log('stupid', stupid)
+  console.log('simple', simple)
+
+  return {
+    stupid,
+    simple,
+  }
 }

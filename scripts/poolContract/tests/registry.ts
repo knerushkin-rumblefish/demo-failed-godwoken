@@ -8,6 +8,7 @@ const registry = connectRegistry(addresses.registry)
 const pool = connectPool(addresses.pool)
 
 export async function addPoolToRegistry() {
+  console.log('add pool to registry', addresses.pool)
   try {
     const tokens: string[] = Array(8).fill(constants.AddressZero)
     
@@ -32,6 +33,17 @@ export async function addPoolToRegistry() {
   } catch(error) {
     console.error(error)
   }
+}
+
+export async function addCoinsToRegistry() {
+  console.log('add coins to registry', addresses.pool)
+  try {
+    const transaction = await registry.get_new_pool_coins(addresses.pool, 3, false, false, transactionOverrides)
+
+    await transaction.wait()
+  } catch(error) {
+    console.error(error)
+  } 
 }
 
 export async function readRegistryPools() {
@@ -68,6 +80,16 @@ export async function readRegistryCoinsByPool() {
   try {
     const coins = await registry.get_coins(addresses.pool, transactionOverrides) 
     console.log(JSON.stringify(coins, null, 2))
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export async function readPoolDataByPool() {
+  console.log('registry pool coins')
+  try {
+    const poolData = await registry.pool_data(addresses.pool, transactionOverrides) 
+    console.log(JSON.stringify(poolData, null, 2))
   } catch (error) {
     console.error(error)
   }

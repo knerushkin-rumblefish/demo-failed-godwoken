@@ -11,6 +11,7 @@ struct ArrayAndNumber {
 
 interface IStupidContract {
   function publicAddresses(uint256 index) external view returns (address);
+  function fixedSizeArray(uint256 index) external view returns (address);
   function getAddress(uint256 index) external view returns (address);
   function getStructFromMapping(address searchedAddress) external view returns (ArrayAndNumber memory);
 }
@@ -30,5 +31,37 @@ contract SimpleContractSOL {
   function getStupidStruct(address stupidContract, address searchedAddress) public view returns (ArrayAndNumber memory) {
     
     return IStupidContract(stupidContract).getStructFromMapping(searchedAddress);
+  }
+
+  function getStupidFixedSizeArrayAddress(address stupidContract, uint256 index) external view returns (address) {
+    return IStupidContract(stupidContract).fixedSizeArray(index);
+  }
+
+  function getStupidFixedSizeArrayAddresses(
+    address stupidContract,
+    uint256 nCoins
+  ) external view returns (address[10] memory) {
+    address[10] memory address_list = [
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0)
+    ];
+    
+    for (uint256 i = 0; i < 10; i++) {
+      if (i == nCoins) {
+        break;
+      }
+      address_list[i] = IStupidContract(stupidContract).fixedSizeArray(i);
+      // address_list[i] = stupidContract;
+    }
+
+    return address_list;
   }
 }

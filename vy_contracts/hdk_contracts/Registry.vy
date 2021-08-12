@@ -97,7 +97,7 @@ gauge_controller: public(address)
 pool_list: public(address[65536])   # master list of pools
 pool_count: public(uint256)         # actual length of pool_list
 
-pool_data: HashMap[address, PoolArray]
+pool_data: public(HashMap[address, PoolArray])
 
 coin_count: public(uint256)  # total unique coins registered
 coins: HashMap[address, CoinInfo]
@@ -812,36 +812,17 @@ def get_new_pool_coins(
     _is_v1: bool
 ) -> address[MAX_COINS]:
     coin_list: address[MAX_COINS] = empty(address[MAX_COINS])
-    coin: address = ZERO_ADDRESS
+    coin: address = 0x4444444444444444444444444444444444444444
+
     for i in range(MAX_COINS):
         if i == _n_coins:
             break
 
-        coin = CurvePool(_pool).coins(i)
         self.pool_data[_pool].coins[i] = coin
-        coin_list[i] = empty(address)
-
-    # for i in range(MAX_COINS):
-    #     if i == _n_coins:
-    #         break
-
-    #     self._register_coin(coin_list[i])
-    #     # add pool to markets
-    #     i2: uint256 = i + 1
-    #     for x in range(i2, i2 + MAX_COINS):
-    #         if x == _n_coins:
-    #             break
-
-    #         key: uint256 = bitwise_xor(convert(coin_list[i], uint256), convert(coin_list[x], uint256))
-    #         length: uint256 = self.market_counts[key]
-    #         self.markets[key][length] = _pool
-    #         self.market_counts[key] = length + 1
-
-    #         # register the coin pair
-    #         if length == 0:
-    #             self._register_coin_pair(coin_list[x], coin_list[i], key)
+        coin_list[i] = coin
 
     return coin_list
+
 @view
 @internal
 def _get_new_pool_decimals(_coins: address[MAX_COINS], _n_coins: uint256) -> uint256:

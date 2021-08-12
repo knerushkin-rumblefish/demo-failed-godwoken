@@ -1,3 +1,4 @@
+import { constants } from 'ethers'
 import { transactionOverrides } from '../../deployment'
 import {
   connectedStupid as stupid,
@@ -73,6 +74,27 @@ export async function add0PublicWithExplicitArrayInit() {
   }
 }
 
+export async function pushFixedSizeArray() {
+
+  try {
+    console.log('push fixed size array address')
+    const INIT_ARRAY_LEN = 2 // should be less than 8
+    for(let i = 0; i < INIT_ARRAY_LEN; i++) {
+      const fixedSizeArrayLen = await stupid.fixedSizeLength(transactionOverrides)
+      console.log('fixed size len', fixedSizeArrayLen.toString())
+      
+      const transactionAPushFixedSizeArray =
+        await stupid.pushFixedSize(constants.AddressZero.slice(0, -2) + 7 + i, transactionOverrides)
+  
+      await transactionAPushFixedSizeArray.wait()
+    }
+    console.log('added address', ADDRESS)
+  } catch(error) {
+    console.log('push fixed size array error')
+    console.error(error)
+  }
+}
+
 /* Working same on Godwoken/Ganache */
 export async function pushPublicNoArrayInit() {
   try {
@@ -141,5 +163,6 @@ export async function readFromFixedArrayByIndexNoInit() {
 
 export async function initStupidArrays() {
   await pushNoArrayInit()
+  await pushFixedSizeArray()
   await pushPublicNoArrayInit()
 }

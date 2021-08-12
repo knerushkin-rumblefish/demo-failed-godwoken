@@ -13,7 +13,7 @@ import { prepare_contract_abi } from '../../../vy_utils/prepare_contracts'
 
 import { deployer } from '../../deployment'
 
-import { stupidAddress, simpleAddress } from '../address.vy'
+import addresses from '../address.vy'
 
 
 export function connectSimple(address: string) {
@@ -38,5 +38,5 @@ export function connectStupid(address: string) {
   return contract
 }
 
-export const connectedStupid = connectStupid(stupidAddress)
-export const connectedSimple = connectSimple(simpleAddress)
+export const connectedStupid = connectStupid(addresses.stupid)
+export const connectedSimple = connectSimple(addresses.simple)

@@ -10,7 +10,7 @@ import {
 
 import { deployer } from '../../deployment'
 
-import { stupidAddress, simpleAddress } from '../address.sol'
+import addresses from '../address.sol'
 
 export function connectSimple(address: string) {
 
@@ -35,5 +35,5 @@ export function connectStupid(address: string) {
 }
 
 
-export const connectedStupid = connectStupid(stupidAddress)
-export const connectedSimple = connectSimple(simpleAddress)
+export const connectedStupid = connectStupid(addresses.stupid)
+export const connectedSimple = connectSimple(addresses.simple)

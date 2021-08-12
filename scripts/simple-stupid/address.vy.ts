@@ -1,7 +1,8 @@
 import { DEPLOYMENT_ENVS } from '../deployment'
 
-import { simpleAddress as gnSimpleAddress, stupidAddress as gnStupidAddress } from './address.ganache.vy'
-import { simpleAddress as gwSimpleAddress, stupidAddress as gwStupidAddress } from './address.godwoken.vy'
+import gnAddresses from './addresses.ganache.vy.json'
+import gwAddresses from './addresses.godwoken.vy.json'
+
 
 const DEPLOYMENT_ENV = process.env.DEPLOYMENT_ENV;
 
@@ -10,17 +11,12 @@ if(!DEPLOYMENT_ENV || Object.keys(DEPLOYMENT_ENVS).includes(DEPLOYMENT_ENV)) {
 }
 
 
-let simpleAddress: string, stupidAddress: string
+let addresses: typeof gnAddresses = gnAddresses
 
 if(DEPLOYMENT_ENV === DEPLOYMENT_ENVS.Ganache) {
-  simpleAddress = gnSimpleAddress
-  stupidAddress = gnStupidAddress
+  addresses = gnAddresses
 } else if (DEPLOYMENT_ENV === DEPLOYMENT_ENVS.Godwoken) {
-  simpleAddress = gwSimpleAddress
-  stupidAddress = gwStupidAddress
+  addresses = gwAddresses
 }
 
-export {
-  simpleAddress,
-  stupidAddress,
-}
+export default addresses

@@ -66,7 +66,20 @@
       "type": "function"
     },
     {
-      "gas": 1347,
+      "gas": 71605,
+      "inputs": [
+        {
+          "name": "newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "pushFixedSize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "gas": 1377,
       "inputs": [
         {
           "name": "index",
@@ -84,7 +97,7 @@
       "type": "function"
     },
     {
-      "gas": 1268,
+      "gas": 1298,
       "inputs": [],
       "name": "getAddressesLength",
       "outputs": [
@@ -97,7 +110,7 @@
       "type": "function"
     },
     {
-      "gas": 1298,
+      "gas": 1328,
       "inputs": [],
       "name": "getPublicAddressesLength",
       "outputs": [
@@ -110,7 +123,7 @@
       "type": "function"
     },
     {
-      "gas": 10329,
+      "gas": 10359,
       "inputs": [
         {
           "name": "arg0",
@@ -132,7 +145,7 @@
       "type": "function"
     },
     {
-      "gas": 1467,
+      "gas": 1497,
       "inputs": [
         {
           "name": "arg0",
@@ -150,7 +163,20 @@
       "type": "function"
     },
     {
-      "gas": 1497,
+      "gas": 1418,
+      "inputs": [],
+      "name": "fixedSizeLength",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 1557,
       "inputs": [
         {
           "name": "arg0",
@@ -538,30 +564,30 @@
             {
               "ast_type": "Subscript",
               "col_offset": 23,
-              "end_col_offset": 33,
+              "end_col_offset": 41,
               "end_lineno": 15,
               "lineno": 15,
               "node_id": 63,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 31,
-                "end_col_offset": 32,
+                "end_col_offset": 40,
                 "end_lineno": 15,
                 "lineno": 15,
                 "node_id": 66,
-                "src": "278:1:0",
+                "src": "278:9:0",
                 "value": {
-                  "ast_type": "Int",
+                  "ast_type": "Name",
                   "col_offset": 31,
-                  "end_col_offset": 32,
+                  "end_col_offset": 40,
                   "end_lineno": 15,
+                  "id": "MAX_COINS",
                   "lineno": 15,
                   "node_id": 67,
-                  "src": "278:1:0",
-                  "value": 3
+                  "src": "278:9:0"
                 }
               },
-              "src": "270:10:0",
+              "src": "270:18:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 23,
@@ -576,7 +602,7 @@
           ],
           "ast_type": "Call",
           "col_offset": 16,
-          "end_col_offset": 34,
+          "end_col_offset": 42,
           "end_lineno": 15,
           "func": {
             "ast_type": "Name",
@@ -592,16 +618,16 @@
           "keywords": [],
           "lineno": 15,
           "node_id": 60,
-          "src": "263:18:0"
+          "src": "263:26:0"
         },
         "ast_type": "AnnAssign",
         "col_offset": 0,
-        "end_col_offset": 34,
+        "end_col_offset": 42,
         "end_lineno": 15,
         "lineno": 15,
         "node_id": 57,
         "simple": 1,
-        "src": "247:34:0",
+        "src": "247:42:0",
         "target": {
           "ast_type": "Name",
           "col_offset": 0,
@@ -618,81 +644,135 @@
         "annotation": {
           "args": [
             {
+              "ast_type": "Name",
+              "col_offset": 24,
+              "end_col_offset": 31,
+              "end_lineno": 16,
+              "id": "uint256",
+              "lineno": 16,
+              "node_id": 76,
+              "src": "314:7:0"
+            }
+          ],
+          "ast_type": "Call",
+          "col_offset": 17,
+          "end_col_offset": 32,
+          "end_lineno": 16,
+          "func": {
+            "ast_type": "Name",
+            "col_offset": 17,
+            "end_col_offset": 23,
+            "end_lineno": 16,
+            "id": "public",
+            "lineno": 16,
+            "node_id": 74,
+            "src": "307:6:0"
+          },
+          "keyword": null,
+          "keywords": [],
+          "lineno": 16,
+          "node_id": 73,
+          "src": "307:15:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 32,
+        "end_lineno": 16,
+        "lineno": 16,
+        "node_id": 70,
+        "simple": 1,
+        "src": "290:32:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 15,
+          "end_lineno": 16,
+          "id": "fixedSizeLength",
+          "lineno": 16,
+          "node_id": 71,
+          "src": "290:15:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "args": [
+            {
               "ast_type": "Subscript",
               "col_offset": 24,
               "end_col_offset": 38,
-              "end_lineno": 17,
-              "lineno": 17,
-              "node_id": 75,
+              "end_lineno": 18,
+              "lineno": 18,
+              "node_id": 84,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 32,
                 "end_col_offset": 37,
-                "end_lineno": 17,
-                "lineno": 17,
-                "node_id": 78,
-                "src": "315:5:0",
+                "end_lineno": 18,
+                "lineno": 18,
+                "node_id": 87,
+                "src": "356:5:0",
                 "value": {
                   "ast_type": "Int",
                   "col_offset": 32,
                   "end_col_offset": 37,
-                  "end_lineno": 17,
-                  "lineno": 17,
-                  "node_id": 79,
-                  "src": "315:5:0",
+                  "end_lineno": 18,
+                  "lineno": 18,
+                  "node_id": 88,
+                  "src": "356:5:0",
                   "value": 65536
                 }
               },
-              "src": "307:14:0",
+              "src": "348:14:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 24,
                 "end_col_offset": 31,
-                "end_lineno": 17,
+                "end_lineno": 18,
                 "id": "address",
-                "lineno": 17,
-                "node_id": 76,
-                "src": "307:7:0"
+                "lineno": 18,
+                "node_id": 85,
+                "src": "348:7:0"
               }
             }
           ],
           "ast_type": "Call",
           "col_offset": 17,
           "end_col_offset": 39,
-          "end_lineno": 17,
+          "end_lineno": 18,
           "func": {
             "ast_type": "Name",
             "col_offset": 17,
             "end_col_offset": 23,
-            "end_lineno": 17,
+            "end_lineno": 18,
             "id": "public",
-            "lineno": 17,
-            "node_id": 73,
-            "src": "300:6:0"
+            "lineno": 18,
+            "node_id": 82,
+            "src": "341:6:0"
           },
           "keyword": null,
           "keywords": [],
-          "lineno": 17,
-          "node_id": 72,
-          "src": "300:22:0"
+          "lineno": 18,
+          "node_id": 81,
+          "src": "341:22:0"
         },
         "ast_type": "AnnAssign",
         "col_offset": 0,
         "end_col_offset": 39,
-        "end_lineno": 17,
-        "lineno": 17,
-        "node_id": 69,
+        "end_lineno": 18,
+        "lineno": 18,
+        "node_id": 78,
         "simple": 1,
-        "src": "283:39:0",
+        "src": "324:39:0",
         "target": {
           "ast_type": "Name",
           "col_offset": 0,
           "end_col_offset": 15,
-          "end_lineno": 17,
+          "end_lineno": 18,
           "id": "publicAddresses",
-          "lineno": 17,
-          "node_id": 70,
-          "src": "283:15:0"
+          "lineno": 18,
+          "node_id": 79,
+          "src": "324:15:0"
         },
         "value": null
       },
@@ -701,29 +781,29 @@
           "ast_type": "Name",
           "col_offset": 23,
           "end_col_offset": 30,
-          "end_lineno": 18,
+          "end_lineno": 19,
           "id": "uint256",
-          "lineno": 18,
-          "node_id": 84,
-          "src": "346:7:0"
+          "lineno": 19,
+          "node_id": 93,
+          "src": "387:7:0"
         },
         "ast_type": "AnnAssign",
         "col_offset": 0,
         "end_col_offset": 30,
-        "end_lineno": 18,
-        "lineno": 18,
-        "node_id": 81,
+        "end_lineno": 19,
+        "lineno": 19,
+        "node_id": 90,
         "simple": 1,
-        "src": "323:30:0",
+        "src": "364:30:0",
         "target": {
           "ast_type": "Name",
           "col_offset": 0,
           "end_col_offset": 21,
-          "end_lineno": 18,
+          "end_lineno": 19,
           "id": "publicAddressesLength",
-          "lineno": 18,
-          "node_id": 82,
-          "src": "323:21:0"
+          "lineno": 19,
+          "node_id": 91,
+          "src": "364:21:0"
         },
         "value": null
       },
@@ -735,20 +815,20 @@
                 "ast_type": "Name",
                 "col_offset": 43,
                 "end_col_offset": 50,
-                "end_lineno": 21,
+                "end_lineno": 22,
                 "id": "address",
-                "lineno": 21,
-                "node_id": 89,
-                "src": "408:7:0"
+                "lineno": 22,
+                "node_id": 98,
+                "src": "449:7:0"
               },
               "arg": "contract",
               "ast_type": "arg",
               "col_offset": 33,
               "end_col_offset": 50,
-              "end_lineno": 21,
-              "lineno": 21,
-              "node_id": 88,
-              "src": "398:17:0"
+              "end_lineno": 22,
+              "lineno": 22,
+              "node_id": 97,
+              "src": "439:17:0"
             }
           ],
           "ast_type": "arguments",
@@ -756,10 +836,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 50,
-          "end_lineno": 21,
-          "lineno": 21,
-          "node_id": 87,
-          "src": "398:17:0"
+          "end_lineno": 22,
+          "lineno": 22,
+          "node_id": 96,
+          "src": "439:17:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -767,55 +847,55 @@
             "ast_type": "Assign",
             "col_offset": 2,
             "end_col_offset": 30,
-            "end_lineno": 22,
-            "lineno": 22,
-            "node_id": 91,
-            "src": "420:28:0",
+            "end_lineno": 23,
+            "lineno": 23,
+            "node_id": 100,
+            "src": "461:28:0",
             "target": {
               "ast_type": "Subscript",
               "col_offset": 2,
               "end_col_offset": 19,
-              "end_lineno": 22,
-              "lineno": 22,
-              "node_id": 92,
+              "end_lineno": 23,
+              "lineno": 23,
+              "node_id": 101,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 17,
                 "end_col_offset": 18,
-                "end_lineno": 22,
-                "lineno": 22,
-                "node_id": 97,
-                "src": "435:1:0",
+                "end_lineno": 23,
+                "lineno": 23,
+                "node_id": 106,
+                "src": "476:1:0",
                 "value": {
                   "ast_type": "Int",
                   "col_offset": 17,
                   "end_col_offset": 18,
-                  "end_lineno": 22,
-                  "lineno": 22,
-                  "node_id": 98,
-                  "src": "435:1:0",
+                  "end_lineno": 23,
+                  "lineno": 23,
+                  "node_id": 107,
+                  "src": "476:1:0",
                   "value": 0
                 }
               },
-              "src": "420:17:0",
+              "src": "461:17:0",
               "value": {
                 "ast_type": "Attribute",
                 "attr": "addresses",
                 "col_offset": 2,
                 "end_col_offset": 16,
-                "end_lineno": 22,
-                "lineno": 22,
-                "node_id": 93,
-                "src": "420:14:0",
+                "end_lineno": 23,
+                "lineno": 23,
+                "node_id": 102,
+                "src": "461:14:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 2,
                   "end_col_offset": 6,
-                  "end_lineno": 22,
+                  "end_lineno": 23,
                   "id": "self",
-                  "lineno": 22,
-                  "node_id": 94,
-                  "src": "420:4:0"
+                  "lineno": 23,
+                  "node_id": 103,
+                  "src": "461:4:0"
                 }
               }
             },
@@ -823,11 +903,11 @@
               "ast_type": "Name",
               "col_offset": 22,
               "end_col_offset": 30,
-              "end_lineno": 22,
+              "end_lineno": 23,
               "id": "contract",
-              "lineno": 22,
-              "node_id": 100,
-              "src": "440:8:0"
+              "lineno": 23,
+              "node_id": 109,
+              "src": "481:8:0"
             }
           }
         ],
@@ -837,22 +917,22 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 20,
+            "end_lineno": 21,
             "id": "external",
-            "lineno": 20,
-            "node_id": 102,
-            "src": "356:8:0"
+            "lineno": 21,
+            "node_id": 111,
+            "src": "397:8:0"
           }
         ],
         "doc_string": null,
         "end_col_offset": 30,
-        "end_lineno": 22,
-        "lineno": 21,
+        "end_lineno": 23,
+        "lineno": 22,
         "name": "add0AddressWithAddressesInit",
-        "node_id": 86,
+        "node_id": 95,
         "pos": null,
         "returns": null,
-        "src": "365:83:0"
+        "src": "406:83:0"
       },
       {
         "args": {
@@ -862,20 +942,20 @@
                 "ast_type": "Name",
                 "col_offset": 41,
                 "end_col_offset": 48,
-                "end_lineno": 25,
+                "end_lineno": 26,
                 "id": "address",
-                "lineno": 25,
-                "node_id": 107,
-                "src": "501:7:0"
+                "lineno": 26,
+                "node_id": 116,
+                "src": "542:7:0"
               },
               "arg": "contract",
               "ast_type": "arg",
               "col_offset": 31,
               "end_col_offset": 48,
-              "end_lineno": 25,
-              "lineno": 25,
-              "node_id": 106,
-              "src": "491:17:0"
+              "end_lineno": 26,
+              "lineno": 26,
+              "node_id": 115,
+              "src": "532:17:0"
             }
           ],
           "ast_type": "arguments",
@@ -883,10 +963,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 48,
-          "end_lineno": 25,
-          "lineno": 25,
-          "node_id": 105,
-          "src": "491:17:0"
+          "end_lineno": 26,
+          "lineno": 26,
+          "node_id": 114,
+          "src": "532:17:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -894,55 +974,55 @@
             "ast_type": "Assign",
             "col_offset": 2,
             "end_col_offset": 30,
-            "end_lineno": 26,
-            "lineno": 26,
-            "node_id": 109,
-            "src": "513:28:0",
+            "end_lineno": 27,
+            "lineno": 27,
+            "node_id": 118,
+            "src": "554:28:0",
             "target": {
               "ast_type": "Subscript",
               "col_offset": 2,
               "end_col_offset": 19,
-              "end_lineno": 26,
-              "lineno": 26,
-              "node_id": 110,
+              "end_lineno": 27,
+              "lineno": 27,
+              "node_id": 119,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 17,
                 "end_col_offset": 18,
-                "end_lineno": 26,
-                "lineno": 26,
-                "node_id": 115,
-                "src": "528:1:0",
+                "end_lineno": 27,
+                "lineno": 27,
+                "node_id": 124,
+                "src": "569:1:0",
                 "value": {
                   "ast_type": "Int",
                   "col_offset": 17,
                   "end_col_offset": 18,
-                  "end_lineno": 26,
-                  "lineno": 26,
-                  "node_id": 116,
-                  "src": "528:1:0",
+                  "end_lineno": 27,
+                  "lineno": 27,
+                  "node_id": 125,
+                  "src": "569:1:0",
                   "value": 0
                 }
               },
-              "src": "513:17:0",
+              "src": "554:17:0",
               "value": {
                 "ast_type": "Attribute",
                 "attr": "addresses",
                 "col_offset": 2,
                 "end_col_offset": 16,
-                "end_lineno": 26,
-                "lineno": 26,
-                "node_id": 111,
-                "src": "513:14:0",
+                "end_lineno": 27,
+                "lineno": 27,
+                "node_id": 120,
+                "src": "554:14:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 2,
                   "end_col_offset": 6,
-                  "end_lineno": 26,
+                  "end_lineno": 27,
                   "id": "self",
-                  "lineno": 26,
-                  "node_id": 112,
-                  "src": "513:4:0"
+                  "lineno": 27,
+                  "node_id": 121,
+                  "src": "554:4:0"
                 }
               }
             },
@@ -950,11 +1030,11 @@
               "ast_type": "Name",
               "col_offset": 22,
               "end_col_offset": 30,
-              "end_lineno": 26,
+              "end_lineno": 27,
               "id": "contract",
-              "lineno": 26,
-              "node_id": 118,
-              "src": "533:8:0"
+              "lineno": 27,
+              "node_id": 127,
+              "src": "574:8:0"
             }
           }
         ],
@@ -964,22 +1044,22 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 24,
+            "end_lineno": 25,
             "id": "external",
-            "lineno": 24,
-            "node_id": 120,
-            "src": "451:8:0"
+            "lineno": 25,
+            "node_id": 129,
+            "src": "492:8:0"
           }
         ],
         "doc_string": null,
         "end_col_offset": 30,
-        "end_lineno": 26,
-        "lineno": 25,
+        "end_lineno": 27,
+        "lineno": 26,
         "name": "add0AddressNoAddressesInit",
-        "node_id": 104,
+        "node_id": 113,
         "pos": null,
         "returns": null,
-        "src": "460:81:0"
+        "src": "501:81:0"
       },
       {
         "args": {
@@ -989,20 +1069,20 @@
                 "ast_type": "Name",
                 "col_offset": 28,
                 "end_col_offset": 35,
-                "end_lineno": 29,
+                "end_lineno": 30,
                 "id": "address",
-                "lineno": 29,
-                "node_id": 125,
-                "src": "581:7:0"
+                "lineno": 30,
+                "node_id": 134,
+                "src": "622:7:0"
               },
               "arg": "newAddress",
               "ast_type": "arg",
               "col_offset": 16,
               "end_col_offset": 35,
-              "end_lineno": 29,
-              "lineno": 29,
-              "node_id": 124,
-              "src": "569:19:0"
+              "end_lineno": 30,
+              "lineno": 30,
+              "node_id": 133,
+              "src": "610:19:0"
             }
           ],
           "ast_type": "arguments",
@@ -1010,10 +1090,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 35,
-          "end_lineno": 29,
-          "lineno": 29,
-          "node_id": 123,
-          "src": "569:19:0"
+          "end_lineno": 30,
+          "lineno": 30,
+          "node_id": 132,
+          "src": "610:19:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -1022,48 +1102,48 @@
               "ast_type": "Name",
               "col_offset": 10,
               "end_col_offset": 17,
-              "end_lineno": 30,
+              "end_lineno": 31,
               "id": "uint256",
-              "lineno": 30,
-              "node_id": 130,
-              "src": "601:7:0"
+              "lineno": 31,
+              "node_id": 139,
+              "src": "642:7:0"
             },
             "ast_type": "AnnAssign",
             "col_offset": 2,
             "end_col_offset": 40,
-            "end_lineno": 30,
-            "lineno": 30,
-            "node_id": 127,
+            "end_lineno": 31,
+            "lineno": 31,
+            "node_id": 136,
             "simple": 1,
-            "src": "593:38:0",
+            "src": "634:38:0",
             "target": {
               "ast_type": "Name",
               "col_offset": 2,
               "end_col_offset": 8,
-              "end_lineno": 30,
+              "end_lineno": 31,
               "id": "length",
-              "lineno": 30,
-              "node_id": 128,
-              "src": "593:6:0"
+              "lineno": 31,
+              "node_id": 137,
+              "src": "634:6:0"
             },
             "value": {
               "ast_type": "Attribute",
               "attr": "addressesLength",
               "col_offset": 20,
               "end_col_offset": 40,
-              "end_lineno": 30,
-              "lineno": 30,
-              "node_id": 132,
-              "src": "611:20:0",
+              "end_lineno": 31,
+              "lineno": 31,
+              "node_id": 141,
+              "src": "652:20:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 20,
                 "end_col_offset": 24,
-                "end_lineno": 30,
+                "end_lineno": 31,
                 "id": "self",
-                "lineno": 30,
-                "node_id": 133,
-                "src": "611:4:0"
+                "lineno": 31,
+                "node_id": 142,
+                "src": "652:4:0"
               }
             }
           },
@@ -1071,55 +1151,55 @@
             "ast_type": "Assign",
             "col_offset": 2,
             "end_col_offset": 32,
-            "end_lineno": 31,
-            "lineno": 31,
-            "node_id": 136,
-            "src": "634:30:0",
+            "end_lineno": 32,
+            "lineno": 32,
+            "node_id": 145,
+            "src": "675:30:0",
             "target": {
               "ast_type": "Subscript",
               "col_offset": 2,
               "end_col_offset": 19,
-              "end_lineno": 31,
-              "lineno": 31,
-              "node_id": 137,
+              "end_lineno": 32,
+              "lineno": 32,
+              "node_id": 146,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 17,
                 "end_col_offset": 18,
-                "end_lineno": 31,
-                "lineno": 31,
-                "node_id": 142,
-                "src": "649:1:0",
+                "end_lineno": 32,
+                "lineno": 32,
+                "node_id": 151,
+                "src": "690:1:0",
                 "value": {
                   "ast_type": "Int",
                   "col_offset": 17,
                   "end_col_offset": 18,
-                  "end_lineno": 31,
-                  "lineno": 31,
-                  "node_id": 143,
-                  "src": "649:1:0",
+                  "end_lineno": 32,
+                  "lineno": 32,
+                  "node_id": 152,
+                  "src": "690:1:0",
                   "value": 0
                 }
               },
-              "src": "634:17:0",
+              "src": "675:17:0",
               "value": {
                 "ast_type": "Attribute",
                 "attr": "addresses",
                 "col_offset": 2,
                 "end_col_offset": 16,
-                "end_lineno": 31,
-                "lineno": 31,
-                "node_id": 138,
-                "src": "634:14:0",
+                "end_lineno": 32,
+                "lineno": 32,
+                "node_id": 147,
+                "src": "675:14:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 2,
                   "end_col_offset": 6,
-                  "end_lineno": 31,
+                  "end_lineno": 32,
                   "id": "self",
-                  "lineno": 31,
-                  "node_id": 139,
-                  "src": "634:4:0"
+                  "lineno": 32,
+                  "node_id": 148,
+                  "src": "675:4:0"
                 }
               }
             },
@@ -1127,78 +1207,78 @@
               "ast_type": "Name",
               "col_offset": 22,
               "end_col_offset": 32,
-              "end_lineno": 31,
+              "end_lineno": 32,
               "id": "newAddress",
-              "lineno": 31,
-              "node_id": 145,
-              "src": "654:10:0"
+              "lineno": 32,
+              "node_id": 154,
+              "src": "695:10:0"
             }
           },
           {
             "ast_type": "Assign",
             "col_offset": 2,
             "end_col_offset": 35,
-            "end_lineno": 33,
-            "lineno": 33,
-            "node_id": 147,
-            "src": "668:33:0",
+            "end_lineno": 34,
+            "lineno": 34,
+            "node_id": 156,
+            "src": "709:33:0",
             "target": {
               "ast_type": "Attribute",
               "attr": "addressesLength",
               "col_offset": 2,
               "end_col_offset": 22,
-              "end_lineno": 33,
-              "lineno": 33,
-              "node_id": 148,
-              "src": "668:20:0",
+              "end_lineno": 34,
+              "lineno": 34,
+              "node_id": 157,
+              "src": "709:20:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 2,
                 "end_col_offset": 6,
-                "end_lineno": 33,
+                "end_lineno": 34,
                 "id": "self",
-                "lineno": 33,
-                "node_id": 149,
-                "src": "668:4:0"
+                "lineno": 34,
+                "node_id": 158,
+                "src": "709:4:0"
               }
             },
             "value": {
               "ast_type": "BinOp",
               "col_offset": 25,
               "end_col_offset": 35,
-              "end_lineno": 33,
+              "end_lineno": 34,
               "left": {
                 "ast_type": "Name",
                 "col_offset": 25,
                 "end_col_offset": 31,
-                "end_lineno": 33,
+                "end_lineno": 34,
                 "id": "length",
-                "lineno": 33,
-                "node_id": 153,
-                "src": "691:6:0"
+                "lineno": 34,
+                "node_id": 162,
+                "src": "732:6:0"
               },
-              "lineno": 33,
-              "node_id": 152,
+              "lineno": 34,
+              "node_id": 161,
               "op": {
                 "ast_type": "Add",
                 "col_offset": 25,
                 "end_col_offset": 35,
-                "end_lineno": 33,
-                "lineno": 33,
-                "node_id": 211,
-                "src": "691:10:0"
+                "end_lineno": 34,
+                "lineno": 34,
+                "node_id": 258,
+                "src": "732:10:0"
               },
               "right": {
                 "ast_type": "Int",
                 "col_offset": 34,
                 "end_col_offset": 35,
-                "end_lineno": 33,
-                "lineno": 33,
-                "node_id": 156,
-                "src": "700:1:0",
+                "end_lineno": 34,
+                "lineno": 34,
+                "node_id": 165,
+                "src": "741:1:0",
                 "value": 1
               },
-              "src": "691:10:0"
+              "src": "732:10:0"
             }
           }
         ],
@@ -1208,22 +1288,22 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 28,
+            "end_lineno": 29,
             "id": "external",
-            "lineno": 28,
-            "node_id": 157,
-            "src": "544:8:0"
+            "lineno": 29,
+            "node_id": 166,
+            "src": "585:8:0"
           }
         ],
         "doc_string": null,
         "end_col_offset": 35,
-        "end_lineno": 33,
-        "lineno": 29,
+        "end_lineno": 34,
+        "lineno": 30,
         "name": "pushAddress",
-        "node_id": 122,
+        "node_id": 131,
         "pos": null,
         "returns": null,
-        "src": "553:148:0"
+        "src": "594:148:0"
       },
       {
         "args": {
@@ -1233,20 +1313,20 @@
                 "ast_type": "Name",
                 "col_offset": 33,
                 "end_col_offset": 40,
-                "end_lineno": 36,
+                "end_lineno": 37,
                 "id": "address",
-                "lineno": 36,
-                "node_id": 162,
-                "src": "746:7:0"
+                "lineno": 37,
+                "node_id": 171,
+                "src": "787:7:0"
               },
               "arg": "newAddress",
               "ast_type": "arg",
               "col_offset": 21,
               "end_col_offset": 40,
-              "end_lineno": 36,
-              "lineno": 36,
-              "node_id": 161,
-              "src": "734:19:0"
+              "end_lineno": 37,
+              "lineno": 37,
+              "node_id": 170,
+              "src": "775:19:0"
             }
           ],
           "ast_type": "arguments",
@@ -1254,10 +1334,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 40,
-          "end_lineno": 36,
-          "lineno": 36,
-          "node_id": 160,
-          "src": "734:19:0"
+          "end_lineno": 37,
+          "lineno": 37,
+          "node_id": 169,
+          "src": "775:19:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -1265,55 +1345,55 @@
             "ast_type": "Assign",
             "col_offset": 2,
             "end_col_offset": 38,
-            "end_lineno": 37,
-            "lineno": 37,
-            "node_id": 164,
-            "src": "758:36:0",
+            "end_lineno": 38,
+            "lineno": 38,
+            "node_id": 173,
+            "src": "799:36:0",
             "target": {
               "ast_type": "Subscript",
               "col_offset": 2,
               "end_col_offset": 25,
-              "end_lineno": 37,
-              "lineno": 37,
-              "node_id": 165,
+              "end_lineno": 38,
+              "lineno": 38,
+              "node_id": 174,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 23,
                 "end_col_offset": 24,
-                "end_lineno": 37,
-                "lineno": 37,
-                "node_id": 170,
-                "src": "779:1:0",
+                "end_lineno": 38,
+                "lineno": 38,
+                "node_id": 179,
+                "src": "820:1:0",
                 "value": {
                   "ast_type": "Int",
                   "col_offset": 23,
                   "end_col_offset": 24,
-                  "end_lineno": 37,
-                  "lineno": 37,
-                  "node_id": 171,
-                  "src": "779:1:0",
+                  "end_lineno": 38,
+                  "lineno": 38,
+                  "node_id": 180,
+                  "src": "820:1:0",
                   "value": 0
                 }
               },
-              "src": "758:23:0",
+              "src": "799:23:0",
               "value": {
                 "ast_type": "Attribute",
                 "attr": "publicAddresses",
                 "col_offset": 2,
                 "end_col_offset": 22,
-                "end_lineno": 37,
-                "lineno": 37,
-                "node_id": 166,
-                "src": "758:20:0",
+                "end_lineno": 38,
+                "lineno": 38,
+                "node_id": 175,
+                "src": "799:20:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 2,
                   "end_col_offset": 6,
-                  "end_lineno": 37,
+                  "end_lineno": 38,
                   "id": "self",
-                  "lineno": 37,
-                  "node_id": 167,
-                  "src": "758:4:0"
+                  "lineno": 38,
+                  "node_id": 176,
+                  "src": "799:4:0"
                 }
               }
             },
@@ -1321,11 +1401,11 @@
               "ast_type": "Name",
               "col_offset": 28,
               "end_col_offset": 38,
-              "end_lineno": 37,
+              "end_lineno": 38,
               "id": "newAddress",
-              "lineno": 37,
-              "node_id": 173,
-              "src": "784:10:0"
+              "lineno": 38,
+              "node_id": 182,
+              "src": "825:10:0"
             }
           }
         ],
@@ -1335,22 +1415,22 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 35,
+            "end_lineno": 36,
             "id": "external",
-            "lineno": 35,
-            "node_id": 175,
-            "src": "704:8:0"
+            "lineno": 36,
+            "node_id": 184,
+            "src": "745:8:0"
           }
         ],
         "doc_string": null,
         "end_col_offset": 38,
-        "end_lineno": 37,
-        "lineno": 36,
+        "end_lineno": 38,
+        "lineno": 37,
         "name": "addPublicAddress",
-        "node_id": 159,
+        "node_id": 168,
         "pos": null,
         "returns": null,
-        "src": "713:81:0"
+        "src": "754:81:0"
       },
       {
         "args": {
@@ -1360,20 +1440,20 @@
                 "ast_type": "Name",
                 "col_offset": 34,
                 "end_col_offset": 41,
-                "end_lineno": 40,
+                "end_lineno": 41,
                 "id": "address",
-                "lineno": 40,
-                "node_id": 180,
-                "src": "842:7:0"
+                "lineno": 41,
+                "node_id": 189,
+                "src": "883:7:0"
               },
               "arg": "newAddress",
               "ast_type": "arg",
               "col_offset": 22,
               "end_col_offset": 41,
-              "end_lineno": 40,
-              "lineno": 40,
-              "node_id": 179,
-              "src": "830:19:0"
+              "end_lineno": 41,
+              "lineno": 41,
+              "node_id": 188,
+              "src": "871:19:0"
             }
           ],
           "ast_type": "arguments",
@@ -1381,10 +1461,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 41,
-          "end_lineno": 40,
-          "lineno": 40,
-          "node_id": 178,
-          "src": "830:19:0"
+          "end_lineno": 41,
+          "lineno": 41,
+          "node_id": 187,
+          "src": "871:19:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -1393,48 +1473,48 @@
               "ast_type": "Name",
               "col_offset": 10,
               "end_col_offset": 17,
-              "end_lineno": 41,
+              "end_lineno": 42,
               "id": "uint256",
-              "lineno": 41,
-              "node_id": 185,
-              "src": "862:7:0"
+              "lineno": 42,
+              "node_id": 194,
+              "src": "903:7:0"
             },
             "ast_type": "AnnAssign",
             "col_offset": 2,
             "end_col_offset": 46,
-            "end_lineno": 41,
-            "lineno": 41,
-            "node_id": 182,
+            "end_lineno": 42,
+            "lineno": 42,
+            "node_id": 191,
             "simple": 1,
-            "src": "854:44:0",
+            "src": "895:44:0",
             "target": {
               "ast_type": "Name",
               "col_offset": 2,
               "end_col_offset": 8,
-              "end_lineno": 41,
+              "end_lineno": 42,
               "id": "length",
-              "lineno": 41,
-              "node_id": 183,
-              "src": "854:6:0"
+              "lineno": 42,
+              "node_id": 192,
+              "src": "895:6:0"
             },
             "value": {
               "ast_type": "Attribute",
               "attr": "publicAddressesLength",
               "col_offset": 20,
               "end_col_offset": 46,
-              "end_lineno": 41,
-              "lineno": 41,
-              "node_id": 187,
-              "src": "872:26:0",
+              "end_lineno": 42,
+              "lineno": 42,
+              "node_id": 196,
+              "src": "913:26:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 20,
                 "end_col_offset": 24,
-                "end_lineno": 41,
+                "end_lineno": 42,
                 "id": "self",
-                "lineno": 41,
-                "node_id": 188,
-                "src": "872:4:0"
+                "lineno": 42,
+                "node_id": 197,
+                "src": "913:4:0"
               }
             }
           },
@@ -1442,55 +1522,55 @@
             "ast_type": "Assign",
             "col_offset": 2,
             "end_col_offset": 43,
-            "end_lineno": 42,
-            "lineno": 42,
-            "node_id": 191,
-            "src": "901:41:0",
+            "end_lineno": 43,
+            "lineno": 43,
+            "node_id": 200,
+            "src": "942:41:0",
             "target": {
               "ast_type": "Subscript",
               "col_offset": 2,
               "end_col_offset": 30,
-              "end_lineno": 42,
-              "lineno": 42,
-              "node_id": 192,
+              "end_lineno": 43,
+              "lineno": 43,
+              "node_id": 201,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 23,
                 "end_col_offset": 29,
-                "end_lineno": 42,
-                "lineno": 42,
-                "node_id": 197,
-                "src": "922:6:0",
+                "end_lineno": 43,
+                "lineno": 43,
+                "node_id": 206,
+                "src": "963:6:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 23,
                   "end_col_offset": 29,
-                  "end_lineno": 42,
+                  "end_lineno": 43,
                   "id": "length",
-                  "lineno": 42,
-                  "node_id": 198,
-                  "src": "922:6:0"
+                  "lineno": 43,
+                  "node_id": 207,
+                  "src": "963:6:0"
                 }
               },
-              "src": "901:28:0",
+              "src": "942:28:0",
               "value": {
                 "ast_type": "Attribute",
                 "attr": "publicAddresses",
                 "col_offset": 2,
                 "end_col_offset": 22,
-                "end_lineno": 42,
-                "lineno": 42,
-                "node_id": 193,
-                "src": "901:20:0",
+                "end_lineno": 43,
+                "lineno": 43,
+                "node_id": 202,
+                "src": "942:20:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 2,
                   "end_col_offset": 6,
-                  "end_lineno": 42,
+                  "end_lineno": 43,
                   "id": "self",
-                  "lineno": 42,
-                  "node_id": 194,
-                  "src": "901:4:0"
+                  "lineno": 43,
+                  "node_id": 203,
+                  "src": "942:4:0"
                 }
               }
             },
@@ -1498,78 +1578,78 @@
               "ast_type": "Name",
               "col_offset": 33,
               "end_col_offset": 43,
-              "end_lineno": 42,
+              "end_lineno": 43,
               "id": "newAddress",
-              "lineno": 42,
-              "node_id": 201,
-              "src": "932:10:0"
+              "lineno": 43,
+              "node_id": 210,
+              "src": "973:10:0"
             }
           },
           {
             "ast_type": "Assign",
             "col_offset": 2,
             "end_col_offset": 41,
-            "end_lineno": 44,
-            "lineno": 44,
-            "node_id": 203,
-            "src": "946:39:0",
+            "end_lineno": 45,
+            "lineno": 45,
+            "node_id": 212,
+            "src": "987:39:0",
             "target": {
               "ast_type": "Attribute",
               "attr": "publicAddressesLength",
               "col_offset": 2,
               "end_col_offset": 28,
-              "end_lineno": 44,
-              "lineno": 44,
-              "node_id": 204,
-              "src": "946:26:0",
+              "end_lineno": 45,
+              "lineno": 45,
+              "node_id": 213,
+              "src": "987:26:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 2,
                 "end_col_offset": 6,
-                "end_lineno": 44,
+                "end_lineno": 45,
                 "id": "self",
-                "lineno": 44,
-                "node_id": 205,
-                "src": "946:4:0"
+                "lineno": 45,
+                "node_id": 214,
+                "src": "987:4:0"
               }
             },
             "value": {
               "ast_type": "BinOp",
               "col_offset": 31,
               "end_col_offset": 41,
-              "end_lineno": 44,
+              "end_lineno": 45,
               "left": {
                 "ast_type": "Name",
                 "col_offset": 31,
                 "end_col_offset": 37,
-                "end_lineno": 44,
+                "end_lineno": 45,
                 "id": "length",
-                "lineno": 44,
-                "node_id": 209,
-                "src": "975:6:0"
+                "lineno": 45,
+                "node_id": 218,
+                "src": "1016:6:0"
               },
-              "lineno": 44,
-              "node_id": 208,
+              "lineno": 45,
+              "node_id": 217,
               "op": {
                 "ast_type": "Add",
                 "col_offset": 31,
                 "end_col_offset": 41,
-                "end_lineno": 44,
-                "lineno": 44,
-                "node_id": 211,
-                "src": "975:10:0"
+                "end_lineno": 45,
+                "lineno": 45,
+                "node_id": 258,
+                "src": "1016:10:0"
               },
               "right": {
                 "ast_type": "Int",
                 "col_offset": 40,
                 "end_col_offset": 41,
-                "end_lineno": 44,
-                "lineno": 44,
-                "node_id": 212,
-                "src": "984:1:0",
+                "end_lineno": 45,
+                "lineno": 45,
+                "node_id": 221,
+                "src": "1025:1:0",
                 "value": 1
               },
-              "src": "975:10:0"
+              "src": "1016:10:0"
             }
           }
         ],
@@ -1579,22 +1659,266 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 39,
+            "end_lineno": 40,
             "id": "external",
-            "lineno": 39,
-            "node_id": 213,
-            "src": "799:8:0"
+            "lineno": 40,
+            "node_id": 222,
+            "src": "840:8:0"
           }
         ],
         "doc_string": null,
         "end_col_offset": 41,
-        "end_lineno": 44,
-        "lineno": 40,
+        "end_lineno": 45,
+        "lineno": 41,
         "name": "pushPublicAddress",
-        "node_id": 177,
+        "node_id": 186,
         "pos": null,
         "returns": null,
-        "src": "808:177:0"
+        "src": "849:177:0"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 30,
+                "end_col_offset": 37,
+                "end_lineno": 48,
+                "id": "address",
+                "lineno": 48,
+                "node_id": 227,
+                "src": "1068:7:0"
+              },
+              "arg": "newAddress",
+              "ast_type": "arg",
+              "col_offset": 18,
+              "end_col_offset": 37,
+              "end_lineno": 48,
+              "lineno": 48,
+              "node_id": 226,
+              "src": "1056:19:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 18,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 37,
+          "end_lineno": 48,
+          "lineno": 48,
+          "node_id": 225,
+          "src": "1056:19:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "annotation": {
+              "ast_type": "Name",
+              "col_offset": 10,
+              "end_col_offset": 17,
+              "end_lineno": 49,
+              "id": "uint256",
+              "lineno": 49,
+              "node_id": 232,
+              "src": "1088:7:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 2,
+            "end_col_offset": 40,
+            "end_lineno": 49,
+            "lineno": 49,
+            "node_id": 229,
+            "simple": 1,
+            "src": "1080:38:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 2,
+              "end_col_offset": 8,
+              "end_lineno": 49,
+              "id": "length",
+              "lineno": 49,
+              "node_id": 230,
+              "src": "1080:6:0"
+            },
+            "value": {
+              "ast_type": "Attribute",
+              "attr": "fixedSizeLength",
+              "col_offset": 20,
+              "end_col_offset": 40,
+              "end_lineno": 49,
+              "lineno": 49,
+              "node_id": 234,
+              "src": "1098:20:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 20,
+                "end_col_offset": 24,
+                "end_lineno": 49,
+                "id": "self",
+                "lineno": 49,
+                "node_id": 235,
+                "src": "1098:4:0"
+              }
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 2,
+            "end_col_offset": 42,
+            "end_lineno": 50,
+            "lineno": 50,
+            "node_id": 238,
+            "src": "1121:40:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 2,
+              "end_col_offset": 29,
+              "end_lineno": 50,
+              "lineno": 50,
+              "node_id": 239,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 22,
+                "end_col_offset": 28,
+                "end_lineno": 50,
+                "lineno": 50,
+                "node_id": 244,
+                "src": "1141:6:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 22,
+                  "end_col_offset": 28,
+                  "end_lineno": 50,
+                  "id": "length",
+                  "lineno": 50,
+                  "node_id": 245,
+                  "src": "1141:6:0"
+                }
+              },
+              "src": "1121:27:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "fixedSizeArray",
+                "col_offset": 2,
+                "end_col_offset": 21,
+                "end_lineno": 50,
+                "lineno": 50,
+                "node_id": 240,
+                "src": "1121:19:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 2,
+                  "end_col_offset": 6,
+                  "end_lineno": 50,
+                  "id": "self",
+                  "lineno": 50,
+                  "node_id": 241,
+                  "src": "1121:4:0"
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 32,
+              "end_col_offset": 42,
+              "end_lineno": 50,
+              "id": "newAddress",
+              "lineno": 50,
+              "node_id": 248,
+              "src": "1151:10:0"
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 2,
+            "end_col_offset": 35,
+            "end_lineno": 52,
+            "lineno": 52,
+            "node_id": 250,
+            "src": "1165:33:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "fixedSizeLength",
+              "col_offset": 2,
+              "end_col_offset": 22,
+              "end_lineno": 52,
+              "lineno": 52,
+              "node_id": 251,
+              "src": "1165:20:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 2,
+                "end_col_offset": 6,
+                "end_lineno": 52,
+                "id": "self",
+                "lineno": 52,
+                "node_id": 252,
+                "src": "1165:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "BinOp",
+              "col_offset": 25,
+              "end_col_offset": 35,
+              "end_lineno": 52,
+              "left": {
+                "ast_type": "Name",
+                "col_offset": 25,
+                "end_col_offset": 31,
+                "end_lineno": 52,
+                "id": "length",
+                "lineno": 52,
+                "node_id": 256,
+                "src": "1188:6:0"
+              },
+              "lineno": 52,
+              "node_id": 255,
+              "op": {
+                "ast_type": "Add",
+                "col_offset": 25,
+                "end_col_offset": 35,
+                "end_lineno": 52,
+                "lineno": 52,
+                "node_id": 258,
+                "src": "1188:10:0"
+              },
+              "right": {
+                "ast_type": "Int",
+                "col_offset": 34,
+                "end_col_offset": 35,
+                "end_lineno": 52,
+                "lineno": 52,
+                "node_id": 259,
+                "src": "1197:1:0",
+                "value": 1
+              },
+              "src": "1188:10:0"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 47,
+            "id": "external",
+            "lineno": 47,
+            "node_id": 260,
+            "src": "1029:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 35,
+        "end_lineno": 52,
+        "lineno": 48,
+        "name": "pushFixedSize",
+        "node_id": 224,
+        "pos": null,
+        "returns": null,
+        "src": "1038:160:0"
       },
       {
         "args": {
@@ -1604,20 +1928,20 @@
                 "ast_type": "Name",
                 "col_offset": 22,
                 "end_col_offset": 29,
-                "end_lineno": 48,
+                "end_lineno": 56,
                 "id": "uint256",
-                "lineno": 48,
-                "node_id": 218,
-                "src": "1025:7:0"
+                "lineno": 56,
+                "node_id": 265,
+                "src": "1238:7:0"
               },
               "arg": "index",
               "ast_type": "arg",
               "col_offset": 15,
               "end_col_offset": 29,
-              "end_lineno": 48,
-              "lineno": 48,
-              "node_id": 217,
-              "src": "1018:14:0"
+              "end_lineno": 56,
+              "lineno": 56,
+              "node_id": 264,
+              "src": "1231:14:0"
             }
           ],
           "ast_type": "arguments",
@@ -1625,10 +1949,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 29,
-          "end_lineno": 48,
-          "lineno": 48,
-          "node_id": 216,
-          "src": "1018:14:0"
+          "end_lineno": 56,
+          "lineno": 56,
+          "node_id": 263,
+          "src": "1231:14:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -1636,55 +1960,55 @@
             "ast_type": "Return",
             "col_offset": 2,
             "end_col_offset": 30,
-            "end_lineno": 49,
-            "lineno": 49,
-            "node_id": 220,
-            "src": "1048:28:0",
+            "end_lineno": 57,
+            "lineno": 57,
+            "node_id": 267,
+            "src": "1261:28:0",
             "value": {
               "ast_type": "Subscript",
               "col_offset": 9,
               "end_col_offset": 30,
-              "end_lineno": 49,
-              "lineno": 49,
-              "node_id": 221,
+              "end_lineno": 57,
+              "lineno": 57,
+              "node_id": 268,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 24,
                 "end_col_offset": 29,
-                "end_lineno": 49,
-                "lineno": 49,
-                "node_id": 226,
-                "src": "1070:5:0",
+                "end_lineno": 57,
+                "lineno": 57,
+                "node_id": 273,
+                "src": "1283:5:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 24,
                   "end_col_offset": 29,
-                  "end_lineno": 49,
+                  "end_lineno": 57,
                   "id": "index",
-                  "lineno": 49,
-                  "node_id": 227,
-                  "src": "1070:5:0"
+                  "lineno": 57,
+                  "node_id": 274,
+                  "src": "1283:5:0"
                 }
               },
-              "src": "1055:21:0",
+              "src": "1268:21:0",
               "value": {
                 "ast_type": "Attribute",
                 "attr": "addresses",
                 "col_offset": 9,
                 "end_col_offset": 23,
-                "end_lineno": 49,
-                "lineno": 49,
-                "node_id": 222,
-                "src": "1055:14:0",
+                "end_lineno": 57,
+                "lineno": 57,
+                "node_id": 269,
+                "src": "1268:14:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 9,
                   "end_col_offset": 13,
-                  "end_lineno": 49,
+                  "end_lineno": 57,
                   "id": "self",
-                  "lineno": 49,
-                  "node_id": 223,
-                  "src": "1055:4:0"
+                  "lineno": 57,
+                  "node_id": 270,
+                  "src": "1268:4:0"
                 }
               }
             }
@@ -1696,41 +2020,41 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 5,
-            "end_lineno": 46,
+            "end_lineno": 54,
             "id": "view",
-            "lineno": 46,
-            "node_id": 230,
-            "src": "988:4:0"
+            "lineno": 54,
+            "node_id": 277,
+            "src": "1201:4:0"
           },
           {
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 47,
+            "end_lineno": 55,
             "id": "external",
-            "lineno": 47,
-            "node_id": 232,
-            "src": "994:8:0"
+            "lineno": 55,
+            "node_id": 279,
+            "src": "1207:8:0"
           }
         ],
         "doc_string": null,
         "end_col_offset": 30,
-        "end_lineno": 49,
-        "lineno": 48,
+        "end_lineno": 57,
+        "lineno": 56,
         "name": "getAddress",
-        "node_id": 215,
+        "node_id": 262,
         "pos": null,
         "returns": {
           "ast_type": "Name",
           "col_offset": 34,
           "end_col_offset": 41,
-          "end_lineno": 48,
+          "end_lineno": 56,
           "id": "address",
-          "lineno": 48,
-          "node_id": 234,
-          "src": "1037:7:0"
+          "lineno": 56,
+          "node_id": 281,
+          "src": "1250:7:0"
         },
-        "src": "1003:73:0"
+        "src": "1216:73:0"
       },
       {
         "args": {
@@ -1740,10 +2064,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 3,
-          "end_lineno": 53,
-          "lineno": 53,
-          "node_id": 237,
-          "src": "1094:3:0"
+          "end_lineno": 61,
+          "lineno": 61,
+          "node_id": 284,
+          "src": "1307:3:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -1751,28 +2075,28 @@
             "ast_type": "Return",
             "col_offset": 2,
             "end_col_offset": 29,
-            "end_lineno": 54,
-            "lineno": 54,
-            "node_id": 238,
-            "src": "1133:27:0",
+            "end_lineno": 62,
+            "lineno": 62,
+            "node_id": 285,
+            "src": "1346:27:0",
             "value": {
               "ast_type": "Attribute",
               "attr": "addressesLength",
               "col_offset": 9,
               "end_col_offset": 29,
-              "end_lineno": 54,
-              "lineno": 54,
-              "node_id": 239,
-              "src": "1140:20:0",
+              "end_lineno": 62,
+              "lineno": 62,
+              "node_id": 286,
+              "src": "1353:20:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 9,
                 "end_col_offset": 13,
-                "end_lineno": 54,
+                "end_lineno": 62,
                 "id": "self",
-                "lineno": 54,
-                "node_id": 240,
-                "src": "1140:4:0"
+                "lineno": 62,
+                "node_id": 287,
+                "src": "1353:4:0"
               }
             }
           }
@@ -1783,41 +2107,41 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 5,
-            "end_lineno": 51,
+            "end_lineno": 59,
             "id": "view",
-            "lineno": 51,
-            "node_id": 243,
-            "src": "1079:4:0"
+            "lineno": 59,
+            "node_id": 290,
+            "src": "1292:4:0"
           },
           {
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 52,
+            "end_lineno": 60,
             "id": "external",
-            "lineno": 52,
-            "node_id": 245,
-            "src": "1085:8:0"
+            "lineno": 60,
+            "node_id": 292,
+            "src": "1298:8:0"
           }
         ],
         "doc_string": null,
         "end_col_offset": 29,
-        "end_lineno": 54,
-        "lineno": 53,
+        "end_lineno": 62,
+        "lineno": 61,
         "name": "getAddressesLength",
-        "node_id": 236,
+        "node_id": 283,
         "pos": null,
         "returns": {
           "ast_type": "Name",
           "col_offset": 28,
           "end_col_offset": 35,
-          "end_lineno": 53,
+          "end_lineno": 61,
           "id": "uint256",
-          "lineno": 53,
-          "node_id": 247,
-          "src": "1122:7:0"
+          "lineno": 61,
+          "node_id": 294,
+          "src": "1335:7:0"
         },
-        "src": "1094:66:0"
+        "src": "1307:66:0"
       },
       {
         "args": {
@@ -1827,10 +2151,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 3,
-          "end_lineno": 58,
-          "lineno": 58,
-          "node_id": 250,
-          "src": "1178:3:0"
+          "end_lineno": 66,
+          "lineno": 66,
+          "node_id": 297,
+          "src": "1391:3:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -1838,28 +2162,28 @@
             "ast_type": "Return",
             "col_offset": 2,
             "end_col_offset": 35,
-            "end_lineno": 59,
-            "lineno": 59,
-            "node_id": 251,
-            "src": "1223:33:0",
+            "end_lineno": 67,
+            "lineno": 67,
+            "node_id": 298,
+            "src": "1436:33:0",
             "value": {
               "ast_type": "Attribute",
               "attr": "publicAddressesLength",
               "col_offset": 9,
               "end_col_offset": 35,
-              "end_lineno": 59,
-              "lineno": 59,
-              "node_id": 252,
-              "src": "1230:26:0",
+              "end_lineno": 67,
+              "lineno": 67,
+              "node_id": 299,
+              "src": "1443:26:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 9,
                 "end_col_offset": 13,
-                "end_lineno": 59,
+                "end_lineno": 67,
                 "id": "self",
-                "lineno": 59,
-                "node_id": 253,
-                "src": "1230:4:0"
+                "lineno": 67,
+                "node_id": 300,
+                "src": "1443:4:0"
               }
             }
           }
@@ -1870,54 +2194,54 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 5,
-            "end_lineno": 56,
+            "end_lineno": 64,
             "id": "view",
-            "lineno": 56,
-            "node_id": 256,
-            "src": "1163:4:0"
+            "lineno": 64,
+            "node_id": 303,
+            "src": "1376:4:0"
           },
           {
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 57,
+            "end_lineno": 65,
             "id": "external",
-            "lineno": 57,
-            "node_id": 258,
-            "src": "1169:8:0"
+            "lineno": 65,
+            "node_id": 305,
+            "src": "1382:8:0"
           }
         ],
         "doc_string": null,
         "end_col_offset": 35,
-        "end_lineno": 59,
-        "lineno": 58,
+        "end_lineno": 67,
+        "lineno": 66,
         "name": "getPublicAddressesLength",
-        "node_id": 249,
+        "node_id": 296,
         "pos": null,
         "returns": {
           "ast_type": "Name",
           "col_offset": 34,
           "end_col_offset": 41,
-          "end_lineno": 58,
+          "end_lineno": 66,
           "id": "uint256",
-          "lineno": 58,
-          "node_id": 260,
-          "src": "1212:7:0"
+          "lineno": 66,
+          "node_id": 307,
+          "src": "1425:7:0"
         },
-        "src": "1178:78:0"
+        "src": "1391:78:0"
       }
     ],
     "col_offset": 0,
     "doc_string": null,
     "end_col_offset": 35,
-    "end_lineno": 59,
+    "end_lineno": 67,
     "lineno": 1,
     "name": "vy_contracts/StupidContractVY.vy",
     "node_id": 0,
-    "src": "0:1256:0"
+    "src": "0:1469:0"
   },
-  "bytecode": "0x6103a356600436101561000d57610399565b600035601c52600051341561002157600080fd5b638ba1066181141561004d5760043560a01c1561003d57600080fd5b600435600160c052602060c02055005b6337f851228114156100795760043560a01c1561006957600080fd5b600435600160c052602060c02055005b6334ef551b8114156100cb5760043560a01c1561009557600080fd5b60025461014052600435600160c052602060c020556101405160018181830110156100bf57600080fd5b80820190509050600255005b63b8d343628114156100f75760043560a01c156100e757600080fd5b600435600460c052602060c02055005b639f52100c81141561015d5760043560a01c1561011357600080fd5b600554610140526004356101405162010000811061013057600080fd5b600460c052602060c020015561014051600181818301101561015157600080fd5b80820190509050600555005b63b93f9b0a8114156101905760043562010000811061017b57600080fd5b600160c052602060c020015460005260206000f35b63cbf78f478114156101a85760025460005260206000f35b63ef7bc28d8114156101c05760055460005260206000f35b63909d807d8114156103335760043560a01c156101dc57600080fd5b600060043560e05260c052604060c0206101408080808460c052602060c02054815250506020810190508080808060018760c052602060c0200160c052602060c02054815250506020810190508080600160018860c052602060c0200160c052602060c0200154815250506020810190508080600260018860c052602060c0200160c052602060c0200154815250506020810190508080600360018860c052602060c0200160c052602060c0200154815250506020810190508080600460018860c052602060c0200160c052602060c0200154815250506020810190508080600560018860c052602060c0200160c052602060c0200154815250506020810190508080600660018860c052602060c0200160c052602060c0200154815250506020810190508080600760018860c052602060c0200160c052602060c02001548152505050506101209050905060c05260c051610140f35b6312399d88811415610364576004356003811061034f57600080fd5b600360c052602060c020015460005260206000f35b63e209c7a38114156103975760043562010000811061038257600080fd5b600460c052602060c020015460005260206000f35b505b60006000fd5b6100046103a3036100046000396100046103a3036000f3",
-  "bytecodeSha1": "ac47c00ce916449012988ca4a03957ca48c592d9",
+  "bytecode": "0x61041f56600436101561000d57610415565b600035601c52600051341561002157600080fd5b638ba1066181141561004d5760043560a01c1561003d57600080fd5b600435600160c052602060c02055005b6337f851228114156100795760043560a01c1561006957600080fd5b600435600160c052602060c02055005b6334ef551b8114156100cb5760043560a01c1561009557600080fd5b60025461014052600435600160c052602060c020556101405160018181830110156100bf57600080fd5b80820190509050600255005b63b8d343628114156100f75760043560a01c156100e757600080fd5b600435600560c052602060c02055005b639f52100c81141561015d5760043560a01c1561011357600080fd5b600654610140526004356101405162010000811061013057600080fd5b600560c052602060c020015561014051600181818301101561015157600080fd5b80820190509050600655005b6380f451388114156101c15760043560a01c1561017957600080fd5b60045461014052600435610140516008811061019457600080fd5b600360c052602060c02001556101405160018181830110156101b557600080fd5b80820190509050600455005b63b93f9b0a8114156101f4576004356201000081106101df57600080fd5b600160c052602060c020015460005260206000f35b63cbf78f4781141561020c5760025460005260206000f35b63ef7bc28d8114156102245760065460005260206000f35b63909d807d8114156103975760043560a01c1561024057600080fd5b600060043560e05260c052604060c0206101408080808460c052602060c02054815250506020810190508080808060018760c052602060c0200160c052602060c02054815250506020810190508080600160018860c052602060c0200160c052602060c0200154815250506020810190508080600260018860c052602060c0200160c052602060c0200154815250506020810190508080600360018860c052602060c0200160c052602060c0200154815250506020810190508080600460018860c052602060c0200160c052602060c0200154815250506020810190508080600560018860c052602060c0200160c052602060c0200154815250506020810190508080600660018860c052602060c0200160c052602060c0200154815250506020810190508080600760018860c052602060c0200160c052602060c02001548152505050506101209050905060c05260c051610140f35b6312399d888114156103c857600435600881106103b357600080fd5b600360c052602060c020015460005260206000f35b636316dbfc8114156103e05760045460005260206000f35b63e209c7a3811415610413576004356201000081106103fe57600080fd5b600560c052602060c020015460005260206000f35b505b60006000fd5b61000461041f0361000460003961000461041f036000f3",
+  "bytecodeSha1": "151fb8b2db447fe6256a4b7e62022c28935e5d71",
   "compiler": {
     "evm_version": "istanbul",
     "version": "0.2.12"
@@ -1931,88 +2255,102 @@
       "0": {
         "StupidContractVY.add0AddressNoAddressesInit": {
           "1": [
-            513,
-            541
+            554,
+            582
           ]
         },
         "StupidContractVY.add0AddressWithAddressesInit": {
           "0": [
-            420,
-            448
+            461,
+            489
           ]
         },
         "StupidContractVY.addPublicAddress": {
           "5": [
-            758,
-            794
+            799,
+            835
           ]
         },
         "StupidContractVY.getAddress": {
-          "9": [
-            1048,
-            1076
+          "12": [
+            1261,
+            1289
           ]
         },
         "StupidContractVY.getAddressesLength": {
-          "10": [
-            1133,
-            1160
+          "13": [
+            1346,
+            1373
           ]
         },
         "StupidContractVY.getPublicAddressesLength": {
-          "11": [
-            1223,
-            1256
+          "14": [
+            1436,
+            1469
           ]
         },
         "StupidContractVY.pushAddress": {
           "2": [
-            593,
-            631
+            634,
+            672
           ],
           "3": [
-            634,
-            664
+            675,
+            705
           ],
           "4": [
-            668,
-            701
+            709,
+            742
+          ]
+        },
+        "StupidContractVY.pushFixedSize": {
+          "9": [
+            1080,
+            1118
+          ],
+          "10": [
+            1121,
+            1161
+          ],
+          "11": [
+            1165,
+            1198
           ]
         },
         "StupidContractVY.pushPublicAddress": {
           "6": [
-            854,
-            898
+            895,
+            939
           ],
           "7": [
-            901,
-            942
+            942,
+            983
           ],
           "8": [
-            946,
-            985
+            987,
+            1026
           ]
         }
       }
     }
   },
   "dependencies": [],
-  "deployedBytecode": "0x600436101561000d57610399565b600035601c52600051341561002157600080fd5b638ba1066181141561004d5760043560a01c1561003d57600080fd5b600435600160c052602060c02055005b6337f851228114156100795760043560a01c1561006957600080fd5b600435600160c052602060c02055005b6334ef551b8114156100cb5760043560a01c1561009557600080fd5b60025461014052600435600160c052602060c020556101405160018181830110156100bf57600080fd5b80820190509050600255005b63b8d343628114156100f75760043560a01c156100e757600080fd5b600435600460c052602060c02055005b639f52100c81141561015d5760043560a01c1561011357600080fd5b600554610140526004356101405162010000811061013057600080fd5b600460c052602060c020015561014051600181818301101561015157600080fd5b80820190509050600555005b63b93f9b0a8114156101905760043562010000811061017b57600080fd5b600160c052602060c020015460005260206000f35b63cbf78f478114156101a85760025460005260206000f35b63ef7bc28d8114156101c05760055460005260206000f35b63909d807d8114156103335760043560a01c156101dc57600080fd5b600060043560e05260c052604060c0206101408080808460c052602060c02054815250506020810190508080808060018760c052602060c0200160c052602060c02054815250506020810190508080600160018860c052602060c0200160c052602060c0200154815250506020810190508080600260018860c052602060c0200160c052602060c0200154815250506020810190508080600360018860c052602060c0200160c052602060c0200154815250506020810190508080600460018860c052602060c0200160c052602060c0200154815250506020810190508080600560018860c052602060c0200160c052602060c0200154815250506020810190508080600660018860c052602060c0200160c052602060c0200154815250506020810190508080600760018860c052602060c0200160c052602060c02001548152505050506101209050905060c05260c051610140f35b6312399d88811415610364576004356003811061034f57600080fd5b600360c052602060c020015460005260206000f35b63e209c7a38114156103975760043562010000811061038257600080fd5b600460c052602060c020015460005260206000f35b505b60006000fd",
-  "deployedSourceMap": "-1:-1:0:-;;;;;:::-;;:::-;:::-;;;;;;;;;;:::-;;;;:::-;365:83;;;;;:::-;-1:-1;;;;;365:83;:::-;;;;:::-;440:8;-1:-1;420:14;:17;;;;;:28;365:83;:::-;460:81;;;;;:::-;-1:-1;;;;;460:81;:::-;;;;:::-;533:8;-1:-1;513:14;:17;;;;;:28;460:81;:::-;553:148;;;;;:::-;-1:-1;;;;;553:148;:::-;;;;:::-;611:20;-1:-1;593:38;553:148;654:10;-1:-1;634:14;:17;;;;;:30;691:6;:10;700:1;691:10;;;;-1:-1;;691:10;:::-;;;;:::-;;;;;;;;668:20;:33;553:148;:::-;713:81;;;;;:::-;-1:-1;;;;;713:81;:::-;;;;:::-;784:10;-1:-1;758:20;:23;;;;;:36;713:81;:::-;808:177;;;;;:::-;-1:-1;;;;;808:177;:::-;;;;:::-;872:26;-1:-1;854:44;808:177;932:10;-1:-1;922:6;901:28;;;;;:::-;;;;:::-;:20;:28;;;;;;:41;975:6;:10;984:1;975:10;;;;-1:-1;;975:10;:::-;;;;:::-;;;;;;;;946:26;:39;808:177;:::-;1003:73;;;;;:::-;1070:5;1055:21;;;;;:::-;;;;:::-;:14;:21;;;;;;1048:28;;;;;;1003:73::-;1094:66;;;;;:::-;1140:20;1133:27;;;;;;1094:66::-;1178:78;;;;;:::-;1230:26;1223:33;;;;;;1178:78::-;152:40;;;;;:::-;-1:-1;;;;;152:40;:::-;;;;:::-;-1:-1;;;152:40;;;;;;;;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;152:40;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;152:40;;;;;;;;:::-;263:18;;;;;:::-;-1:-1;;;;;;:::-;;;;:::-;;;;;;;;263:18;;;;;;:::-;300:22;;;;;:::-;-1:-1;;;;;;:::-;;;;:::-;;;;;;;;300:22;;;;;;:::-;-1:-1;:::-;;;;",
+  "deployedBytecode": "0x600436101561000d57610415565b600035601c52600051341561002157600080fd5b638ba1066181141561004d5760043560a01c1561003d57600080fd5b600435600160c052602060c02055005b6337f851228114156100795760043560a01c1561006957600080fd5b600435600160c052602060c02055005b6334ef551b8114156100cb5760043560a01c1561009557600080fd5b60025461014052600435600160c052602060c020556101405160018181830110156100bf57600080fd5b80820190509050600255005b63b8d343628114156100f75760043560a01c156100e757600080fd5b600435600560c052602060c02055005b639f52100c81141561015d5760043560a01c1561011357600080fd5b600654610140526004356101405162010000811061013057600080fd5b600560c052602060c020015561014051600181818301101561015157600080fd5b80820190509050600655005b6380f451388114156101c15760043560a01c1561017957600080fd5b60045461014052600435610140516008811061019457600080fd5b600360c052602060c02001556101405160018181830110156101b557600080fd5b80820190509050600455005b63b93f9b0a8114156101f4576004356201000081106101df57600080fd5b600160c052602060c020015460005260206000f35b63cbf78f4781141561020c5760025460005260206000f35b63ef7bc28d8114156102245760065460005260206000f35b63909d807d8114156103975760043560a01c1561024057600080fd5b600060043560e05260c052604060c0206101408080808460c052602060c02054815250506020810190508080808060018760c052602060c0200160c052602060c02054815250506020810190508080600160018860c052602060c0200160c052602060c0200154815250506020810190508080600260018860c052602060c0200160c052602060c0200154815250506020810190508080600360018860c052602060c0200160c052602060c0200154815250506020810190508080600460018860c052602060c0200160c052602060c0200154815250506020810190508080600560018860c052602060c0200160c052602060c0200154815250506020810190508080600660018860c052602060c0200160c052602060c0200154815250506020810190508080600760018860c052602060c0200160c052602060c02001548152505050506101209050905060c05260c051610140f35b6312399d888114156103c857600435600881106103b357600080fd5b600360c052602060c020015460005260206000f35b636316dbfc8114156103e05760045460005260206000f35b63e209c7a3811415610413576004356201000081106103fe57600080fd5b600560c052602060c020015460005260206000f35b505b60006000fd",
+  "deployedSourceMap": "-1:-1:0:-;;;;;:::-;;:::-;:::-;;;;;;;;;;:::-;;;;:::-;406:83;;;;;:::-;-1:-1;;;;;406:83;:::-;;;;:::-;481:8;-1:-1;461:14;:17;;;;;:28;406:83;:::-;501:81;;;;;:::-;-1:-1;;;;;501:81;:::-;;;;:::-;574:8;-1:-1;554:14;:17;;;;;:28;501:81;:::-;594:148;;;;;:::-;-1:-1;;;;;594:148;:::-;;;;:::-;652:20;-1:-1;634:38;594:148;695:10;-1:-1;675:14;:17;;;;;:30;732:6;:10;741:1;732:10;;;;-1:-1;;732:10;:::-;;;;:::-;;;;;;;;709:20;:33;594:148;:::-;754:81;;;;;:::-;-1:-1;;;;;754:81;:::-;;;;:::-;825:10;-1:-1;799:20;:23;;;;;:36;754:81;:::-;849:177;;;;;:::-;-1:-1;;;;;849:177;:::-;;;;:::-;913:26;-1:-1;895:44;849:177;973:10;-1:-1;963:6;942:28;;;;;:::-;;;;:::-;:20;:28;;;;;;:41;1016:6;:10;1025:1;1016:10;;;;-1:-1;;1016:10;:::-;;;;:::-;;;;;;;;987:26;:39;849:177;:::-;1038:160;;;;;:::-;-1:-1;;;;;1038:160;:::-;;;;:::-;1098:20;-1:-1;1080:38;1038:160;1151:10;-1:-1;1141:6;1121:27;;;;;:::-;;;;:::-;:19;:27;;;;;;:40;1188:6;:10;1197:1;1188:10;;;;-1:-1;;1188:10;:::-;;;;:::-;;;;;;;;1165:20;:33;1038:160;:::-;1216:73;;;;;:::-;1283:5;1268:21;;;;;:::-;;;;:::-;:14;:21;;;;;;1261:28;;;;;;1216:73::-;1307:66;;;;;:::-;1353:20;1346:27;;;;;;1307:66::-;1391:78;;;;;:::-;1443:26;1436:33;;;;;;1391:78::-;152:40;;;;;:::-;-1:-1;;;;;152:40;:::-;;;;:::-;-1:-1;;;152:40;;;;;;;;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;152:40;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;;;152:40;-1:-1;;;;;;;152:40;;;;;;;-1:-1;;;;;;;;;;152:40;;;;;;;;:::-;263:26;;;;;:::-;-1:-1;;;;;;:::-;;;;:::-;;;;;;;;263:26;;;;;;:::-;307:15;;;;;:::-;-1:-1;307:15;;;;;;:::-;341:22;;;;;:::-;-1:-1;;;;;;:::-;;;;:::-;;;;;;;;341:22;;;;;;:::-;-1:-1;:::-;;;;",
   "language": "Vyper",
   "natspec": {
     "methods": {}
   },
   "offset": [
     0,
-    1257
+    1470
   ],
-  "opcodes": "PUSH1 0x4 CALLDATASIZE LT ISZERO PUSH2 0x0D JUMPI PUSH2 0x399 JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0x1C MSTORE PUSH1 0x0 MLOAD CALLVALUE ISZERO PUSH2 0x021 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH4 0x8BA1661 DUP2 EQ ISZERO PUSH2 0x04D JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x03D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x4 CALLDATALOAD PUSH1 0x1 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SSTORE STOP JUMPDEST PUSH4 0x37F85122 DUP2 EQ ISZERO PUSH2 0x079 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x069 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x4 CALLDATALOAD PUSH1 0x1 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SSTORE STOP JUMPDEST PUSH4 0x34EF551B DUP2 EQ ISZERO PUSH2 0x0CB JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x095 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x2 SLOAD PUSH2 0x140 MSTORE PUSH1 0x4 CALLDATALOAD PUSH1 0x1 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SSTORE PUSH2 0x140 MLOAD PUSH1 0x1 DUP2 DUP2 DUP4 ADD LT ISZERO PUSH2 0x0BF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 DUP3 ADD SWAP1 POP SWAP1 POP PUSH1 0x2 SSTORE STOP JUMPDEST PUSH4 0xB8D34362 DUP2 EQ ISZERO PUSH2 0x0F7 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x0E7 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x4 CALLDATALOAD PUSH1 0x4 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SSTORE STOP JUMPDEST PUSH4 0x9F5210C DUP2 EQ ISZERO PUSH2 0x15D JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x113 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x5 SLOAD PUSH2 0x140 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x140 MLOAD PUSH3 0x100 DUP2 LT PUSH2 0x130 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x4 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SSTORE PUSH2 0x140 MLOAD PUSH1 0x1 DUP2 DUP2 DUP4 ADD LT ISZERO PUSH2 0x151 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 DUP3 ADD SWAP1 POP SWAP1 POP PUSH1 0x5 SSTORE STOP JUMPDEST PUSH4 0xB93F9BA DUP2 EQ ISZERO PUSH2 0x190 JUMPI PUSH1 0x4 CALLDATALOAD PUSH3 0x100 DUP2 LT PUSH2 0x17B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xCBF78F47 DUP2 EQ ISZERO PUSH2 0x1A8 JUMPI PUSH1 0x2 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xEF7BC28D DUP2 EQ ISZERO PUSH2 0x1C0 JUMPI PUSH1 0x5 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x909D807D DUP2 EQ ISZERO PUSH2 0x333 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x1DC JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 PUSH2 0x140 DUP1 DUP1 DUP1 DUP5 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 DUP1 DUP1 PUSH1 0x1 DUP8 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x1 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x2 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x3 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x4 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x5 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x6 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x7 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP POP POP PUSH2 0x120 SWAP1 POP SWAP1 POP PUSH1 0xC0 MSTORE PUSH1 0xC0 MLOAD PUSH2 0x140 RETURN JUMPDEST PUSH4 0x12399D88 DUP2 EQ ISZERO PUSH2 0x364 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0x3 DUP2 LT PUSH2 0x34F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xE29C7A3 DUP2 EQ ISZERO PUSH2 0x397 JUMPI PUSH1 0x4 CALLDATALOAD PUSH3 0x100 DUP2 LT PUSH2 0x382 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x4 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST POP JUMPDEST PUSH1 0x0 PUSH1 0x0 REVERT",
+  "opcodes": "PUSH1 0x4 CALLDATASIZE LT ISZERO PUSH2 0x0D JUMPI PUSH2 0x415 JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0x1C MSTORE PUSH1 0x0 MLOAD CALLVALUE ISZERO PUSH2 0x021 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH4 0x8BA1661 DUP2 EQ ISZERO PUSH2 0x04D JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x03D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x4 CALLDATALOAD PUSH1 0x1 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SSTORE STOP JUMPDEST PUSH4 0x37F85122 DUP2 EQ ISZERO PUSH2 0x079 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x069 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x4 CALLDATALOAD PUSH1 0x1 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SSTORE STOP JUMPDEST PUSH4 0x34EF551B DUP2 EQ ISZERO PUSH2 0x0CB JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x095 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x2 SLOAD PUSH2 0x140 MSTORE PUSH1 0x4 CALLDATALOAD PUSH1 0x1 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SSTORE PUSH2 0x140 MLOAD PUSH1 0x1 DUP2 DUP2 DUP4 ADD LT ISZERO PUSH2 0x0BF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 DUP3 ADD SWAP1 POP SWAP1 POP PUSH1 0x2 SSTORE STOP JUMPDEST PUSH4 0xB8D34362 DUP2 EQ ISZERO PUSH2 0x0F7 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x0E7 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x4 CALLDATALOAD PUSH1 0x5 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SSTORE STOP JUMPDEST PUSH4 0x9F5210C DUP2 EQ ISZERO PUSH2 0x15D JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x113 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x6 SLOAD PUSH2 0x140 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x140 MLOAD PUSH3 0x100 DUP2 LT PUSH2 0x130 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x5 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SSTORE PUSH2 0x140 MLOAD PUSH1 0x1 DUP2 DUP2 DUP4 ADD LT ISZERO PUSH2 0x151 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 DUP3 ADD SWAP1 POP SWAP1 POP PUSH1 0x6 SSTORE STOP JUMPDEST PUSH4 0x80F45138 DUP2 EQ ISZERO PUSH2 0x1C1 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x179 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x4 SLOAD PUSH2 0x140 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x140 MLOAD PUSH1 0x8 DUP2 LT PUSH2 0x194 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SSTORE PUSH2 0x140 MLOAD PUSH1 0x1 DUP2 DUP2 DUP4 ADD LT ISZERO PUSH2 0x1B5 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 DUP3 ADD SWAP1 POP SWAP1 POP PUSH1 0x4 SSTORE STOP JUMPDEST PUSH4 0xB93F9BA DUP2 EQ ISZERO PUSH2 0x1F4 JUMPI PUSH1 0x4 CALLDATALOAD PUSH3 0x100 DUP2 LT PUSH2 0x1DF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xCBF78F47 DUP2 EQ ISZERO PUSH2 0x2C JUMPI PUSH1 0x2 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xEF7BC28D DUP2 EQ ISZERO PUSH2 0x224 JUMPI PUSH1 0x6 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x909D807D DUP2 EQ ISZERO PUSH2 0x397 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x240 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 PUSH2 0x140 DUP1 DUP1 DUP1 DUP5 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 DUP1 DUP1 PUSH1 0x1 DUP8 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x1 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x2 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x3 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x4 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x5 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x6 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH1 0x7 PUSH1 0x1 DUP9 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD DUP2 MSTORE POP POP POP POP PUSH2 0x120 SWAP1 POP SWAP1 POP PUSH1 0xC0 MSTORE PUSH1 0xC0 MLOAD PUSH2 0x140 RETURN JUMPDEST PUSH4 0x12399D88 DUP2 EQ ISZERO PUSH2 0x3C8 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0x8 DUP2 LT PUSH2 0x3B3 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x6316DBFC DUP2 EQ ISZERO PUSH2 0x3E0 JUMPI PUSH1 0x4 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xE29C7A3 DUP2 EQ ISZERO PUSH2 0x413 JUMPI PUSH1 0x4 CALLDATALOAD PUSH3 0x100 DUP2 LT PUSH2 0x3FE JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x5 PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH1 0xC0 SHA3 ADD SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST POP JUMPDEST PUSH1 0x0 PUSH1 0x0 REVERT",
   "pcMap": {
     "0": {
       "offset": [
         0,
-        1256
+        1469
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2036,7 +2374,7 @@
     },
     "9": {
       "op": "PUSH2",
-      "value": "0x399"
+      "value": "0x415"
     },
     "12": {
       "op": "JUMP"
@@ -2100,8 +2438,8 @@
     "34": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "PUSH4",
       "path": "0",
@@ -2110,8 +2448,8 @@
     "39": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "DUP2",
       "path": "0"
@@ -2119,8 +2457,8 @@
     "40": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "EQ",
       "path": "0"
@@ -2128,8 +2466,8 @@
     "41": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "ISZERO",
       "path": "0"
@@ -2137,8 +2475,8 @@
     "42": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2147,8 +2485,8 @@
     "45": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "JUMPI",
       "path": "0"
@@ -2173,8 +2511,8 @@
     "53": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2183,8 +2521,8 @@
     "56": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "JUMPI",
       "path": "0"
@@ -2192,8 +2530,8 @@
     "57": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2202,8 +2540,8 @@
     "59": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "DUP1",
       "path": "0"
@@ -2211,8 +2549,8 @@
     "60": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "REVERT",
       "path": "0"
@@ -2220,8 +2558,8 @@
     "61": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -2229,8 +2567,8 @@
     "62": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        440,
-        448
+        481,
+        489
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2243,8 +2581,8 @@
     "65": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        420,
-        434
+        461,
+        475
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2253,8 +2591,8 @@
     "67": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        420,
-        437
+        461,
+        478
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2263,8 +2601,8 @@
     "69": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        420,
-        437
+        461,
+        478
       ],
       "op": "MSTORE",
       "path": "0"
@@ -2272,8 +2610,8 @@
     "70": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        420,
-        437
+        461,
+        478
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2282,8 +2620,8 @@
     "72": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        420,
-        437
+        461,
+        478
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2292,8 +2630,8 @@
     "74": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        420,
-        437
+        461,
+        478
       ],
       "op": "SHA3",
       "path": "0"
@@ -2301,8 +2639,8 @@
     "75": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        420,
-        448
+        461,
+        489
       ],
       "op": "SSTORE",
       "path": "0"
@@ -2310,8 +2648,8 @@
     "76": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "STOP",
       "path": "0"
@@ -2319,8 +2657,8 @@
     "77": {
       "fn": "StupidContractVY.add0AddressWithAddressesInit",
       "offset": [
-        365,
-        448
+        406,
+        489
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -2328,8 +2666,8 @@
     "78": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "PUSH4",
       "path": "0",
@@ -2338,8 +2676,8 @@
     "83": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "DUP2",
       "path": "0"
@@ -2347,8 +2685,8 @@
     "84": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "EQ",
       "path": "0"
@@ -2356,8 +2694,8 @@
     "85": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "ISZERO",
       "path": "0"
@@ -2365,8 +2703,8 @@
     "86": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2375,8 +2713,8 @@
     "89": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "JUMPI",
       "path": "0"
@@ -2401,8 +2739,8 @@
     "97": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2411,8 +2749,8 @@
     "100": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "JUMPI",
       "path": "0"
@@ -2420,8 +2758,8 @@
     "101": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2430,8 +2768,8 @@
     "103": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "DUP1",
       "path": "0"
@@ -2439,8 +2777,8 @@
     "104": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "REVERT",
       "path": "0"
@@ -2448,8 +2786,8 @@
     "105": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -2457,8 +2795,8 @@
     "106": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        533,
-        541
+        574,
+        582
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2471,8 +2809,8 @@
     "109": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        513,
-        527
+        554,
+        568
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2481,8 +2819,8 @@
     "111": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        513,
-        530
+        554,
+        571
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2491,8 +2829,8 @@
     "113": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        513,
-        530
+        554,
+        571
       ],
       "op": "MSTORE",
       "path": "0"
@@ -2500,8 +2838,8 @@
     "114": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        513,
-        530
+        554,
+        571
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2510,8 +2848,8 @@
     "116": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        513,
-        530
+        554,
+        571
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2520,8 +2858,8 @@
     "118": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        513,
-        530
+        554,
+        571
       ],
       "op": "SHA3",
       "path": "0"
@@ -2529,8 +2867,8 @@
     "119": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        513,
-        541
+        554,
+        582
       ],
       "op": "SSTORE",
       "path": "0"
@@ -2538,8 +2876,8 @@
     "120": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "STOP",
       "path": "0"
@@ -2547,8 +2885,8 @@
     "121": {
       "fn": "StupidContractVY.add0AddressNoAddressesInit",
       "offset": [
-        460,
-        541
+        501,
+        582
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -2556,8 +2894,8 @@
     "122": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "PUSH4",
       "path": "0",
@@ -2566,8 +2904,8 @@
     "127": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "DUP2",
       "path": "0"
@@ -2575,8 +2913,8 @@
     "128": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "EQ",
       "path": "0"
@@ -2584,8 +2922,8 @@
     "129": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "ISZERO",
       "path": "0"
@@ -2593,8 +2931,8 @@
     "130": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2603,8 +2941,8 @@
     "133": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "JUMPI",
       "path": "0"
@@ -2629,8 +2967,8 @@
     "141": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2639,8 +2977,8 @@
     "144": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "JUMPI",
       "path": "0"
@@ -2648,8 +2986,8 @@
     "145": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2658,8 +2996,8 @@
     "147": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "DUP1",
       "path": "0"
@@ -2667,8 +3005,8 @@
     "148": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "REVERT",
       "path": "0"
@@ -2676,8 +3014,8 @@
     "149": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -2685,8 +3023,8 @@
     "150": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        611,
-        631
+        652,
+        672
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2699,8 +3037,8 @@
     "153": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        593,
-        631
+        634,
+        672
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2709,8 +3047,8 @@
     "156": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "MSTORE",
       "path": "0"
@@ -2718,8 +3056,8 @@
     "157": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        654,
-        664
+        695,
+        705
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2732,8 +3070,8 @@
     "160": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        634,
-        648
+        675,
+        689
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2742,8 +3080,8 @@
     "162": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        634,
-        651
+        675,
+        692
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2752,8 +3090,8 @@
     "164": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        634,
-        651
+        675,
+        692
       ],
       "op": "MSTORE",
       "path": "0"
@@ -2761,8 +3099,8 @@
     "165": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        634,
-        651
+        675,
+        692
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2771,8 +3109,8 @@
     "167": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        634,
-        651
+        675,
+        692
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2781,8 +3119,8 @@
     "169": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        634,
-        651
+        675,
+        692
       ],
       "op": "SHA3",
       "path": "0"
@@ -2790,8 +3128,8 @@
     "170": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        634,
-        664
+        675,
+        705
       ],
       "op": "SSTORE",
       "path": "0"
@@ -2799,8 +3137,8 @@
     "171": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        697
+        732,
+        738
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2810,8 +3148,8 @@
     "174": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "MLOAD",
       "path": "0"
@@ -2819,8 +3157,8 @@
     "175": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        700,
-        701
+        741,
+        742
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2829,8 +3167,8 @@
     "177": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "DUP2",
       "path": "0"
@@ -2838,8 +3176,8 @@
     "178": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "DUP2",
       "path": "0"
@@ -2847,8 +3185,8 @@
     "179": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "DUP4",
       "path": "0"
@@ -2856,8 +3194,8 @@
     "180": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "ADD",
       "path": "0"
@@ -2871,8 +3209,8 @@
     "183": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2881,8 +3219,8 @@
     "186": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "JUMPI",
       "path": "0"
@@ -2890,8 +3228,8 @@
     "187": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2900,8 +3238,8 @@
     "189": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "DUP1",
       "path": "0"
@@ -2910,8 +3248,8 @@
       "dev": "Integer overflow",
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "REVERT",
       "path": "0"
@@ -2919,8 +3257,8 @@
     "191": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -2928,8 +3266,8 @@
     "192": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "DUP1",
       "path": "0"
@@ -2937,8 +3275,8 @@
     "193": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "DUP3",
       "path": "0"
@@ -2946,8 +3284,8 @@
     "194": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "ADD",
       "path": "0"
@@ -2955,8 +3293,8 @@
     "195": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "SWAP1",
       "path": "0"
@@ -2964,8 +3302,8 @@
     "196": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "POP",
       "path": "0"
@@ -2973,8 +3311,8 @@
     "197": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "SWAP1",
       "path": "0"
@@ -2982,8 +3320,8 @@
     "198": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        691,
-        701
+        732,
+        742
       ],
       "op": "POP",
       "path": "0"
@@ -2991,8 +3329,8 @@
     "199": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        668,
-        688
+        709,
+        729
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3001,8 +3339,8 @@
     "201": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        668,
-        701
+        709,
+        742
       ],
       "op": "SSTORE",
       "path": "0"
@@ -3010,8 +3348,8 @@
     "202": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "STOP",
       "path": "0"
@@ -3019,8 +3357,8 @@
     "203": {
       "fn": "StupidContractVY.pushAddress",
       "offset": [
-        553,
-        701
+        594,
+        742
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3028,8 +3366,8 @@
     "204": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "PUSH4",
       "path": "0",
@@ -3038,8 +3376,8 @@
     "209": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "DUP2",
       "path": "0"
@@ -3047,8 +3385,8 @@
     "210": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "EQ",
       "path": "0"
@@ -3056,8 +3394,8 @@
     "211": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "ISZERO",
       "path": "0"
@@ -3065,8 +3403,8 @@
     "212": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3075,8 +3413,8 @@
     "215": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3101,8 +3439,8 @@
     "223": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3111,8 +3449,8 @@
     "226": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3120,8 +3458,8 @@
     "227": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3130,8 +3468,8 @@
     "229": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "DUP1",
       "path": "0"
@@ -3139,8 +3477,8 @@
     "230": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "REVERT",
       "path": "0"
@@ -3148,8 +3486,8 @@
     "231": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3157,8 +3495,8 @@
     "232": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        784,
-        794
+        825,
+        835
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3171,18 +3509,18 @@
     "235": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        758,
-        778
+        799,
+        819
       ],
       "op": "PUSH1",
       "path": "0",
-      "value": "0x4"
+      "value": "0x5"
     },
     "237": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        758,
-        781
+        799,
+        822
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3191,8 +3529,8 @@
     "239": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        758,
-        781
+        799,
+        822
       ],
       "op": "MSTORE",
       "path": "0"
@@ -3200,8 +3538,8 @@
     "240": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        758,
-        781
+        799,
+        822
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3210,8 +3548,8 @@
     "242": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        758,
-        781
+        799,
+        822
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3220,8 +3558,8 @@
     "244": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        758,
-        781
+        799,
+        822
       ],
       "op": "SHA3",
       "path": "0"
@@ -3229,8 +3567,8 @@
     "245": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        758,
-        794
+        799,
+        835
       ],
       "op": "SSTORE",
       "path": "0"
@@ -3238,8 +3576,8 @@
     "246": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "STOP",
       "path": "0"
@@ -3247,8 +3585,8 @@
     "247": {
       "fn": "StupidContractVY.addPublicAddress",
       "offset": [
-        713,
-        794
+        754,
+        835
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3256,8 +3594,8 @@
     "248": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "PUSH4",
       "path": "0",
@@ -3266,8 +3604,8 @@
     "253": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "DUP2",
       "path": "0"
@@ -3275,8 +3613,8 @@
     "254": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "EQ",
       "path": "0"
@@ -3284,8 +3622,8 @@
     "255": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "ISZERO",
       "path": "0"
@@ -3293,8 +3631,8 @@
     "256": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3303,8 +3641,8 @@
     "259": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3329,8 +3667,8 @@
     "267": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3339,8 +3677,8 @@
     "270": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3348,8 +3686,8 @@
     "271": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3358,8 +3696,8 @@
     "273": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "DUP1",
       "path": "0"
@@ -3367,8 +3705,8 @@
     "274": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "REVERT",
       "path": "0"
@@ -3376,8 +3714,8 @@
     "275": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3385,13 +3723,13 @@
     "276": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        872,
-        898
+        913,
+        939
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 6,
-      "value": "0x5"
+      "value": "0x6"
     },
     "278": {
       "op": "SLOAD"
@@ -3399,8 +3737,8 @@
     "279": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        854,
-        898
+        895,
+        939
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3409,8 +3747,8 @@
     "282": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "MSTORE",
       "path": "0"
@@ -3418,8 +3756,8 @@
     "283": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        932,
-        942
+        973,
+        983
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3432,8 +3770,8 @@
     "286": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        922,
-        928
+        963,
+        969
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3442,8 +3780,8 @@
     "289": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "MLOAD",
       "path": "0"
@@ -3451,8 +3789,8 @@
     "290": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "PUSH3",
       "path": "0",
@@ -3461,8 +3799,8 @@
     "294": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "DUP2",
       "path": "0"
@@ -3470,8 +3808,8 @@
     "295": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "LT",
       "path": "0"
@@ -3479,8 +3817,8 @@
     "296": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3489,8 +3827,8 @@
     "299": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3498,8 +3836,8 @@
     "300": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3508,8 +3846,8 @@
     "302": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "DUP1",
       "path": "0"
@@ -3518,8 +3856,8 @@
       "dev": "Index out of range",
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "REVERT",
       "path": "0"
@@ -3527,8 +3865,8 @@
     "304": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3536,18 +3874,18 @@
     "305": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        921
+        942,
+        962
       ],
       "op": "PUSH1",
       "path": "0",
-      "value": "0x4"
+      "value": "0x5"
     },
     "307": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3556,8 +3894,8 @@
     "309": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "MSTORE",
       "path": "0"
@@ -3565,8 +3903,8 @@
     "310": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3575,8 +3913,8 @@
     "312": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3585,8 +3923,8 @@
     "314": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "SHA3",
       "path": "0"
@@ -3594,8 +3932,8 @@
     "315": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        929
+        942,
+        970
       ],
       "op": "ADD",
       "path": "0"
@@ -3603,8 +3941,8 @@
     "316": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        901,
-        942
+        942,
+        983
       ],
       "op": "SSTORE",
       "path": "0"
@@ -3612,8 +3950,8 @@
     "317": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        981
+        1016,
+        1022
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3623,8 +3961,8 @@
     "320": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "MLOAD",
       "path": "0"
@@ -3632,8 +3970,8 @@
     "321": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        984,
-        985
+        1025,
+        1026
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3642,8 +3980,8 @@
     "323": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "DUP2",
       "path": "0"
@@ -3651,8 +3989,8 @@
     "324": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "DUP2",
       "path": "0"
@@ -3660,8 +3998,8 @@
     "325": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "DUP4",
       "path": "0"
@@ -3669,8 +4007,8 @@
     "326": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "ADD",
       "path": "0"
@@ -3684,8 +4022,8 @@
     "329": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3694,8 +4032,8 @@
     "332": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3703,8 +4041,8 @@
     "333": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3713,8 +4051,8 @@
     "335": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "DUP1",
       "path": "0"
@@ -3723,8 +4061,8 @@
       "dev": "Integer overflow",
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "REVERT",
       "path": "0"
@@ -3732,8 +4070,8 @@
     "337": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3741,8 +4079,8 @@
     "338": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "DUP1",
       "path": "0"
@@ -3750,8 +4088,8 @@
     "339": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "DUP3",
       "path": "0"
@@ -3759,8 +4097,8 @@
     "340": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "ADD",
       "path": "0"
@@ -3768,8 +4106,8 @@
     "341": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "SWAP1",
       "path": "0"
@@ -3777,8 +4115,8 @@
     "342": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "POP",
       "path": "0"
@@ -3786,8 +4124,8 @@
     "343": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "SWAP1",
       "path": "0"
@@ -3795,8 +4133,8 @@
     "344": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        975,
-        985
+        1016,
+        1026
       ],
       "op": "POP",
       "path": "0"
@@ -3804,18 +4142,18 @@
     "345": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        946,
-        972
+        987,
+        1013
       ],
       "op": "PUSH1",
       "path": "0",
-      "value": "0x5"
+      "value": "0x6"
     },
     "347": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        946,
-        985
+        987,
+        1026
       ],
       "op": "SSTORE",
       "path": "0"
@@ -3823,8 +4161,8 @@
     "348": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "STOP",
       "path": "0"
@@ -3832,573 +4170,1158 @@
     "349": {
       "fn": "StupidContractVY.pushPublicAddress",
       "offset": [
-        808,
-        985
+        849,
+        1026
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
     "350": {
-      "fn": "StupidContractVY.getAddress",
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1003,
-        1076
+        1038,
+        1198
       ],
       "op": "PUSH4",
       "path": "0",
-      "value": "0xB93F9BA"
+      "value": "0x80F45138"
     },
     "355": {
-      "fn": "StupidContractVY.getAddress",
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1003,
-        1076
+        1038,
+        1198
       ],
       "op": "DUP2",
       "path": "0"
     },
     "356": {
-      "fn": "StupidContractVY.getAddress",
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1003,
-        1076
+        1038,
+        1198
       ],
       "op": "EQ",
       "path": "0"
     },
     "357": {
-      "fn": "StupidContractVY.getAddress",
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1003,
-        1076
+        1038,
+        1198
       ],
       "op": "ISZERO",
       "path": "0"
     },
     "358": {
-      "fn": "StupidContractVY.getAddress",
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1003,
-        1076
+        1038,
+        1198
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x190"
+      "value": "0x1C1"
     },
     "361": {
-      "fn": "StupidContractVY.getAddress",
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1003,
-        1076
+        1038,
+        1198
       ],
       "op": "JUMPI",
       "path": "0"
     },
     "362": {
-      "fn": "StupidContractVY.getAddress",
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "364": {
+      "op": "CALLDATALOAD"
+    },
+    "365": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "367": {
+      "op": "SHR"
+    },
+    "368": {
+      "op": "ISZERO"
+    },
+    "369": {
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1070,
-        1075
+        1038,
+        1198
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x179"
+    },
+    "372": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1038,
+        1198
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "373": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1038,
+        1198
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "375": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1038,
+        1198
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "376": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1038,
+        1198
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "377": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1038,
+        1198
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "378": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1098,
+        1118
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 9,
       "value": "0x4"
     },
-    "364": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
-      ],
-      "op": "CALLDATALOAD",
-      "path": "0"
+    "380": {
+      "op": "SLOAD"
     },
-    "365": {
-      "fn": "StupidContractVY.getAddress",
+    "381": {
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1055,
-        1076
-      ],
-      "op": "PUSH3",
-      "path": "0",
-      "value": "0x100"
-    },
-    "369": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
-      ],
-      "op": "DUP2",
-      "path": "0"
-    },
-    "370": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
-      ],
-      "op": "LT",
-      "path": "0"
-    },
-    "371": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
+        1080,
+        1118
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x17B"
-    },
-    "374": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
-      ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "375": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
-    "377": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
-      ],
-      "op": "DUP1",
-      "path": "0"
-    },
-    "378": {
-      "dev": "Index out of range",
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
-      ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "379": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "380": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1069
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x1"
-    },
-    "382": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xC0"
+      "value": "0x140"
     },
     "384": {
-      "fn": "StupidContractVY.getAddress",
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1055,
-        1076
+        1038,
+        1198
       ],
       "op": "MSTORE",
       "path": "0"
     },
     "385": {
-      "fn": "StupidContractVY.getAddress",
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1055,
-        1076
+        1151,
+        1161
       ],
       "op": "PUSH1",
       "path": "0",
-      "value": "0x20"
+      "statement": 10,
+      "value": "0x4"
     },
     "387": {
-      "fn": "StupidContractVY.getAddress",
+      "op": "CALLDATALOAD"
+    },
+    "388": {
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1055,
-        1076
+        1141,
+        1147
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x140"
+    },
+    "391": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "392": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x8"
+    },
+    "394": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "395": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "396": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x194"
+    },
+    "399": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "400": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "402": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "403": {
+      "dev": "Index out of range",
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "404": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "405": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1140
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "407": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0xC0"
     },
-    "389": {
-      "fn": "StupidContractVY.getAddress",
+    "409": {
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1055,
-        1076
-      ],
-      "op": "SHA3",
-      "path": "0"
-    },
-    "390": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1055,
-        1076
-      ],
-      "op": "ADD",
-      "path": "0"
-    },
-    "391": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1048,
-        1076
-      ],
-      "op": "SLOAD",
-      "path": "0"
-    },
-    "392": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1048,
-        1076
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
-    "394": {
-      "fn": "StupidContractVY.getAddress",
-      "offset": [
-        1048,
-        1076
+        1121,
+        1148
       ],
       "op": "MSTORE",
       "path": "0"
     },
-    "395": {
-      "fn": "StupidContractVY.getAddress",
+    "410": {
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1048,
-        1076
+        1121,
+        1148
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x20"
     },
-    "397": {
-      "fn": "StupidContractVY.getAddress",
+    "412": {
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1048,
-        1076
+        1121,
+        1148
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "414": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "SHA3",
+      "path": "0"
+    },
+    "415": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1148
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "416": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1121,
+        1161
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "417": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1194
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "statement": 11,
+      "value": "0x140"
+    },
+    "420": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "421": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1197,
+        1198
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "423": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "424": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "425": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "426": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "427": {
+      "op": "LT"
+    },
+    "428": {
+      "op": "ISZERO"
+    },
+    "429": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1B5"
+    },
+    "432": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "433": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "399": {
-      "fn": "StupidContractVY.getAddress",
+    "435": {
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1048,
-        1076
+        1188,
+        1198
       ],
-      "op": "RETURN",
+      "op": "DUP1",
       "path": "0"
     },
-    "400": {
-      "fn": "StupidContractVY.getAddress",
+    "436": {
+      "dev": "Integer overflow",
+      "fn": "StupidContractVY.pushFixedSize",
       "offset": [
-        1003,
-        1076
+        1188,
+        1198
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "437": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
-    "401": {
+    "438": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "439": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "440": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "441": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "442": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "443": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "444": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1188,
+        1198
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "445": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1165,
+        1185
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "447": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1165,
+        1198
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "448": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1038,
+        1198
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "449": {
+      "fn": "StupidContractVY.pushFixedSize",
+      "offset": [
+        1038,
+        1198
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "450": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1216,
+        1289
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xB93F9BA"
+    },
+    "455": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1216,
+        1289
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "456": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1216,
+        1289
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "457": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1216,
+        1289
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "458": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1216,
+        1289
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1F4"
+    },
+    "461": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1216,
+        1289
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "462": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1283,
+        1288
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 12,
+      "value": "0x4"
+    },
+    "464": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "465": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "PUSH3",
+      "path": "0",
+      "value": "0x100"
+    },
+    "469": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "470": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "471": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1DF"
+    },
+    "474": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "475": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "477": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "478": {
+      "dev": "Index out of range",
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "479": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "480": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1282
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "482": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "484": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "485": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "487": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "489": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "SHA3",
+      "path": "0"
+    },
+    "490": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1268,
+        1289
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "491": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1261,
+        1289
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "492": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1261,
+        1289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "494": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1261,
+        1289
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "495": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1261,
+        1289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "497": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1261,
+        1289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "499": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1261,
+        1289
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "500": {
+      "fn": "StupidContractVY.getAddress",
+      "offset": [
+        1216,
+        1289
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "501": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1094,
-        1160
+        1307,
+        1373
       ],
       "op": "PUSH4",
       "path": "0",
       "value": "0xCBF78F47"
     },
-    "406": {
+    "506": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1094,
-        1160
+        1307,
+        1373
       ],
       "op": "DUP2",
       "path": "0"
     },
-    "407": {
+    "507": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1094,
-        1160
+        1307,
+        1373
       ],
       "op": "EQ",
       "path": "0"
     },
-    "408": {
+    "508": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1094,
-        1160
+        1307,
+        1373
       ],
       "op": "ISZERO",
       "path": "0"
     },
-    "409": {
+    "509": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1094,
-        1160
+        1307,
+        1373
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x1A8"
+      "value": "0x2C"
     },
-    "412": {
+    "512": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1094,
-        1160
+        1307,
+        1373
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "413": {
+    "513": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1140,
-        1160
+        1353,
+        1373
       ],
       "op": "PUSH1",
       "path": "0",
-      "statement": 10,
+      "statement": 13,
       "value": "0x2"
     },
-    "415": {
+    "515": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1133,
-        1160
+        1346,
+        1373
       ],
       "op": "SLOAD",
       "path": "0"
     },
-    "416": {
+    "516": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1133,
-        1160
+        1346,
+        1373
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "418": {
+    "518": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1133,
-        1160
+        1346,
+        1373
       ],
       "op": "MSTORE",
       "path": "0"
     },
-    "419": {
+    "519": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1133,
-        1160
+        1346,
+        1373
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x20"
     },
-    "421": {
+    "521": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1133,
-        1160
+        1346,
+        1373
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "423": {
+    "523": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1133,
-        1160
+        1346,
+        1373
       ],
       "op": "RETURN",
       "path": "0"
     },
-    "424": {
+    "524": {
       "fn": "StupidContractVY.getAddressesLength",
       "offset": [
-        1094,
-        1160
+        1307,
+        1373
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
-    "425": {
+    "525": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1178,
-        1256
+        1391,
+        1469
       ],
       "op": "PUSH4",
       "path": "0",
       "value": "0xEF7BC28D"
     },
-    "430": {
+    "530": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1178,
-        1256
+        1391,
+        1469
       ],
       "op": "DUP2",
       "path": "0"
     },
-    "431": {
+    "531": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1178,
-        1256
+        1391,
+        1469
       ],
       "op": "EQ",
       "path": "0"
     },
-    "432": {
+    "532": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1178,
-        1256
+        1391,
+        1469
       ],
       "op": "ISZERO",
       "path": "0"
     },
-    "433": {
+    "533": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1178,
-        1256
+        1391,
+        1469
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x1C0"
+      "value": "0x224"
     },
-    "436": {
+    "536": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1178,
-        1256
+        1391,
+        1469
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "437": {
+    "537": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1230,
-        1256
+        1443,
+        1469
       ],
       "op": "PUSH1",
       "path": "0",
-      "statement": 11,
-      "value": "0x5"
+      "statement": 14,
+      "value": "0x6"
     },
-    "439": {
+    "539": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1223,
-        1256
+        1436,
+        1469
       ],
       "op": "SLOAD",
       "path": "0"
     },
-    "440": {
+    "540": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1223,
-        1256
+        1436,
+        1469
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "442": {
+    "542": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1223,
-        1256
+        1436,
+        1469
       ],
       "op": "MSTORE",
       "path": "0"
     },
-    "443": {
+    "543": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1223,
-        1256
+        1436,
+        1469
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x20"
     },
-    "445": {
+    "545": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1223,
-        1256
+        1436,
+        1469
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "447": {
+    "547": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1223,
-        1256
+        1436,
+        1469
       ],
       "op": "RETURN",
       "path": "0"
     },
-    "448": {
+    "548": {
       "fn": "StupidContractVY.getPublicAddressesLength",
       "offset": [
-        1178,
-        1256
+        1391,
+        1469
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
-    "449": {
+    "549": {
       "offset": [
         152,
         192
@@ -4407,7 +5330,7 @@
       "path": "0",
       "value": "0x909D807D"
     },
-    "454": {
+    "554": {
       "offset": [
         152,
         192
@@ -4415,7 +5338,7 @@
       "op": "DUP2",
       "path": "0"
     },
-    "455": {
+    "555": {
       "offset": [
         152,
         192
@@ -4423,7 +5346,7 @@
       "op": "EQ",
       "path": "0"
     },
-    "456": {
+    "556": {
       "offset": [
         152,
         192
@@ -4431,16 +5354,16 @@
       "op": "ISZERO",
       "path": "0"
     },
-    "457": {
+    "557": {
       "offset": [
         152,
         192
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x333"
+      "value": "0x397"
     },
-    "460": {
+    "560": {
       "offset": [
         152,
         192
@@ -4448,33 +5371,33 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "461": {
+    "561": {
       "op": "PUSH1",
       "value": "0x4"
     },
-    "463": {
+    "563": {
       "op": "CALLDATALOAD"
     },
-    "464": {
+    "564": {
       "op": "PUSH1",
       "value": "0xA0"
     },
-    "466": {
+    "566": {
       "op": "SHR"
     },
-    "467": {
+    "567": {
       "op": "ISZERO"
     },
-    "468": {
+    "568": {
       "offset": [
         152,
         192
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x1DC"
+      "value": "0x240"
     },
-    "471": {
+    "571": {
       "offset": [
         152,
         192
@@ -4482,7 +5405,7 @@
       "op": "JUMPI",
       "path": "0"
     },
-    "472": {
+    "572": {
       "offset": [
         152,
         192
@@ -4491,7 +5414,7 @@
       "path": "0",
       "value": "0x0"
     },
-    "474": {
+    "574": {
       "offset": [
         152,
         192
@@ -4499,7 +5422,7 @@
       "op": "DUP1",
       "path": "0"
     },
-    "475": {
+    "575": {
       "offset": [
         152,
         192
@@ -4507,7 +5430,7 @@
       "op": "REVERT",
       "path": "0"
     },
-    "476": {
+    "576": {
       "offset": [
         152,
         192
@@ -4515,18 +5438,18 @@
       "op": "JUMPDEST",
       "path": "0"
     },
-    "477": {
+    "577": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "479": {
+    "579": {
       "op": "PUSH1",
       "value": "0x4"
     },
-    "481": {
+    "581": {
       "op": "CALLDATALOAD"
     },
-    "482": {
+    "582": {
       "offset": [
         152,
         192
@@ -4535,7 +5458,7 @@
       "path": "0",
       "value": "0xE0"
     },
-    "484": {
+    "584": {
       "offset": [
         152,
         192
@@ -4543,7 +5466,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "485": {
+    "585": {
       "offset": [
         152,
         192
@@ -4552,7 +5475,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "487": {
+    "587": {
       "offset": [
         152,
         192
@@ -4560,7 +5483,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "488": {
+    "588": {
       "offset": [
         152,
         192
@@ -4569,7 +5492,7 @@
       "path": "0",
       "value": "0x40"
     },
-    "490": {
+    "590": {
       "offset": [
         152,
         192
@@ -4578,7 +5501,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "492": {
+    "592": {
       "offset": [
         152,
         192
@@ -4586,7 +5509,7 @@
       "op": "SHA3",
       "path": "0"
     },
-    "493": {
+    "593": {
       "offset": [
         152,
         192
@@ -4595,105 +5518,105 @@
       "path": "0",
       "value": "0x140"
     },
-    "496": {
+    "596": {
       "op": "DUP1"
     },
-    "497": {
+    "597": {
       "op": "DUP1"
     },
-    "498": {
+    "598": {
       "op": "DUP1"
     },
-    "499": {
+    "599": {
       "op": "DUP5"
     },
-    "500": {
+    "600": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "502": {
+    "602": {
       "op": "MSTORE"
     },
-    "503": {
+    "603": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "505": {
+    "605": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "507": {
+    "607": {
       "op": "SHA3"
     },
-    "508": {
+    "608": {
       "op": "SLOAD"
     },
-    "509": {
+    "609": {
       "op": "DUP2"
     },
-    "510": {
+    "610": {
       "op": "MSTORE"
     },
-    "511": {
+    "611": {
       "op": "POP"
     },
-    "512": {
+    "612": {
       "op": "POP"
     },
-    "513": {
+    "613": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "515": {
+    "615": {
       "op": "DUP2"
     },
-    "516": {
+    "616": {
       "op": "ADD"
     },
-    "517": {
+    "617": {
       "op": "SWAP1"
     },
-    "518": {
+    "618": {
       "op": "POP"
     },
-    "519": {
+    "619": {
       "op": "DUP1"
     },
-    "520": {
+    "620": {
       "op": "DUP1"
     },
-    "521": {
+    "621": {
       "op": "DUP1"
     },
-    "522": {
+    "622": {
       "op": "DUP1"
     },
-    "523": {
+    "623": {
       "op": "PUSH1",
       "value": "0x1"
     },
-    "525": {
+    "625": {
       "op": "DUP8"
     },
-    "526": {
+    "626": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "528": {
+    "628": {
       "op": "MSTORE"
     },
-    "529": {
+    "629": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "531": {
+    "631": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "533": {
+    "633": {
       "op": "SHA3"
     },
-    "534": {
+    "634": {
       "offset": [
         152,
         192
@@ -4701,7 +5624,7 @@
       "op": "ADD",
       "path": "0"
     },
-    "535": {
+    "635": {
       "offset": [
         152,
         192
@@ -4710,7 +5633,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "537": {
+    "637": {
       "offset": [
         152,
         192
@@ -4718,7 +5641,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "538": {
+    "638": {
       "offset": [
         152,
         192
@@ -4727,7 +5650,7 @@
       "path": "0",
       "value": "0x20"
     },
-    "540": {
+    "640": {
       "offset": [
         152,
         192
@@ -4736,7 +5659,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "542": {
+    "642": {
       "offset": [
         152,
         192
@@ -4744,44 +5667,44 @@
       "op": "SHA3",
       "path": "0"
     },
-    "543": {
+    "643": {
       "op": "SLOAD"
     },
-    "544": {
+    "644": {
       "op": "DUP2"
     },
-    "545": {
+    "645": {
       "op": "MSTORE"
     },
-    "546": {
+    "646": {
       "op": "POP"
     },
-    "547": {
+    "647": {
       "op": "POP"
     },
-    "548": {
+    "648": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "550": {
+    "650": {
       "op": "DUP2"
     },
-    "551": {
+    "651": {
       "op": "ADD"
     },
-    "552": {
+    "652": {
       "op": "SWAP1"
     },
-    "553": {
+    "653": {
       "op": "POP"
     },
-    "554": {
+    "654": {
       "op": "DUP1"
     },
-    "555": {
+    "655": {
       "op": "DUP1"
     },
-    "556": {
+    "656": {
       "offset": [
         152,
         192
@@ -4790,32 +5713,32 @@
       "path": "0",
       "value": "0x1"
     },
-    "558": {
+    "658": {
       "op": "PUSH1",
       "value": "0x1"
     },
-    "560": {
+    "660": {
       "op": "DUP9"
     },
-    "561": {
+    "661": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "563": {
+    "663": {
       "op": "MSTORE"
     },
-    "564": {
+    "664": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "566": {
+    "666": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "568": {
+    "668": {
       "op": "SHA3"
     },
-    "569": {
+    "669": {
       "offset": [
         152,
         192
@@ -4823,7 +5746,7 @@
       "op": "ADD",
       "path": "0"
     },
-    "570": {
+    "670": {
       "offset": [
         152,
         192
@@ -4832,7 +5755,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "572": {
+    "672": {
       "offset": [
         152,
         192
@@ -4840,7 +5763,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "573": {
+    "673": {
       "offset": [
         152,
         192
@@ -4849,7 +5772,7 @@
       "path": "0",
       "value": "0x20"
     },
-    "575": {
+    "675": {
       "offset": [
         152,
         192
@@ -4858,7 +5781,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "577": {
+    "677": {
       "offset": [
         152,
         192
@@ -4866,7 +5789,7 @@
       "op": "SHA3",
       "path": "0"
     },
-    "578": {
+    "678": {
       "offset": [
         152,
         192
@@ -4874,44 +5797,44 @@
       "op": "ADD",
       "path": "0"
     },
-    "579": {
+    "679": {
       "op": "SLOAD"
     },
-    "580": {
+    "680": {
       "op": "DUP2"
     },
-    "581": {
+    "681": {
       "op": "MSTORE"
     },
-    "582": {
+    "682": {
       "op": "POP"
     },
-    "583": {
+    "683": {
       "op": "POP"
     },
-    "584": {
+    "684": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "586": {
+    "686": {
       "op": "DUP2"
     },
-    "587": {
+    "687": {
       "op": "ADD"
     },
-    "588": {
+    "688": {
       "op": "SWAP1"
     },
-    "589": {
+    "689": {
       "op": "POP"
     },
-    "590": {
+    "690": {
       "op": "DUP1"
     },
-    "591": {
+    "691": {
       "op": "DUP1"
     },
-    "592": {
+    "692": {
       "offset": [
         152,
         192
@@ -4920,32 +5843,32 @@
       "path": "0",
       "value": "0x2"
     },
-    "594": {
+    "694": {
       "op": "PUSH1",
       "value": "0x1"
     },
-    "596": {
+    "696": {
       "op": "DUP9"
     },
-    "597": {
+    "697": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "599": {
+    "699": {
       "op": "MSTORE"
     },
-    "600": {
+    "700": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "602": {
+    "702": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "604": {
+    "704": {
       "op": "SHA3"
     },
-    "605": {
+    "705": {
       "offset": [
         152,
         192
@@ -4953,7 +5876,7 @@
       "op": "ADD",
       "path": "0"
     },
-    "606": {
+    "706": {
       "offset": [
         152,
         192
@@ -4962,7 +5885,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "608": {
+    "708": {
       "offset": [
         152,
         192
@@ -4970,7 +5893,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "609": {
+    "709": {
       "offset": [
         152,
         192
@@ -4979,7 +5902,7 @@
       "path": "0",
       "value": "0x20"
     },
-    "611": {
+    "711": {
       "offset": [
         152,
         192
@@ -4988,7 +5911,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "613": {
+    "713": {
       "offset": [
         152,
         192
@@ -4996,7 +5919,7 @@
       "op": "SHA3",
       "path": "0"
     },
-    "614": {
+    "714": {
       "offset": [
         152,
         192
@@ -5004,44 +5927,44 @@
       "op": "ADD",
       "path": "0"
     },
-    "615": {
+    "715": {
       "op": "SLOAD"
     },
-    "616": {
+    "716": {
       "op": "DUP2"
     },
-    "617": {
+    "717": {
       "op": "MSTORE"
     },
-    "618": {
+    "718": {
       "op": "POP"
     },
-    "619": {
+    "719": {
       "op": "POP"
     },
-    "620": {
+    "720": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "622": {
+    "722": {
       "op": "DUP2"
     },
-    "623": {
+    "723": {
       "op": "ADD"
     },
-    "624": {
+    "724": {
       "op": "SWAP1"
     },
-    "625": {
+    "725": {
       "op": "POP"
     },
-    "626": {
+    "726": {
       "op": "DUP1"
     },
-    "627": {
+    "727": {
       "op": "DUP1"
     },
-    "628": {
+    "728": {
       "offset": [
         152,
         192
@@ -5050,32 +5973,32 @@
       "path": "0",
       "value": "0x3"
     },
-    "630": {
+    "730": {
       "op": "PUSH1",
       "value": "0x1"
     },
-    "632": {
+    "732": {
       "op": "DUP9"
     },
-    "633": {
+    "733": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "635": {
+    "735": {
       "op": "MSTORE"
     },
-    "636": {
+    "736": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "638": {
+    "738": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "640": {
+    "740": {
       "op": "SHA3"
     },
-    "641": {
+    "741": {
       "offset": [
         152,
         192
@@ -5083,7 +6006,7 @@
       "op": "ADD",
       "path": "0"
     },
-    "642": {
+    "742": {
       "offset": [
         152,
         192
@@ -5092,7 +6015,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "644": {
+    "744": {
       "offset": [
         152,
         192
@@ -5100,7 +6023,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "645": {
+    "745": {
       "offset": [
         152,
         192
@@ -5109,7 +6032,7 @@
       "path": "0",
       "value": "0x20"
     },
-    "647": {
+    "747": {
       "offset": [
         152,
         192
@@ -5118,7 +6041,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "649": {
+    "749": {
       "offset": [
         152,
         192
@@ -5126,7 +6049,7 @@
       "op": "SHA3",
       "path": "0"
     },
-    "650": {
+    "750": {
       "offset": [
         152,
         192
@@ -5134,44 +6057,44 @@
       "op": "ADD",
       "path": "0"
     },
-    "651": {
+    "751": {
       "op": "SLOAD"
     },
-    "652": {
+    "752": {
       "op": "DUP2"
     },
-    "653": {
+    "753": {
       "op": "MSTORE"
     },
-    "654": {
+    "754": {
       "op": "POP"
     },
-    "655": {
+    "755": {
       "op": "POP"
     },
-    "656": {
+    "756": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "658": {
+    "758": {
       "op": "DUP2"
     },
-    "659": {
+    "759": {
       "op": "ADD"
     },
-    "660": {
+    "760": {
       "op": "SWAP1"
     },
-    "661": {
+    "761": {
       "op": "POP"
     },
-    "662": {
+    "762": {
       "op": "DUP1"
     },
-    "663": {
+    "763": {
       "op": "DUP1"
     },
-    "664": {
+    "764": {
       "offset": [
         152,
         192
@@ -5180,32 +6103,32 @@
       "path": "0",
       "value": "0x4"
     },
-    "666": {
+    "766": {
       "op": "PUSH1",
       "value": "0x1"
     },
-    "668": {
+    "768": {
       "op": "DUP9"
     },
-    "669": {
+    "769": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "671": {
+    "771": {
       "op": "MSTORE"
     },
-    "672": {
+    "772": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "674": {
+    "774": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "676": {
+    "776": {
       "op": "SHA3"
     },
-    "677": {
+    "777": {
       "offset": [
         152,
         192
@@ -5213,7 +6136,7 @@
       "op": "ADD",
       "path": "0"
     },
-    "678": {
+    "778": {
       "offset": [
         152,
         192
@@ -5222,7 +6145,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "680": {
+    "780": {
       "offset": [
         152,
         192
@@ -5230,7 +6153,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "681": {
+    "781": {
       "offset": [
         152,
         192
@@ -5239,7 +6162,7 @@
       "path": "0",
       "value": "0x20"
     },
-    "683": {
+    "783": {
       "offset": [
         152,
         192
@@ -5248,7 +6171,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "685": {
+    "785": {
       "offset": [
         152,
         192
@@ -5256,7 +6179,7 @@
       "op": "SHA3",
       "path": "0"
     },
-    "686": {
+    "786": {
       "offset": [
         152,
         192
@@ -5264,44 +6187,44 @@
       "op": "ADD",
       "path": "0"
     },
-    "687": {
+    "787": {
       "op": "SLOAD"
     },
-    "688": {
+    "788": {
       "op": "DUP2"
     },
-    "689": {
+    "789": {
       "op": "MSTORE"
     },
-    "690": {
+    "790": {
       "op": "POP"
     },
-    "691": {
+    "791": {
       "op": "POP"
     },
-    "692": {
+    "792": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "694": {
+    "794": {
       "op": "DUP2"
     },
-    "695": {
+    "795": {
       "op": "ADD"
     },
-    "696": {
+    "796": {
       "op": "SWAP1"
     },
-    "697": {
+    "797": {
       "op": "POP"
     },
-    "698": {
+    "798": {
       "op": "DUP1"
     },
-    "699": {
+    "799": {
       "op": "DUP1"
     },
-    "700": {
+    "800": {
       "offset": [
         152,
         192
@@ -5310,32 +6233,32 @@
       "path": "0",
       "value": "0x5"
     },
-    "702": {
+    "802": {
       "op": "PUSH1",
       "value": "0x1"
     },
-    "704": {
+    "804": {
       "op": "DUP9"
     },
-    "705": {
+    "805": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "707": {
+    "807": {
       "op": "MSTORE"
     },
-    "708": {
+    "808": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "710": {
+    "810": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "712": {
+    "812": {
       "op": "SHA3"
     },
-    "713": {
+    "813": {
       "offset": [
         152,
         192
@@ -5343,7 +6266,7 @@
       "op": "ADD",
       "path": "0"
     },
-    "714": {
+    "814": {
       "offset": [
         152,
         192
@@ -5352,7 +6275,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "716": {
+    "816": {
       "offset": [
         152,
         192
@@ -5360,7 +6283,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "717": {
+    "817": {
       "offset": [
         152,
         192
@@ -5369,7 +6292,7 @@
       "path": "0",
       "value": "0x20"
     },
-    "719": {
+    "819": {
       "offset": [
         152,
         192
@@ -5378,7 +6301,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "721": {
+    "821": {
       "offset": [
         152,
         192
@@ -5386,7 +6309,7 @@
       "op": "SHA3",
       "path": "0"
     },
-    "722": {
+    "822": {
       "offset": [
         152,
         192
@@ -5394,44 +6317,44 @@
       "op": "ADD",
       "path": "0"
     },
-    "723": {
+    "823": {
       "op": "SLOAD"
     },
-    "724": {
+    "824": {
       "op": "DUP2"
     },
-    "725": {
+    "825": {
       "op": "MSTORE"
     },
-    "726": {
+    "826": {
       "op": "POP"
     },
-    "727": {
+    "827": {
       "op": "POP"
     },
-    "728": {
+    "828": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "730": {
+    "830": {
       "op": "DUP2"
     },
-    "731": {
+    "831": {
       "op": "ADD"
     },
-    "732": {
+    "832": {
       "op": "SWAP1"
     },
-    "733": {
+    "833": {
       "op": "POP"
     },
-    "734": {
+    "834": {
       "op": "DUP1"
     },
-    "735": {
+    "835": {
       "op": "DUP1"
     },
-    "736": {
+    "836": {
       "offset": [
         152,
         192
@@ -5440,32 +6363,32 @@
       "path": "0",
       "value": "0x6"
     },
-    "738": {
+    "838": {
       "op": "PUSH1",
       "value": "0x1"
     },
-    "740": {
+    "840": {
       "op": "DUP9"
     },
-    "741": {
+    "841": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "743": {
+    "843": {
       "op": "MSTORE"
     },
-    "744": {
+    "844": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "746": {
+    "846": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "748": {
+    "848": {
       "op": "SHA3"
     },
-    "749": {
+    "849": {
       "offset": [
         152,
         192
@@ -5473,7 +6396,7 @@
       "op": "ADD",
       "path": "0"
     },
-    "750": {
+    "850": {
       "offset": [
         152,
         192
@@ -5482,7 +6405,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "752": {
+    "852": {
       "offset": [
         152,
         192
@@ -5490,7 +6413,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "753": {
+    "853": {
       "offset": [
         152,
         192
@@ -5499,7 +6422,7 @@
       "path": "0",
       "value": "0x20"
     },
-    "755": {
+    "855": {
       "offset": [
         152,
         192
@@ -5508,7 +6431,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "757": {
+    "857": {
       "offset": [
         152,
         192
@@ -5516,7 +6439,7 @@
       "op": "SHA3",
       "path": "0"
     },
-    "758": {
+    "858": {
       "offset": [
         152,
         192
@@ -5524,44 +6447,44 @@
       "op": "ADD",
       "path": "0"
     },
-    "759": {
+    "859": {
       "op": "SLOAD"
     },
-    "760": {
+    "860": {
       "op": "DUP2"
     },
-    "761": {
+    "861": {
       "op": "MSTORE"
     },
-    "762": {
+    "862": {
       "op": "POP"
     },
-    "763": {
+    "863": {
       "op": "POP"
     },
-    "764": {
+    "864": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "766": {
+    "866": {
       "op": "DUP2"
     },
-    "767": {
+    "867": {
       "op": "ADD"
     },
-    "768": {
+    "868": {
       "op": "SWAP1"
     },
-    "769": {
+    "869": {
       "op": "POP"
     },
-    "770": {
+    "870": {
       "op": "DUP1"
     },
-    "771": {
+    "871": {
       "op": "DUP1"
     },
-    "772": {
+    "872": {
       "offset": [
         152,
         192
@@ -5570,32 +6493,32 @@
       "path": "0",
       "value": "0x7"
     },
-    "774": {
+    "874": {
       "op": "PUSH1",
       "value": "0x1"
     },
-    "776": {
+    "876": {
       "op": "DUP9"
     },
-    "777": {
+    "877": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "779": {
+    "879": {
       "op": "MSTORE"
     },
-    "780": {
+    "880": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "782": {
+    "882": {
       "op": "PUSH1",
       "value": "0xC0"
     },
-    "784": {
+    "884": {
       "op": "SHA3"
     },
-    "785": {
+    "885": {
       "offset": [
         152,
         192
@@ -5603,7 +6526,7 @@
       "op": "ADD",
       "path": "0"
     },
-    "786": {
+    "886": {
       "offset": [
         152,
         192
@@ -5612,7 +6535,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "788": {
+    "888": {
       "offset": [
         152,
         192
@@ -5620,7 +6543,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "789": {
+    "889": {
       "offset": [
         152,
         192
@@ -5629,7 +6552,7 @@
       "path": "0",
       "value": "0x20"
     },
-    "791": {
+    "891": {
       "offset": [
         152,
         192
@@ -5638,7 +6561,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "793": {
+    "893": {
       "offset": [
         152,
         192
@@ -5646,7 +6569,7 @@
       "op": "SHA3",
       "path": "0"
     },
-    "794": {
+    "894": {
       "offset": [
         152,
         192
@@ -5654,38 +6577,38 @@
       "op": "ADD",
       "path": "0"
     },
-    "795": {
+    "895": {
       "op": "SLOAD"
     },
-    "796": {
+    "896": {
       "op": "DUP2"
     },
-    "797": {
+    "897": {
       "op": "MSTORE"
     },
-    "798": {
+    "898": {
       "op": "POP"
     },
-    "799": {
+    "899": {
       "op": "POP"
     },
-    "800": {
+    "900": {
       "op": "POP"
     },
-    "801": {
+    "901": {
       "op": "POP"
     },
-    "802": {
+    "902": {
       "op": "PUSH2",
       "value": "0x120"
     },
-    "805": {
+    "905": {
       "op": "SWAP1"
     },
-    "806": {
+    "906": {
       "op": "POP"
     },
-    "807": {
+    "907": {
       "offset": [
         152,
         192
@@ -5693,7 +6616,7 @@
       "op": "SWAP1",
       "path": "0"
     },
-    "808": {
+    "908": {
       "offset": [
         152,
         192
@@ -5701,7 +6624,7 @@
       "op": "POP",
       "path": "0"
     },
-    "809": {
+    "909": {
       "offset": [
         152,
         192
@@ -5710,7 +6633,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "811": {
+    "911": {
       "offset": [
         152,
         192
@@ -5718,7 +6641,7 @@
       "op": "MSTORE",
       "path": "0"
     },
-    "812": {
+    "912": {
       "offset": [
         152,
         192
@@ -5727,7 +6650,7 @@
       "path": "0",
       "value": "0xC0"
     },
-    "814": {
+    "914": {
       "offset": [
         152,
         192
@@ -5735,7 +6658,7 @@
       "op": "MLOAD",
       "path": "0"
     },
-    "815": {
+    "915": {
       "offset": [
         152,
         192
@@ -5744,384 +6667,497 @@
       "path": "0",
       "value": "0x140"
     },
-    "818": {
-      "offset": [
-        152,
-        192
-      ],
-      "op": "RETURN",
-      "path": "0"
-    },
-    "819": {
-      "offset": [
-        152,
-        192
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "820": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "PUSH4",
-      "path": "0",
-      "value": "0x12399D88"
-    },
-    "825": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "DUP2",
-      "path": "0"
-    },
-    "826": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "EQ",
-      "path": "0"
-    },
-    "827": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "ISZERO",
-      "path": "0"
-    },
-    "828": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x364"
-    },
-    "831": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "832": {
-      "op": "PUSH1",
-      "value": "0x4"
-    },
-    "834": {
-      "op": "CALLDATALOAD"
-    },
-    "835": {
-      "op": "PUSH1",
-      "value": "0x3"
-    },
-    "837": {
-      "op": "DUP2"
-    },
-    "838": {
-      "op": "LT"
-    },
-    "839": {
-      "op": "PUSH2",
-      "value": "0x34F"
-    },
-    "842": {
-      "op": "JUMPI"
-    },
-    "843": {
-      "op": "PUSH1",
-      "value": "0x0"
-    },
-    "845": {
-      "op": "DUP1"
-    },
-    "846": {
-      "op": "REVERT"
-    },
-    "847": {
-      "op": "JUMPDEST"
-    },
-    "848": {
-      "op": "PUSH1",
-      "value": "0x3"
-    },
-    "850": {
-      "op": "PUSH1",
-      "value": "0xC0"
-    },
-    "852": {
-      "op": "MSTORE"
-    },
-    "853": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "855": {
-      "op": "PUSH1",
-      "value": "0xC0"
-    },
-    "857": {
-      "op": "SHA3"
-    },
-    "858": {
-      "op": "ADD"
-    },
-    "859": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "SLOAD",
-      "path": "0"
-    },
-    "860": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
-    "862": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "MSTORE",
-      "path": "0"
-    },
-    "863": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x20"
-    },
-    "865": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
-    "867": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "RETURN",
-      "path": "0"
-    },
-    "868": {
-      "offset": [
-        263,
-        281
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "869": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "PUSH4",
-      "path": "0",
-      "value": "0xE29C7A3"
-    },
-    "874": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "DUP2",
-      "path": "0"
-    },
-    "875": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "EQ",
-      "path": "0"
-    },
-    "876": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "ISZERO",
-      "path": "0"
-    },
-    "877": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x397"
-    },
-    "880": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "881": {
-      "op": "PUSH1",
-      "value": "0x4"
-    },
-    "883": {
-      "op": "CALLDATALOAD"
-    },
-    "884": {
-      "op": "PUSH3",
-      "value": "0x100"
-    },
-    "888": {
-      "op": "DUP2"
-    },
-    "889": {
-      "op": "LT"
-    },
-    "890": {
-      "op": "PUSH2",
-      "value": "0x382"
-    },
-    "893": {
-      "op": "JUMPI"
-    },
-    "894": {
-      "op": "PUSH1",
-      "value": "0x0"
-    },
-    "896": {
-      "op": "DUP1"
-    },
-    "897": {
-      "op": "REVERT"
-    },
-    "898": {
-      "op": "JUMPDEST"
-    },
-    "899": {
-      "op": "PUSH1",
-      "value": "0x4"
-    },
-    "901": {
-      "op": "PUSH1",
-      "value": "0xC0"
-    },
-    "903": {
-      "op": "MSTORE"
-    },
-    "904": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "906": {
-      "op": "PUSH1",
-      "value": "0xC0"
-    },
-    "908": {
-      "op": "SHA3"
-    },
-    "909": {
-      "op": "ADD"
-    },
-    "910": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "SLOAD",
-      "path": "0"
-    },
-    "911": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
-    "913": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "MSTORE",
-      "path": "0"
-    },
-    "914": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x20"
-    },
-    "916": {
-      "offset": [
-        300,
-        322
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
     "918": {
       "offset": [
-        300,
-        322
+        152,
+        192
       ],
       "op": "RETURN",
       "path": "0"
     },
     "919": {
       "offset": [
-        300,
-        322
+        152,
+        192
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
     "920": {
-      "op": "POP"
+      "offset": [
+        263,
+        289
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x12399D88"
     },
-    "921": {
-      "op": "JUMPDEST"
-    },
-    "922": {
-      "op": "PUSH1",
-      "value": "0x0"
-    },
-    "924": {
-      "op": "PUSH1",
-      "value": "0x0"
+    "925": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "DUP2",
+      "path": "0"
     },
     "926": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "927": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "928": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3C8"
+    },
+    "931": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "932": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "934": {
+      "op": "CALLDATALOAD"
+    },
+    "935": {
+      "op": "PUSH1",
+      "value": "0x8"
+    },
+    "937": {
+      "op": "DUP2"
+    },
+    "938": {
+      "op": "LT"
+    },
+    "939": {
+      "op": "PUSH2",
+      "value": "0x3B3"
+    },
+    "942": {
+      "op": "JUMPI"
+    },
+    "943": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "945": {
+      "op": "DUP1"
+    },
+    "946": {
+      "op": "REVERT"
+    },
+    "947": {
+      "op": "JUMPDEST"
+    },
+    "948": {
+      "op": "PUSH1",
+      "value": "0x3"
+    },
+    "950": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "952": {
+      "op": "MSTORE"
+    },
+    "953": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "955": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "957": {
+      "op": "SHA3"
+    },
+    "958": {
+      "op": "ADD"
+    },
+    "959": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "960": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "962": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "963": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "965": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "967": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "968": {
+      "offset": [
+        263,
+        289
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "969": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x6316DBFC"
+    },
+    "974": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "975": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "976": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "977": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3E0"
+    },
+    "980": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "981": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "983": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "984": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "986": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "987": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "989": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "991": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "992": {
+      "offset": [
+        307,
+        322
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "993": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xE29C7A3"
+    },
+    "998": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "999": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "1000": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "1001": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x413"
+    },
+    "1004": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "1005": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1007": {
+      "op": "CALLDATALOAD"
+    },
+    "1008": {
+      "op": "PUSH3",
+      "value": "0x100"
+    },
+    "1012": {
+      "op": "DUP2"
+    },
+    "1013": {
+      "op": "LT"
+    },
+    "1014": {
+      "op": "PUSH2",
+      "value": "0x3FE"
+    },
+    "1017": {
+      "op": "JUMPI"
+    },
+    "1018": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1020": {
+      "op": "DUP1"
+    },
+    "1021": {
+      "op": "REVERT"
+    },
+    "1022": {
+      "op": "JUMPDEST"
+    },
+    "1023": {
+      "op": "PUSH1",
+      "value": "0x5"
+    },
+    "1025": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "1027": {
+      "op": "MSTORE"
+    },
+    "1028": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1030": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "1032": {
+      "op": "SHA3"
+    },
+    "1033": {
+      "op": "ADD"
+    },
+    "1034": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "1035": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "1037": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "1038": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "1040": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "1042": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "1043": {
+      "offset": [
+        341,
+        363
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "1044": {
+      "op": "POP"
+    },
+    "1045": {
+      "op": "JUMPDEST"
+    },
+    "1046": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1048": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1050": {
       "op": "REVERT"
     }
   },
-  "sha1": "9e61318d0a62aaf9a6b4bb923d2b9acec0aecd67",
-  "source": "# @version 0.2.12\n\nMAX_COINS: constant(int128) = 8\n\nstruct ArrayAndNumber:\n  latest_change: uint256\n  structAddress: address[MAX_COINS]\n\nstructMapping: public(HashMap[address, ArrayAndNumber])\n\naddresses: address[65536]\naddressesLength: uint256\n\n\nfixedSizeArray: public(address[3])\n\npublicAddresses: public(address[65536])\npublicAddressesLength: uint256\n\n@external\ndef add0AddressWithAddressesInit(contract: address):\n  self.addresses[0] = contract\n\n@external\ndef add0AddressNoAddressesInit(contract: address):\n  self.addresses[0] = contract\n\n@external\ndef pushAddress(newAddress: address):\n  length: uint256 = self.addressesLength\n  self.addresses[0] = newAddress\n\n  self.addressesLength = length + 1\n\n@external\ndef addPublicAddress(newAddress: address):\n  self.publicAddresses[0] = newAddress\n  \n@external\ndef pushPublicAddress(newAddress: address):\n  length: uint256 = self.publicAddressesLength\n  self.publicAddresses[length] = newAddress\n\n  self.publicAddressesLength = length + 1\n\n@view\n@external\ndef getAddress(index: uint256) -> address:\n  return self.addresses[index]\n\n@view\n@external\ndef getAddressesLength() -> uint256:\n  return self.addressesLength\n\n@view\n@external\ndef getPublicAddressesLength() -> uint256:\n  return self.publicAddressesLength\n",
+  "sha1": "01c2183a5920152f3299960a566fb1edd76251c5",
+  "source": "# @version 0.2.12\n\nMAX_COINS: constant(int128) = 8\n\nstruct ArrayAndNumber:\n  latest_change: uint256\n  structAddress: address[MAX_COINS]\n\nstructMapping: public(HashMap[address, ArrayAndNumber])\n\naddresses: address[65536]\naddressesLength: uint256\n\n\nfixedSizeArray: public(address[MAX_COINS])\nfixedSizeLength: public(uint256)\n\npublicAddresses: public(address[65536])\npublicAddressesLength: uint256\n\n@external\ndef add0AddressWithAddressesInit(contract: address):\n  self.addresses[0] = contract\n\n@external\ndef add0AddressNoAddressesInit(contract: address):\n  self.addresses[0] = contract\n\n@external\ndef pushAddress(newAddress: address):\n  length: uint256 = self.addressesLength\n  self.addresses[0] = newAddress\n\n  self.addressesLength = length + 1\n\n@external\ndef addPublicAddress(newAddress: address):\n  self.publicAddresses[0] = newAddress\n  \n@external\ndef pushPublicAddress(newAddress: address):\n  length: uint256 = self.publicAddressesLength\n  self.publicAddresses[length] = newAddress\n\n  self.publicAddressesLength = length + 1\n\n@external\ndef pushFixedSize(newAddress: address):\n  length: uint256 = self.fixedSizeLength\n  self.fixedSizeArray[length] = newAddress\n\n  self.fixedSizeLength = length + 1\n\n@view\n@external\ndef getAddress(index: uint256) -> address:\n  return self.addresses[index]\n\n@view\n@external\ndef getAddressesLength() -> uint256:\n  return self.addressesLength\n\n@view\n@external\ndef getPublicAddressesLength() -> uint256:\n  return self.publicAddressesLength\n",
   "sourceMap": "",
   "sourcePath": "vy_contracts/StupidContractVY.vy",
   "type": "contract"
