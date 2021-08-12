@@ -1,14 +1,18 @@
 import { 
   addPoolToRegistry,
   readRegistryPools,
-  readRegistryCoinsByPool
+  readRegistryCoinsByPool,
+  readRegistryPoolParameters
 } from './registry'
 
 export async function testRegistry() {
-  console.log('add test to registry')
-  await addPoolToRegistry()
+  console.log('test registry')
+
+  // await addPoolToRegistry()
 
   await readRegistryPools()
 
-  await readRegistryCoinsByPool()
+  // await readRegistryCoinsByPool()
+
+  await readRegistryPoolParameters()
 }

@@ -55,6 +55,21 @@ export async function readRegistryPools() {
 }
 
 
+export async function readRegistryPoolParameters() {
+  console.log('registry pool parameters')
+  try {
+    const parameters = await registry.get_parameters(poolAddress, transactionOverrides) 
+    console.log(JSON.stringify(
+        parameters.map(parameter => parameter.toString()),
+        null,
+        2
+      )
+    )
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 export async function readRegistryCoinsByPool() {
   console.log('registry pool coins')
   try {
