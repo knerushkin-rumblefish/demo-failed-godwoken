@@ -1,3 +1,9 @@
+## Install
+Install all necessary npm dependencies:
+```
+yarn
+```
+
 ## Build
 ```yarn build```
 > To build Vyper contracts you need python virtual env and run:\
