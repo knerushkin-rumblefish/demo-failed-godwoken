@@ -1,6 +1,7 @@
 ## Build
 ```yarn build```
 > To build Vyper contracts you need python virtual env and run:\
+`python3 -m venv env`\
 `source env/bin/activate `\
 before runing `yarn build`
 
