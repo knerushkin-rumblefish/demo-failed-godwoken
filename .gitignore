@@ -16,7 +16,6 @@ artifacts/
 types/
 cache/
 
-vy_contracts/
 vy_interfaces/
 vy_reports/
 vy_scripts/
