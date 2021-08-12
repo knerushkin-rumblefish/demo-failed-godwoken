@@ -5,7 +5,9 @@ yarn
 ```
 
 ## Build
-```yarn build```
+```
+yarn build
+```
 > To build Vyper contracts you need python virtual env and run:\
 `python3 -m venv env`\
 `source env/bin/activate `\
@@ -19,7 +21,9 @@ For `Godwoken` deployment make sure you've run Godwoken with [godwoken-kicker](h
 \
 Run deploy with
 
-```yarn deploy```
+```
+yarn deploy
+```
 
 Output:
 ```
@@ -34,4 +38,6 @@ Pool Contract Deploy
 Addresses are replaced in addresses.{network}.json files accordingly to `DEPLOYMENT_ENV`
 
 ## Test
-``` yarn test```
+```
+yarn test
+```
