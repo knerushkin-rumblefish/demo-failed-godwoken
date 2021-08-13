@@ -62,6 +62,22 @@ async function simpleCallFixedByConstArrayAddresses() {
   }
 }
 
+async function simpleUpdateFixedByConstArrayAddresses() {
+  console.log('simple call stupid fixed with const variable array')
+  try {
+    const transaction = await simple.updateStupidFixedSizeArrayAddresses(stupid.address, 8, transactionOverrides)
+
+    await transaction.wait()
+
+    const simpleData = await simple.getSimpleData(stupid.address, transactionOverrides)
+
+    console.log('simple data', simpleData)
+
+  } catch (error) {
+    console.error('simple call stupid fixed with const variable array error', error)
+  }
+}
+
 async function testNestedCallsSuccess() {
   /* Simple Contract call to Stupid Contract to get data from Array */
   console.log('init stupid arrays')
@@ -70,6 +86,8 @@ async function testNestedCallsSuccess() {
   await simpleCallFixedByConstArrayAddress()
   await simpleCallFixedByConstArrayAddresses()
 
+  await simpleUpdateFixedByConstArrayAddresses()
+  
   // await testStupidArrays()
 
   // console.log('test simple call stupid')

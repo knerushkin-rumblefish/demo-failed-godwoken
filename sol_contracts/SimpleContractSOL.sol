@@ -18,6 +18,13 @@ interface IStupidContract {
 
 contract SimpleContractSOL {
 
+  struct AddressData {
+      address[10] addresses;
+      uint256 latest_update;
+  }
+
+  mapping(address => AddressData) public simple_data;
+
   function getStupidAddress(address stupidContract, uint256 index) public view returns (address) {
     
     return IStupidContract(stupidContract).getAddress(index);
@@ -63,5 +70,42 @@ contract SimpleContractSOL {
     }
 
     return address_list;
+  }
+
+  function updateStupidFixedSizeArrayAddresses(
+    address stupidContract,
+    uint256 nCoins
+  ) external returns (address[10] memory) {
+    address[10] memory address_list = [
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0),
+      address(0)
+    ];
+    
+    for (uint256 i = 0; i < 10; i++) {
+      if (i == nCoins) {
+        break;
+      }
+      address fromFixedSizeArray = IStupidContract(stupidContract).fixedSizeArray(i);
+      address_list[i] = fromFixedSizeArray;
+
+      simple_data[stupidContract].addresses[i] = fromFixedSizeArray;
+      // address_list[i] = stupidContract;
+    }
+
+    simple_data[stupidContract].latest_update = block.timestamp;
+
+    return address_list;
+  }
+
+  function getSimpleData(address stupidContract) external view returns (address[10] memory) {
+    return simple_data[stupidContract].addresses;
   }
 }

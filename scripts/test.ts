@@ -6,7 +6,7 @@ export async function test() {
 
   await testPoolContract()
 
-  // await testSimpleStupid()
+  await testSimpleStupid()
 }
 
 test()
