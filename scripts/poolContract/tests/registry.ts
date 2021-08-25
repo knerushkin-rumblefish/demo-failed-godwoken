@@ -1,8 +1,8 @@
-import { constants } from 'ethers'
+import { constants, Overrides } from 'ethers'
 import { transactionOverrides } from '../../deployment'
 
 import {
-  Registry, StableSwap3Pool,
+  Registry, StableSwap3Pool, Swaps,
 } from '../../../types/vy_contracts';
 
 import { connectRegistry, connectPool } from '../connect'
@@ -27,12 +27,21 @@ export async function addPoolToRegistry(registry: Registry, poolAddress: string,
     await transaction.wait()
 
     const poolNameInRegistry = await registry.get_pool_name(poolAddress, transactionOverrides)
+    const poolLpTokenInRegistry = await registry.get_lp_token(poolAddress, transactionOverrides)
     console.log('Pool addeed to registry', poolNameInRegistry)
+    console.log('Pool lp token in registry', poolLpTokenInRegistry)
   } catch(error) {
     console.error(error)
   }
 }
 
+
+export async function updateRegistry(swaps: Swaps, transactionOverrides: Overrides) {
+  console.log('Update Registry through Swaps after Factory deploy')
+  const updateRegistryTransaction = await swaps.update_registry_address(transactionOverrides)
+
+  await updateRegistryTransaction.wait()
+}
 // export async function addCoinsToRegistry(registry: Registry, poolAddress: string) {
 //   try {
 //     const transaction = await registry.get_new_pool_coins(poolAddress, 3, false, false, transactionOverrides)

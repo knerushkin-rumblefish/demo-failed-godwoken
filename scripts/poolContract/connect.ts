@@ -77,7 +77,7 @@ export function connectToken(address: string) {
 
 export function connectSwaps(
   address: string
-): Swaps | null {
+): Swaps {
 
   const contract = new ethers.Contract(
     address,

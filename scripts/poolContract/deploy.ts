@@ -13,6 +13,7 @@ import * as AddressProvider_JSON from '../../vy_artifacts/contracts/AddressProvi
 import * as Swaps_JSON from '../../vy_artifacts/contracts/Swaps.json'
 import * as PoolInfo_JSON from '../../vy_artifacts/contracts/PoolInfo.json'
 import * as LPToken_JSON from '../../vy_artifacts/contracts/LPToken.json'
+import * as Factory_JSON from '../../vy_artifacts/contracts/Factory.json'
 
 import {
   ERC20,
@@ -20,10 +21,12 @@ import {
   StableSwap3Pool,
   AddressProvider,
   Registry,
+  Factory,
   PoolInfo,
   LPToken__factory,
   ERC20__factory,
   PoolInfo__factory,
+  Factory__factory,
   StableSwap3Pool__factory,
   AddressProvider__factory,
   Registry__factory,
@@ -35,9 +38,10 @@ import {
   connectRegistry,
   connectAddressProvider,
   connectLPToken,
+  connectSwaps,
 } from './connect'
 
-import { addPoolToRegistry } from './tests/registry'
+import { addPoolToRegistry, updateRegistry } from './tests/registry'
 import { addLiquidity, setLPMinter } from './tests/pool';
 
 export async function deployAddressProvider(
@@ -206,6 +210,54 @@ export async function deploySwaps(
   return swapsAddress
 }
 
+export async function deployMetapoolFactory(
+  addressProvider: AddressProvider,
+  admin: string,
+  deployer: Wallet
+) {
+  console.log('MetaPool Factory Deploy')
+  const factory = new ContractFactory(
+    JSON.stringify(prepare_contract_abi(Factory_JSON.abi)),
+    Factory_JSON.bytecode,
+    deployer
+  )  as Factory__factory;
+  
+  const deployTransaction = factory.getDeployTransaction(
+    transactionOverrides
+  );
+
+  const deploymentResult = await deployer.sendTransaction(deployTransaction);
+  const deploymentReceipt = await deploymentResult.wait();
+  console.log('Deployment transaction', deploymentReceipt.transactionHash)
+  
+  const factoryAddress = deploymentReceipt.contractAddress
+
+
+  const addressProviderMaxId = await addressProvider.max_id()
+  console.log('Address Provider max id', addressProviderMaxId.toNumber())
+  
+  if (addressProviderMaxId.toNumber() === 2) {
+    const addNewIdResult = await addressProvider.add_new_id(
+      factoryAddress,
+      "Metapool Factory",
+      transactionOverrides
+    )
+    const addNewIdReceipt = await addNewIdResult.wait()
+    console.log('Address Provider new id added', addNewIdReceipt.transactionHash)
+
+    const addressProviderMaxId = await addressProvider.max_id()
+    console.log('Address Provider updated max id', addressProviderMaxId.toNumber())
+  } else {
+    const resultUpdateAddressProvider = await addressProvider.set_address(3, factoryAddress, transactionOverrides)
+    const updateAddressProviderReceipt = await resultUpdateAddressProvider.wait()
+    console.log('Address Provider updated', updateAddressProviderReceipt.transactionHash)
+  }
+
+  console.log('Factory deployed:', factoryAddress)
+
+  return factoryAddress
+}
+
 export async function deployERC20(
   name: string,
   decimals: number,
@@ -273,7 +325,7 @@ export async function deployPool(
 
 
   const deployTransaction = factory.getDeployTransaction(
-    deployer.address,
+    admin,
     tokens as [string, string, string],
     lpToken,
     100,
@@ -316,6 +368,13 @@ export async function deploy() {
   const swaps = await deploySwaps(addressProviderContract, admin, deployer)
   console.log('swaps', swaps)
 
+  const factory = await deployMetapoolFactory(addressProviderContract, admin, deployer)
+  console.log('factory', factory)
+
+
+  const swapsContract = connectSwaps(swaps)
+  await updateRegistry(swapsContract, transactionOverrides)
+
   const tokenDesc = [
     { name: 'a', decimals: 18},
     { name: 'b', decimals: 6}, 
@@ -336,6 +395,7 @@ export async function deploy() {
 
   const lpToken = await deployLPToken('LP Token', 'LP', admin, deployer)
   const pool = await deployPool(tokens, lpToken, registry, admin, deployer)
+
   console.log('pool', pool)
 
   const addresses = {
