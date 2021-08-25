@@ -11,6 +11,8 @@ const localProvider = new providers.JsonRpcProvider(
   "http://localhost:7545",
 )
 
+export const translateAddress = (address: string) => address
+
 export const provider = localProvider
 
 export const deployer = new Wallet(

@@ -2,12 +2,14 @@ import { Overrides, providers, Wallet } from 'ethers'
 
 import {
   provider as gnProvider,
-  deployer as gnDeployer
+  deployer as gnDeployer,
+  translateAddress as gnTranslateAddress,
 } from './deployment.ganache'
 
 import {
   provider as gwProvider,
-  deployer as gwDeployer
+  deployer as gwDeployer,
+  translateAddress as gwTranslateAddress,
 } from './deployment.godwoken'
 
 
@@ -32,17 +34,23 @@ if(!DEPLOYMENT_ENV || Object.keys(DEPLOYMENT_ENVS).includes(DEPLOYMENT_ENV)) {
 }
 
 
-let provider: providers.JsonRpcProvider, deployer: Wallet
+let provider: 
+  providers.JsonRpcProvider,
+  deployer: Wallet,
+  translateAddress: (address: string) => string
 
 if(DEPLOYMENT_ENV === DEPLOYMENT_ENVS.Ganache) {
   provider = gnProvider
   deployer = gnDeployer
+  translateAddress = gnTranslateAddress
 } else if (DEPLOYMENT_ENV === DEPLOYMENT_ENVS.Godwoken) {
   provider = gwProvider
   deployer = gwDeployer
+  translateAddress = gwTranslateAddress
 }
 
 export {
+  translateAddress,
   provider,
   deployer,
 }

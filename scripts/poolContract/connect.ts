@@ -16,6 +16,7 @@ import {
   StableSwap3Pool,
   Registry,
   Swaps,
+  ERC20
 } from '../../types/vy_contracts';
 
 export function connectAddressProvider(address: string) {
@@ -47,6 +48,17 @@ export function connectPool(address: string) {
     prepare_contract_abi(StableSwap3Pool_JSON.abi),
     deployer.provider
   ).connect(deployer) as StableSwap3Pool;
+
+  return contract
+}
+
+
+export function connectToken(address: string) {
+  const contract = new ethers.Contract(
+    address,
+    prepare_contract_abi(ERC20_JSON.abi),
+    deployer.provider
+  ).connect(deployer) as ERC20;
 
   return contract
 }
