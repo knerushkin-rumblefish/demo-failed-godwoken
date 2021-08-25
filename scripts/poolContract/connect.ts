@@ -10,13 +10,15 @@ import * as StableSwap3Pool_JSON from '../../vy_artifacts/contracts/StableSwap3P
 import * as Registry_JSON from '../../vy_artifacts/contracts/Registry.json'
 import * as Swaps_JSON from '../../vy_artifacts/contracts/Swaps.json'
 import * as AddressProvider_JSON from '../../vy_artifacts/contracts/AddressProvider.json'
+import * as LPToken_JSON from '../../vy_artifacts/contracts/LPToken.json'
 
 import {
   AddressProvider,
   StableSwap3Pool,
   Registry,
   Swaps,
-  ERC20
+  ERC20,
+  LPToken
 } from '../../types/vy_contracts';
 
 export function connectAddressProvider(address: string) {
@@ -41,8 +43,18 @@ export function connectRegistry(address: string) {
   return contract
 }
 
-export function connectPool(address: string) {
+export function connectLPToken(address: string) {
 
+  const contract = new ethers.Contract(
+    address,
+    prepare_contract_abi(LPToken_JSON.abi),
+    deployer.provider
+  ).connect(deployer) as LPToken;
+
+  return contract
+}
+
+export function connectPool(address: string) {
   const contract = new ethers.Contract(
     address,
     prepare_contract_abi(StableSwap3Pool_JSON.abi),

@@ -12,13 +12,16 @@ import * as Registry_JSON from '../../vy_artifacts/contracts/Registry.json'
 import * as AddressProvider_JSON from '../../vy_artifacts/contracts/AddressProvider.json'
 import * as Swaps_JSON from '../../vy_artifacts/contracts/Swaps.json'
 import * as PoolInfo_JSON from '../../vy_artifacts/contracts/PoolInfo.json'
+import * as LPToken_JSON from '../../vy_artifacts/contracts/LPToken.json'
 
 import {
   ERC20,
+  LPToken,
   StableSwap3Pool,
   AddressProvider,
   Registry,
   PoolInfo,
+  LPToken__factory,
   ERC20__factory,
   PoolInfo__factory,
   StableSwap3Pool__factory,
@@ -28,9 +31,14 @@ import {
 } from '../../types/vy_contracts';
 
 import {
+  connectPool,
   connectRegistry,
   connectAddressProvider,
+  connectLPToken,
 } from './connect'
+
+import { addPoolToRegistry } from './tests/registry'
+import { addLiquidity, setLPMinter } from './tests/pool';
 
 export async function deployAddressProvider(
   admin: string,
@@ -221,8 +229,38 @@ export async function deployERC20(
   return contractAddress
 }
 
+export async function deployLPToken(
+  name: string,
+  symbol: string,
+  admin: string,
+  deployer: Wallet
+): Promise<LPToken['address']> {
+  const factory = new ContractFactory(
+    prepare_contract_abi(LPToken_JSON.abi),
+    LPToken_JSON.bytecode,
+    deployer
+  )  as LPToken__factory;
+
+  const deployTransaction = factory.getDeployTransaction(
+    name,
+    symbol,
+    transactionOverrides
+  );
+
+  const transactionResponse = await deployer.sendTransaction(deployTransaction);
+
+  const receipt = await transactionResponse.wait();
+
+  const lpTokenAddress = receipt.contractAddress;
+
+  console.log('LP Token deployed:', lpTokenAddress)
+
+  return lpTokenAddress
+}
+
 export async function deployPool(
   tokens: ERC20['address'][],
+  lpToken: ERC20['address'],
   registry: Registry['address'],
   admin: string,
   deployer: Wallet
@@ -237,7 +275,7 @@ export async function deployPool(
   const deployTransaction = factory.getDeployTransaction(
     deployer.address,
     tokens as [string, string, string],
-    constants.AddressZero,
+    lpToken,
     100,
     0,
     0,
@@ -248,21 +286,15 @@ export async function deployPool(
   const receipt = await transactionResult.wait();
 
   const contractAddress = receipt.contractAddress
-  const registryContract = await connectRegistry(registry)
 
-  const addPoolWithoutUnderlyingTx = await registryContract.add_pool_without_underlying(
-    contractAddress,
-    3,
-    tokens[0],
-    constants.HashZero,
-    0,
-    0,
-    false,
-    false,
-    'pool',
-    transactionOverrides,
-  )
-  await addPoolWithoutUnderlyingTx.wait()
+  console.log('Pool deployed', contractAddress)
+  const registryContract = connectRegistry(registry)
+  const poolContract = connectPool(contractAddress)
+  const lpTokenContract = connectLPToken(lpToken)
+
+  await setLPMinter(lpTokenContract, contractAddress, admin, deployer, transactionOverrides)
+  await addLiquidity(poolContract, tokens, admin, deployer, transactionOverrides)
+  await addPoolToRegistry(registryContract, contractAddress, lpToken)
 
   return contractAddress
 }
@@ -302,7 +334,8 @@ export async function deploy() {
     tokens.push(token)
   }
 
-  const pool = await deployPool(tokens, registry, admin, deployer)
+  const lpToken = await deployLPToken('LP Token', 'LP', admin, deployer)
+  const pool = await deployPool(tokens, lpToken, registry, admin, deployer)
   console.log('pool', pool)
 
   const addresses = {

@@ -1,7 +1,9 @@
+import addresses from '../addresses'
+import { connectPool, connectRegistry } from '../connect'
 import { 
-  addCoinsToRegistry,
+  // addCoinsToRegistry,
   addPoolToRegistry,
-  readPoolDataByPool,
+  // readPoolDataByPool,
   readRegistryPools,
   readRegistryCoinsByPool,
   readRegistryPoolParameters
@@ -10,14 +12,17 @@ import {
 export async function testRegistry() {
   console.log('test registry')
 
-  await addCoinsToRegistry()
-  await readRegistryCoinsByPool()
-  await readPoolDataByPool()
+  const registry = connectRegistry(addresses.registry)
+  const pool = connectPool(addresses.pool)
+  
+  // await addCoinsToRegistry(registry, pool.address)
+  await readRegistryCoinsByPool(registry, pool.address)
+  // await readPoolDataByPool(registry, pool.address)
 
-  await addPoolToRegistry()
+  await addPoolToRegistry(registry, pool.address, addresses.tokenA)
 
-  await readRegistryPools()
-  await readRegistryCoinsByPool()
+  await readRegistryPools(registry)
+  await readRegistryCoinsByPool(registry, pool.address)
 
-  await readRegistryPoolParameters()
+  await readRegistryPoolParameters(registry, pool.address)
 }

@@ -101,28 +101,28 @@ export async function swapWithRegistry(admin: string, deployer: Wallet, transact
     //   console.error('exchange_with_best_rate', error)
     // }
 
-    try {
-      console.log('exchange with swaps', tokensAddresses[0], tokensAddresses[1])
-      const exchange = swaps["exchange(address,address,address,uint256,uint256)"]
-      const exchangeTransaction = await exchange(
-        foundedPool,
-        tokensAddresses[0],
-        tokensAddresses[1],
-        tokensAmounts[0],
-        BigNumber.from(0),
-        transactionOverrides
-      )
-      console.log('transaction', exchangeTransaction.hash)
-      await exchangeTransaction.wait()
+    // try {
+    //   console.log('exchange with swaps', tokensAddresses[0], tokensAddresses[1])
+    //   const exchange = swaps["exchange(address,address,address,uint256,uint256)"]
+    //   const exchangeTransaction = await exchange(
+    //     foundedPool,
+    //     tokensAddresses[0],
+    //     tokensAddresses[1],
+    //     tokensAmounts[0],
+    //     BigNumber.from(0),
+    //     transactionOverrides
+    //   )
+    //   console.log('transaction', exchangeTransaction.hash)
+    //   await exchangeTransaction.wait()
 
-      const poolBalanceAfterExchange = await registry.get_balances(poolAddress, transactionOverrides)
-      console.log(
-        'pool balance',
-        poolBalanceAfterExchange.map(tokenBalance => tokenBalance.toString())
-      )
-    } catch(error) {
-      console.error('exchange_with_swaps', error)
-    }
+    //   const poolBalanceAfterExchange = await registry.get_balances(poolAddress, transactionOverrides)
+    //   console.log(
+    //     'pool balance',
+    //     poolBalanceAfterExchange.map(tokenBalance => tokenBalance.toString())
+    //   )
+    // } catch(error) {
+    //   console.error('exchange_with_swaps', error)
+    // }
 
     try {
       console.log('exchange with best rate', tokensAddresses[0], tokensAddresses[1])

@@ -1,25 +1,20 @@
 import { constants } from 'ethers'
 import { transactionOverrides } from '../../deployment'
-import addresses from '../addresses'
+
+import {
+  Registry, StableSwap3Pool,
+} from '../../../types/vy_contracts';
 
 import { connectRegistry, connectPool } from '../connect'
 
-const registry = connectRegistry(addresses.registry)
-const pool = connectPool(addresses.pool)
 
-export async function addPoolToRegistry() {
-  console.log('add pool to registry', addresses.pool)
+export async function addPoolToRegistry(registry: Registry, poolAddress: string, lpToken: string) {
+  console.log('Add pool to Registry', poolAddress)
   try {
-    const tokens: string[] = Array(8).fill(constants.AddressZero)
-    
-    tokens[0] = addresses.tokenA
-    tokens[1] = addresses.tokenB
-    tokens[2] = addresses.tokenC
-
     const transaction = await registry.add_pool_without_underlying(
-      addresses.pool,
+      poolAddress,
       3,
-      addresses.tokenA,
+      lpToken,
       constants.HashZero,
       0,
       0,
@@ -30,23 +25,25 @@ export async function addPoolToRegistry() {
     )
 
     await transaction.wait()
+
+    const poolNameInRegistry = await registry.get_pool_name(poolAddress, transactionOverrides)
+    console.log('Pool addeed to registry', poolNameInRegistry)
   } catch(error) {
     console.error(error)
   }
 }
 
-export async function addCoinsToRegistry() {
-  console.log('add coins to registry', addresses.pool)
-  try {
-    const transaction = await registry.get_new_pool_coins(addresses.pool, 3, false, false, transactionOverrides)
+// export async function addCoinsToRegistry(registry: Registry, poolAddress: string) {
+//   try {
+//     const transaction = await registry.get_new_pool_coins(poolAddress, 3, false, false, transactionOverrides)
 
-    await transaction.wait()
-  } catch(error) {
-    console.error(error)
-  } 
-}
+//     await transaction.wait()
+//   } catch(error) {
+//     console.error(error)
+//   } 
+// }
 
-export async function readRegistryPools() {
+export async function readRegistryPools(registry: Registry) {
   console.log('registry pools')
   try {
     const poolCount = await registry.pool_count(transactionOverrides)
@@ -60,10 +57,10 @@ export async function readRegistryPools() {
 }
 
 
-export async function readRegistryPoolParameters() {
+export async function readRegistryPoolParameters(registry: Registry, poolAddress: string) {
   console.log('registry pool parameters')
   try {
-    const parameters = await registry.get_parameters(addresses.pool, transactionOverrides) 
+    const parameters = await registry.get_parameters(poolAddress, transactionOverrides) 
     console.log(JSON.stringify(
         parameters.map(parameter => parameter.toString()),
         null,
@@ -75,22 +72,22 @@ export async function readRegistryPoolParameters() {
   }
 }
 
-export async function readRegistryCoinsByPool() {
+export async function readRegistryCoinsByPool(registry: Registry, poolAddress: string) {
   console.log('registry pool coins')
   try {
-    const coins = await registry.get_coins(addresses.pool, transactionOverrides) 
+    const coins = await registry.get_coins(poolAddress, transactionOverrides) 
     console.log(JSON.stringify(coins, null, 2))
   } catch (error) {
     console.error(error)
   }
 }
 
-export async function readPoolDataByPool() {
-  console.log('registry pool coins')
-  try {
-    const poolData = await registry.pool_data(addresses.pool, transactionOverrides) 
-    console.log(JSON.stringify(poolData, null, 2))
-  } catch (error) {
-    console.error(error)
-  }
-}
+// export async function readPoolDataByPool(registry: Registry, poolAddress: string) {
+//   console.log('registry pool coins')
+//   try {
+//     const poolData = await registry.pool_data(poolAddress, transactionOverrides) 
+//     console.log(JSON.stringify(poolData, null, 2))
+//   } catch (error) {
+//     console.error(error)
+//   }
+// }

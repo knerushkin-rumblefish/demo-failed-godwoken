@@ -4,11 +4,9 @@ import { testSwaps } from './swaps-test'
 
 
 export async function test() {
-  console.log('test pool contracts')
-  
   await testPool()
 
-  await testRegistry()
+  // await testRegistry()
 
   await testSwaps()
 }
