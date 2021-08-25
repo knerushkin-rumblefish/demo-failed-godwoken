@@ -11,11 +11,13 @@ import * as Registry_JSON from '../../vy_artifacts/contracts/Registry.json'
 import * as Swaps_JSON from '../../vy_artifacts/contracts/Swaps.json'
 import * as AddressProvider_JSON from '../../vy_artifacts/contracts/AddressProvider.json'
 import * as LPToken_JSON from '../../vy_artifacts/contracts/LPToken.json'
+import * as PoolInfo_JSON from '../../vy_artifacts/contracts/PoolInfo.json'
 
 import {
   AddressProvider,
   StableSwap3Pool,
   Registry,
+  PoolInfo,
   Swaps,
   ERC20,
   LPToken
@@ -39,6 +41,17 @@ export function connectRegistry(address: string) {
     prepare_contract_abi(Registry_JSON.abi),
     deployer.provider
   ).connect(deployer) as Registry;
+
+  return contract
+}
+
+export function connectPoolInfo(address: string) {
+
+  const contract = new ethers.Contract(
+    address,
+    prepare_contract_abi(PoolInfo_JSON.abi),
+    deployer.provider
+  ).connect(deployer) as PoolInfo;
 
   return contract
 }

@@ -30,7 +30,7 @@
       "type": "function"
     },
     {
-      "gas": 11100,
+      "gas": 16547,
       "inputs": [
         {
           "name": "_pool",
@@ -42,6 +42,10 @@
         {
           "name": "balances",
           "type": "uint256[8]"
+        },
+        {
+          "name": "name",
+          "type": "string"
         }
       ],
       "stateMutability": "view",
@@ -1720,15 +1724,74 @@
               "src": "1607:8:0"
             },
             "value": null
+          },
+          {
+            "annotation": {
+              "ast_type": "Subscript",
+              "col_offset": 10,
+              "end_col_offset": 20,
+              "end_lineno": 56,
+              "lineno": 56,
+              "node_id": 242,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 17,
+                "end_col_offset": 19,
+                "end_lineno": 56,
+                "lineno": 56,
+                "node_id": 245,
+                "src": "1653:2:0",
+                "value": {
+                  "ast_type": "Int",
+                  "col_offset": 17,
+                  "end_col_offset": 19,
+                  "end_lineno": 56,
+                  "lineno": 56,
+                  "node_id": 246,
+                  "src": "1653:2:0",
+                  "value": 64
+                }
+              },
+              "src": "1646:10:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 10,
+                "end_col_offset": 16,
+                "end_lineno": 56,
+                "id": "String",
+                "lineno": 56,
+                "node_id": 243,
+                "src": "1646:6:0"
+              }
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 20,
+            "end_lineno": 56,
+            "lineno": 56,
+            "node_id": 239,
+            "simple": 1,
+            "src": "1640:16:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 8,
+              "end_lineno": 56,
+              "id": "name",
+              "lineno": 56,
+              "node_id": 240,
+              "src": "1640:4:0"
+            },
+            "value": null
           }
         ],
         "col_offset": 0,
-        "end_col_offset": 32,
-        "end_lineno": 55,
+        "end_col_offset": 20,
+        "end_lineno": 56,
         "lineno": 54,
         "name": "PoolInfo",
         "node_id": 228,
-        "src": "1586:49:0"
+        "src": "1586:70:0"
       },
       {
         "ast_type": "StructDef",
@@ -1738,57 +1801,57 @@
               "ast_type": "Subscript",
               "col_offset": 11,
               "end_col_offset": 29,
-              "end_lineno": 58,
-              "lineno": 58,
-              "node_id": 243,
+              "end_lineno": 59,
+              "lineno": 59,
+              "node_id": 252,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 19,
                 "end_col_offset": 28,
-                "end_lineno": 58,
-                "lineno": 58,
-                "node_id": 246,
-                "src": "1674:9:0",
+                "end_lineno": 59,
+                "lineno": 59,
+                "node_id": 255,
+                "src": "1695:9:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 19,
                   "end_col_offset": 28,
-                  "end_lineno": 58,
+                  "end_lineno": 59,
                   "id": "MAX_COINS",
-                  "lineno": 58,
-                  "node_id": 247,
-                  "src": "1674:9:0"
+                  "lineno": 59,
+                  "node_id": 256,
+                  "src": "1695:9:0"
                 }
               },
-              "src": "1666:18:0",
+              "src": "1687:18:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 11,
                 "end_col_offset": 18,
-                "end_lineno": 58,
+                "end_lineno": 59,
                 "id": "address",
-                "lineno": 58,
-                "node_id": 244,
-                "src": "1666:7:0"
+                "lineno": 59,
+                "node_id": 253,
+                "src": "1687:7:0"
               }
             },
             "ast_type": "AnnAssign",
             "col_offset": 4,
             "end_col_offset": 29,
-            "end_lineno": 58,
-            "lineno": 58,
-            "node_id": 240,
+            "end_lineno": 59,
+            "lineno": 59,
+            "node_id": 249,
             "simple": 1,
-            "src": "1659:25:0",
+            "src": "1680:25:0",
             "target": {
               "ast_type": "Name",
               "col_offset": 4,
               "end_col_offset": 9,
-              "end_lineno": 58,
+              "end_lineno": 59,
               "id": "coins",
-              "lineno": 58,
-              "node_id": 241,
-              "src": "1659:5:0"
+              "lineno": 59,
+              "node_id": 250,
+              "src": "1680:5:0"
             },
             "value": null
           },
@@ -1797,57 +1860,57 @@
               "ast_type": "Subscript",
               "col_offset": 22,
               "end_col_offset": 40,
-              "end_lineno": 59,
-              "lineno": 59,
-              "node_id": 253,
+              "end_lineno": 60,
+              "lineno": 60,
+              "node_id": 262,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 30,
                 "end_col_offset": 39,
-                "end_lineno": 59,
-                "lineno": 59,
-                "node_id": 256,
-                "src": "1715:9:0",
+                "end_lineno": 60,
+                "lineno": 60,
+                "node_id": 265,
+                "src": "1736:9:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 30,
                   "end_col_offset": 39,
-                  "end_lineno": 59,
+                  "end_lineno": 60,
                   "id": "MAX_COINS",
-                  "lineno": 59,
-                  "node_id": 257,
-                  "src": "1715:9:0"
+                  "lineno": 60,
+                  "node_id": 266,
+                  "src": "1736:9:0"
                 }
               },
-              "src": "1707:18:0",
+              "src": "1728:18:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 22,
                 "end_col_offset": 29,
-                "end_lineno": 59,
+                "end_lineno": 60,
                 "id": "address",
-                "lineno": 59,
-                "node_id": 254,
-                "src": "1707:7:0"
+                "lineno": 60,
+                "node_id": 263,
+                "src": "1728:7:0"
               }
             },
             "ast_type": "AnnAssign",
             "col_offset": 4,
             "end_col_offset": 40,
-            "end_lineno": 59,
-            "lineno": 59,
-            "node_id": 250,
+            "end_lineno": 60,
+            "lineno": 60,
+            "node_id": 259,
             "simple": 1,
-            "src": "1689:36:0",
+            "src": "1710:36:0",
             "target": {
               "ast_type": "Name",
               "col_offset": 4,
               "end_col_offset": 20,
-              "end_lineno": 59,
+              "end_lineno": 60,
               "id": "underlying_coins",
-              "lineno": 59,
-              "node_id": 251,
-              "src": "1689:16:0"
+              "lineno": 60,
+              "node_id": 260,
+              "src": "1710:16:0"
             },
             "value": null
           },
@@ -1856,57 +1919,57 @@
               "ast_type": "Subscript",
               "col_offset": 14,
               "end_col_offset": 32,
-              "end_lineno": 60,
-              "lineno": 60,
-              "node_id": 263,
+              "end_lineno": 61,
+              "lineno": 61,
+              "node_id": 272,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 22,
                 "end_col_offset": 31,
-                "end_lineno": 60,
-                "lineno": 60,
-                "node_id": 266,
-                "src": "1748:9:0",
+                "end_lineno": 61,
+                "lineno": 61,
+                "node_id": 275,
+                "src": "1769:9:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 22,
                   "end_col_offset": 31,
-                  "end_lineno": 60,
+                  "end_lineno": 61,
                   "id": "MAX_COINS",
-                  "lineno": 60,
-                  "node_id": 267,
-                  "src": "1748:9:0"
+                  "lineno": 61,
+                  "node_id": 276,
+                  "src": "1769:9:0"
                 }
               },
-              "src": "1740:18:0",
+              "src": "1761:18:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 14,
                 "end_col_offset": 21,
-                "end_lineno": 60,
+                "end_lineno": 61,
                 "id": "uint256",
-                "lineno": 60,
-                "node_id": 264,
-                "src": "1740:7:0"
+                "lineno": 61,
+                "node_id": 273,
+                "src": "1761:7:0"
               }
             },
             "ast_type": "AnnAssign",
             "col_offset": 4,
             "end_col_offset": 32,
-            "end_lineno": 60,
-            "lineno": 60,
-            "node_id": 260,
+            "end_lineno": 61,
+            "lineno": 61,
+            "node_id": 269,
             "simple": 1,
-            "src": "1730:28:0",
+            "src": "1751:28:0",
             "target": {
               "ast_type": "Name",
               "col_offset": 4,
               "end_col_offset": 12,
-              "end_lineno": 60,
+              "end_lineno": 61,
               "id": "decimals",
-              "lineno": 60,
-              "node_id": 261,
-              "src": "1730:8:0"
+              "lineno": 61,
+              "node_id": 270,
+              "src": "1751:8:0"
             },
             "value": null
           },
@@ -1915,68 +1978,68 @@
               "ast_type": "Subscript",
               "col_offset": 25,
               "end_col_offset": 43,
-              "end_lineno": 61,
-              "lineno": 61,
-              "node_id": 273,
+              "end_lineno": 62,
+              "lineno": 62,
+              "node_id": 282,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 33,
                 "end_col_offset": 42,
-                "end_lineno": 61,
-                "lineno": 61,
-                "node_id": 276,
-                "src": "1792:9:0",
+                "end_lineno": 62,
+                "lineno": 62,
+                "node_id": 285,
+                "src": "1813:9:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 33,
                   "end_col_offset": 42,
-                  "end_lineno": 61,
+                  "end_lineno": 62,
                   "id": "MAX_COINS",
-                  "lineno": 61,
-                  "node_id": 277,
-                  "src": "1792:9:0"
+                  "lineno": 62,
+                  "node_id": 286,
+                  "src": "1813:9:0"
                 }
               },
-              "src": "1784:18:0",
+              "src": "1805:18:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 25,
                 "end_col_offset": 32,
-                "end_lineno": 61,
+                "end_lineno": 62,
                 "id": "uint256",
-                "lineno": 61,
-                "node_id": 274,
-                "src": "1784:7:0"
+                "lineno": 62,
+                "node_id": 283,
+                "src": "1805:7:0"
               }
             },
             "ast_type": "AnnAssign",
             "col_offset": 4,
             "end_col_offset": 43,
-            "end_lineno": 61,
-            "lineno": 61,
-            "node_id": 270,
+            "end_lineno": 62,
+            "lineno": 62,
+            "node_id": 279,
             "simple": 1,
-            "src": "1763:39:0",
+            "src": "1784:39:0",
             "target": {
               "ast_type": "Name",
               "col_offset": 4,
               "end_col_offset": 23,
-              "end_lineno": 61,
+              "end_lineno": 62,
               "id": "underlying_decimals",
-              "lineno": 61,
-              "node_id": 271,
-              "src": "1763:19:0"
+              "lineno": 62,
+              "node_id": 280,
+              "src": "1784:19:0"
             },
             "value": null
           }
         ],
         "col_offset": 0,
         "end_col_offset": 43,
-        "end_lineno": 61,
-        "lineno": 57,
+        "end_lineno": 62,
+        "lineno": 58,
         "name": "PoolCoins",
-        "node_id": 239,
-        "src": "1637:165:0"
+        "node_id": 248,
+        "src": "1658:165:0"
       },
       {
         "annotation": {
@@ -1985,50 +2048,50 @@
               "ast_type": "Name",
               "col_offset": 25,
               "end_col_offset": 40,
-              "end_lineno": 64,
+              "end_lineno": 65,
               "id": "AddressProvider",
-              "lineno": 64,
-              "node_id": 286,
-              "src": "1830:15:0"
+              "lineno": 65,
+              "node_id": 295,
+              "src": "1851:15:0"
             }
           ],
           "ast_type": "Call",
           "col_offset": 18,
           "end_col_offset": 41,
-          "end_lineno": 64,
+          "end_lineno": 65,
           "func": {
             "ast_type": "Name",
             "col_offset": 18,
             "end_col_offset": 24,
-            "end_lineno": 64,
+            "end_lineno": 65,
             "id": "public",
-            "lineno": 64,
-            "node_id": 284,
-            "src": "1823:6:0"
+            "lineno": 65,
+            "node_id": 293,
+            "src": "1844:6:0"
           },
           "keyword": null,
           "keywords": [],
-          "lineno": 64,
-          "node_id": 283,
-          "src": "1823:23:0"
+          "lineno": 65,
+          "node_id": 292,
+          "src": "1844:23:0"
         },
         "ast_type": "AnnAssign",
         "col_offset": 0,
         "end_col_offset": 41,
-        "end_lineno": 64,
-        "lineno": 64,
-        "node_id": 280,
+        "end_lineno": 65,
+        "lineno": 65,
+        "node_id": 289,
         "simple": 1,
-        "src": "1805:41:0",
+        "src": "1826:41:0",
         "target": {
           "ast_type": "Name",
           "col_offset": 0,
           "end_col_offset": 16,
-          "end_lineno": 64,
+          "end_lineno": 65,
           "id": "address_provider",
-          "lineno": 64,
-          "node_id": 281,
-          "src": "1805:16:0"
+          "lineno": 65,
+          "node_id": 290,
+          "src": "1826:16:0"
         },
         "value": null
       },
@@ -2040,20 +2103,20 @@
                 "ast_type": "Name",
                 "col_offset": 24,
                 "end_col_offset": 31,
-                "end_lineno": 68,
+                "end_lineno": 69,
                 "id": "address",
-                "lineno": 68,
-                "node_id": 291,
-                "src": "1883:7:0"
+                "lineno": 69,
+                "node_id": 300,
+                "src": "1904:7:0"
               },
               "arg": "_provider",
               "ast_type": "arg",
               "col_offset": 13,
               "end_col_offset": 31,
-              "end_lineno": 68,
-              "lineno": 68,
-              "node_id": 290,
-              "src": "1872:18:0"
+              "end_lineno": 69,
+              "lineno": 69,
+              "node_id": 299,
+              "src": "1893:18:0"
             }
           ],
           "ast_type": "arguments",
@@ -2061,10 +2124,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 31,
-          "end_lineno": 68,
-          "lineno": 68,
-          "node_id": 289,
-          "src": "1872:18:0"
+          "end_lineno": 69,
+          "lineno": 69,
+          "node_id": 298,
+          "src": "1893:18:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -2072,28 +2135,28 @@
             "ast_type": "Assign",
             "col_offset": 4,
             "end_col_offset": 54,
-            "end_lineno": 69,
-            "lineno": 69,
-            "node_id": 293,
-            "src": "1897:50:0",
+            "end_lineno": 70,
+            "lineno": 70,
+            "node_id": 302,
+            "src": "1918:50:0",
             "target": {
               "ast_type": "Attribute",
               "attr": "address_provider",
               "col_offset": 4,
               "end_col_offset": 25,
-              "end_lineno": 69,
-              "lineno": 69,
-              "node_id": 294,
-              "src": "1897:21:0",
+              "end_lineno": 70,
+              "lineno": 70,
+              "node_id": 303,
+              "src": "1918:21:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 4,
                 "end_col_offset": 8,
-                "end_lineno": 69,
+                "end_lineno": 70,
                 "id": "self",
-                "lineno": 69,
-                "node_id": 295,
-                "src": "1897:4:0"
+                "lineno": 70,
+                "node_id": 304,
+                "src": "1918:4:0"
               }
             },
             "value": {
@@ -2102,32 +2165,32 @@
                   "ast_type": "Name",
                   "col_offset": 44,
                   "end_col_offset": 53,
-                  "end_lineno": 69,
+                  "end_lineno": 70,
                   "id": "_provider",
-                  "lineno": 69,
-                  "node_id": 301,
-                  "src": "1937:9:0"
+                  "lineno": 70,
+                  "node_id": 310,
+                  "src": "1958:9:0"
                 }
               ],
               "ast_type": "Call",
               "col_offset": 28,
               "end_col_offset": 54,
-              "end_lineno": 69,
+              "end_lineno": 70,
               "func": {
                 "ast_type": "Name",
                 "col_offset": 28,
                 "end_col_offset": 43,
-                "end_lineno": 69,
+                "end_lineno": 70,
                 "id": "AddressProvider",
-                "lineno": 69,
-                "node_id": 299,
-                "src": "1921:15:0"
+                "lineno": 70,
+                "node_id": 308,
+                "src": "1942:15:0"
               },
               "keyword": null,
               "keywords": [],
-              "lineno": 69,
-              "node_id": 298,
-              "src": "1921:26:0"
+              "lineno": 70,
+              "node_id": 307,
+              "src": "1942:26:0"
             }
           }
         ],
@@ -2137,22 +2200,22 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 67,
+            "end_lineno": 68,
             "id": "external",
-            "lineno": 67,
-            "node_id": 303,
-            "src": "1850:8:0"
+            "lineno": 68,
+            "node_id": 312,
+            "src": "1871:8:0"
           }
         ],
         "doc_string": null,
         "end_col_offset": 54,
-        "end_lineno": 69,
-        "lineno": 68,
+        "end_lineno": 70,
+        "lineno": 69,
         "name": "__init__",
-        "node_id": 288,
+        "node_id": 297,
         "pos": null,
         "returns": null,
-        "src": "1859:88:0"
+        "src": "1880:88:0"
       },
       {
         "args": {
@@ -2162,20 +2225,20 @@
                 "ast_type": "Name",
                 "col_offset": 26,
                 "end_col_offset": 33,
-                "end_lineno": 74,
+                "end_lineno": 75,
                 "id": "address",
-                "lineno": 74,
-                "node_id": 308,
-                "src": "1992:7:0"
+                "lineno": 75,
+                "node_id": 317,
+                "src": "2013:7:0"
               },
               "arg": "_pool",
               "ast_type": "arg",
               "col_offset": 19,
               "end_col_offset": 33,
-              "end_lineno": 74,
-              "lineno": 74,
-              "node_id": 307,
-              "src": "1985:14:0"
+              "end_lineno": 75,
+              "lineno": 75,
+              "node_id": 316,
+              "src": "2006:14:0"
             }
           ],
           "ast_type": "arguments",
@@ -2183,10 +2246,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 33,
-          "end_lineno": 74,
-          "lineno": 74,
-          "node_id": 306,
-          "src": "1985:14:0"
+          "end_lineno": 75,
+          "lineno": 75,
+          "node_id": 315,
+          "src": "2006:14:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -2195,146 +2258,146 @@
               "ast_type": "Name",
               "col_offset": 14,
               "end_col_offset": 21,
-              "end_lineno": 81,
+              "end_lineno": 82,
               "id": "address",
-              "lineno": 81,
-              "node_id": 315,
-              "src": "2263:7:0"
+              "lineno": 82,
+              "node_id": 324,
+              "src": "2284:7:0"
             },
             "ast_type": "AnnAssign",
             "col_offset": 4,
             "end_col_offset": 60,
-            "end_lineno": 81,
-            "lineno": 81,
-            "node_id": 312,
+            "end_lineno": 82,
+            "lineno": 82,
+            "node_id": 321,
             "simple": 1,
-            "src": "2253:56:0",
+            "src": "2274:56:0",
             "target": {
               "ast_type": "Name",
               "col_offset": 4,
               "end_col_offset": 12,
-              "end_lineno": 81,
+              "end_lineno": 82,
               "id": "registry",
-              "lineno": 81,
-              "node_id": 313,
-              "src": "2253:8:0"
+              "lineno": 82,
+              "node_id": 322,
+              "src": "2274:8:0"
             },
             "value": {
               "args": [],
               "ast_type": "Call",
               "col_offset": 24,
               "end_col_offset": 60,
-              "end_lineno": 81,
+              "end_lineno": 82,
               "func": {
                 "ast_type": "Attribute",
                 "attr": "get_registry",
                 "col_offset": 24,
                 "end_col_offset": 58,
-                "end_lineno": 81,
-                "lineno": 81,
-                "node_id": 318,
-                "src": "2273:34:0",
+                "end_lineno": 82,
+                "lineno": 82,
+                "node_id": 327,
+                "src": "2294:34:0",
                 "value": {
                   "ast_type": "Attribute",
                   "attr": "address_provider",
                   "col_offset": 24,
                   "end_col_offset": 45,
-                  "end_lineno": 81,
-                  "lineno": 81,
-                  "node_id": 319,
-                  "src": "2273:21:0",
+                  "end_lineno": 82,
+                  "lineno": 82,
+                  "node_id": 328,
+                  "src": "2294:21:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 24,
                     "end_col_offset": 28,
-                    "end_lineno": 81,
+                    "end_lineno": 82,
                     "id": "self",
-                    "lineno": 81,
-                    "node_id": 320,
-                    "src": "2273:4:0"
+                    "lineno": 82,
+                    "node_id": 329,
+                    "src": "2294:4:0"
                   }
                 }
               },
               "keyword": null,
               "keywords": [],
-              "lineno": 81,
-              "node_id": 317,
-              "src": "2273:36:0"
+              "lineno": 82,
+              "node_id": 326,
+              "src": "2294:36:0"
             }
           },
           {
             "ast_type": "Return",
             "col_offset": 4,
             "end_col_offset": 49,
-            "end_lineno": 91,
-            "lineno": 91,
-            "node_id": 324,
-            "src": "2661:45:0",
+            "end_lineno": 92,
+            "lineno": 92,
+            "node_id": 333,
+            "src": "2682:45:0",
             "value": {
               "args": [
                 {
                   "ast_type": "Name",
                   "col_offset": 43,
                   "end_col_offset": 48,
-                  "end_lineno": 91,
+                  "end_lineno": 92,
                   "id": "_pool",
-                  "lineno": 91,
-                  "node_id": 333,
-                  "src": "2700:5:0"
+                  "lineno": 92,
+                  "node_id": 342,
+                  "src": "2721:5:0"
                 }
               ],
               "ast_type": "Call",
               "col_offset": 11,
               "end_col_offset": 49,
-              "end_lineno": 91,
+              "end_lineno": 92,
               "func": {
                 "ast_type": "Attribute",
                 "attr": "get_balances",
                 "col_offset": 11,
                 "end_col_offset": 42,
-                "end_lineno": 91,
-                "lineno": 91,
-                "node_id": 326,
-                "src": "2668:31:0",
+                "end_lineno": 92,
+                "lineno": 92,
+                "node_id": 335,
+                "src": "2689:31:0",
                 "value": {
                   "args": [
                     {
                       "ast_type": "Name",
                       "col_offset": 20,
                       "end_col_offset": 28,
-                      "end_lineno": 91,
+                      "end_lineno": 92,
                       "id": "registry",
-                      "lineno": 91,
-                      "node_id": 330,
-                      "src": "2677:8:0"
+                      "lineno": 92,
+                      "node_id": 339,
+                      "src": "2698:8:0"
                     }
                   ],
                   "ast_type": "Call",
                   "col_offset": 11,
                   "end_col_offset": 29,
-                  "end_lineno": 91,
+                  "end_lineno": 92,
                   "func": {
                     "ast_type": "Name",
                     "col_offset": 11,
                     "end_col_offset": 19,
-                    "end_lineno": 91,
+                    "end_lineno": 92,
                     "id": "Registry",
-                    "lineno": 91,
-                    "node_id": 328,
-                    "src": "2668:8:0"
+                    "lineno": 92,
+                    "node_id": 337,
+                    "src": "2689:8:0"
                   },
                   "keyword": null,
                   "keywords": [],
-                  "lineno": 91,
-                  "node_id": 327,
-                  "src": "2668:18:0"
+                  "lineno": 92,
+                  "node_id": 336,
+                  "src": "2689:18:0"
                 }
               },
               "keyword": null,
               "keywords": [],
-              "lineno": 91,
-              "node_id": 325,
-              "src": "2668:38:0"
+              "lineno": 92,
+              "node_id": 334,
+              "src": "2689:38:0"
             }
           }
         ],
@@ -2344,78 +2407,78 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 5,
-            "end_lineno": 72,
+            "end_lineno": 73,
             "id": "view",
-            "lineno": 72,
-            "node_id": 335,
-            "src": "1951:4:0"
+            "lineno": 73,
+            "node_id": 344,
+            "src": "1972:4:0"
           },
           {
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 73,
+            "end_lineno": 74,
             "id": "external",
-            "lineno": 73,
-            "node_id": 337,
-            "src": "1957:8:0"
+            "lineno": 74,
+            "node_id": 346,
+            "src": "1978:8:0"
           }
         ],
         "doc_string": {
           "ast_type": "DocStr",
           "col_offset": 4,
           "end_col_offset": 7,
-          "end_lineno": 80,
-          "lineno": 75,
-          "node_id": 345,
-          "src": "2020:228:0",
+          "end_lineno": 81,
+          "lineno": 76,
+          "node_id": 354,
+          "src": "2041:228:0",
           "value": "\n    @notice Get information on coins in a pool\n    @dev Empty values in the returned arrays may be ignored\n    @param _pool Pool address\n    @return Coin addresses, underlying coin addresses, underlying coin decimals\n    "
         },
         "end_col_offset": 49,
-        "end_lineno": 91,
-        "lineno": 74,
+        "end_lineno": 92,
+        "lineno": 75,
         "name": "get_pool_coins",
-        "node_id": 305,
+        "node_id": 314,
         "pos": null,
         "returns": {
           "ast_type": "Subscript",
           "col_offset": 38,
           "end_col_offset": 48,
-          "end_lineno": 74,
-          "lineno": 74,
-          "node_id": 339,
+          "end_lineno": 75,
+          "lineno": 75,
+          "node_id": 348,
           "slice": {
             "ast_type": "Index",
             "col_offset": 46,
             "end_col_offset": 47,
-            "end_lineno": 74,
-            "lineno": 74,
-            "node_id": 342,
-            "src": "2012:1:0",
+            "end_lineno": 75,
+            "lineno": 75,
+            "node_id": 351,
+            "src": "2033:1:0",
             "value": {
               "ast_type": "Int",
               "col_offset": 46,
               "end_col_offset": 47,
-              "end_lineno": 74,
-              "lineno": 74,
-              "node_id": 343,
-              "src": "2012:1:0",
+              "end_lineno": 75,
+              "lineno": 75,
+              "node_id": 352,
+              "src": "2033:1:0",
               "value": 8
             }
           },
-          "src": "2004:10:0",
+          "src": "2025:10:0",
           "value": {
             "ast_type": "Name",
             "col_offset": 38,
             "end_col_offset": 45,
-            "end_lineno": 74,
+            "end_lineno": 75,
             "id": "uint256",
-            "lineno": 74,
-            "node_id": 340,
-            "src": "2004:7:0"
+            "lineno": 75,
+            "node_id": 349,
+            "src": "2025:7:0"
           }
         },
-        "src": "1966:740:0"
+        "src": "1987:740:0"
       },
       {
         "args": {
@@ -2425,20 +2488,20 @@
                 "ast_type": "Name",
                 "col_offset": 25,
                 "end_col_offset": 32,
-                "end_lineno": 95,
+                "end_lineno": 96,
                 "id": "address",
-                "lineno": 95,
-                "node_id": 349,
-                "src": "2749:7:0"
+                "lineno": 96,
+                "node_id": 358,
+                "src": "2770:7:0"
               },
               "arg": "_pool",
               "ast_type": "arg",
               "col_offset": 18,
               "end_col_offset": 32,
-              "end_lineno": 95,
-              "lineno": 95,
-              "node_id": 348,
-              "src": "2742:14:0"
+              "end_lineno": 96,
+              "lineno": 96,
+              "node_id": 357,
+              "src": "2763:14:0"
             }
           ],
           "ast_type": "arguments",
@@ -2446,10 +2509,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 32,
-          "end_lineno": 95,
-          "lineno": 95,
-          "node_id": 347,
-          "src": "2742:14:0"
+          "end_lineno": 96,
+          "lineno": 96,
+          "node_id": 356,
+          "src": "2763:14:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -2458,103 +2521,113 @@
               "ast_type": "Name",
               "col_offset": 14,
               "end_col_offset": 21,
-              "end_lineno": 103,
+              "end_lineno": 104,
               "id": "address",
-              "lineno": 103,
-              "node_id": 356,
-              "src": "3045:7:0"
+              "lineno": 104,
+              "node_id": 365,
+              "src": "3066:7:0"
             },
             "ast_type": "AnnAssign",
             "col_offset": 4,
             "end_col_offset": 60,
-            "end_lineno": 103,
-            "lineno": 103,
-            "node_id": 353,
+            "end_lineno": 104,
+            "lineno": 104,
+            "node_id": 362,
             "simple": 1,
-            "src": "3035:56:0",
+            "src": "3056:56:0",
             "target": {
               "ast_type": "Name",
               "col_offset": 4,
               "end_col_offset": 12,
-              "end_lineno": 103,
+              "end_lineno": 104,
               "id": "registry",
-              "lineno": 103,
-              "node_id": 354,
-              "src": "3035:8:0"
+              "lineno": 104,
+              "node_id": 363,
+              "src": "3056:8:0"
             },
             "value": {
               "args": [],
               "ast_type": "Call",
               "col_offset": 24,
               "end_col_offset": 60,
-              "end_lineno": 103,
+              "end_lineno": 104,
               "func": {
                 "ast_type": "Attribute",
                 "attr": "get_registry",
                 "col_offset": 24,
                 "end_col_offset": 58,
-                "end_lineno": 103,
-                "lineno": 103,
-                "node_id": 359,
-                "src": "3055:34:0",
+                "end_lineno": 104,
+                "lineno": 104,
+                "node_id": 368,
+                "src": "3076:34:0",
                 "value": {
                   "ast_type": "Attribute",
                   "attr": "address_provider",
                   "col_offset": 24,
                   "end_col_offset": 45,
-                  "end_lineno": 103,
-                  "lineno": 103,
-                  "node_id": 360,
-                  "src": "3055:21:0",
+                  "end_lineno": 104,
+                  "lineno": 104,
+                  "node_id": 369,
+                  "src": "3076:21:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 24,
                     "end_col_offset": 28,
-                    "end_lineno": 103,
+                    "end_lineno": 104,
                     "id": "self",
-                    "lineno": 103,
-                    "node_id": 361,
-                    "src": "3055:4:0"
+                    "lineno": 104,
+                    "node_id": 370,
+                    "src": "3076:4:0"
                   }
                 }
               },
               "keyword": null,
               "keywords": [],
-              "lineno": 103,
-              "node_id": 358,
-              "src": "3055:36:0"
+              "lineno": 104,
+              "node_id": 367,
+              "src": "3076:36:0"
             }
           },
           {
             "ast_type": "Return",
             "col_offset": 4,
             "end_col_offset": 6,
-            "end_lineno": 121,
-            "lineno": 119,
-            "node_id": 365,
-            "src": "3783:82:0",
+            "end_lineno": 123,
+            "lineno": 120,
+            "node_id": 374,
+            "src": "3804:137:0",
             "value": {
               "args": [
                 {
                   "ast_type": "Dict",
                   "col_offset": 20,
                   "end_col_offset": 5,
-                  "end_lineno": 121,
+                  "end_lineno": 123,
                   "keys": [
                     {
                       "ast_type": "Name",
                       "col_offset": 8,
                       "end_col_offset": 16,
-                      "end_lineno": 120,
+                      "end_lineno": 121,
                       "id": "balances",
-                      "lineno": 120,
-                      "node_id": 370,
-                      "src": "3809:8:0"
+                      "lineno": 121,
+                      "node_id": 379,
+                      "src": "3830:8:0"
+                    },
+                    {
+                      "ast_type": "Name",
+                      "col_offset": 8,
+                      "end_col_offset": 12,
+                      "end_lineno": 122,
+                      "id": "name",
+                      "lineno": 122,
+                      "node_id": 381,
+                      "src": "3888:4:0"
                     }
                   ],
-                  "lineno": 119,
-                  "node_id": 369,
-                  "src": "3799:65:0",
+                  "lineno": 120,
+                  "node_id": 378,
+                  "src": "3820:120:0",
                   "values": [
                     {
                       "args": [
@@ -2562,65 +2635,131 @@
                           "ast_type": "Name",
                           "col_offset": 50,
                           "end_col_offset": 55,
-                          "end_lineno": 120,
+                          "end_lineno": 121,
                           "id": "_pool",
-                          "lineno": 120,
-                          "node_id": 380,
-                          "src": "3851:5:0"
+                          "lineno": 121,
+                          "node_id": 391,
+                          "src": "3872:5:0"
                         }
                       ],
                       "ast_type": "Call",
                       "col_offset": 18,
                       "end_col_offset": 56,
-                      "end_lineno": 120,
+                      "end_lineno": 121,
                       "func": {
                         "ast_type": "Attribute",
                         "attr": "get_balances",
                         "col_offset": 18,
                         "end_col_offset": 49,
-                        "end_lineno": 120,
-                        "lineno": 120,
-                        "node_id": 373,
-                        "src": "3819:31:0",
+                        "end_lineno": 121,
+                        "lineno": 121,
+                        "node_id": 384,
+                        "src": "3840:31:0",
                         "value": {
                           "args": [
                             {
                               "ast_type": "Name",
                               "col_offset": 27,
                               "end_col_offset": 35,
-                              "end_lineno": 120,
+                              "end_lineno": 121,
                               "id": "registry",
-                              "lineno": 120,
-                              "node_id": 377,
-                              "src": "3828:8:0"
+                              "lineno": 121,
+                              "node_id": 388,
+                              "src": "3849:8:0"
                             }
                           ],
                           "ast_type": "Call",
                           "col_offset": 18,
                           "end_col_offset": 36,
-                          "end_lineno": 120,
+                          "end_lineno": 121,
                           "func": {
                             "ast_type": "Name",
                             "col_offset": 18,
                             "end_col_offset": 26,
-                            "end_lineno": 120,
+                            "end_lineno": 121,
                             "id": "Registry",
-                            "lineno": 120,
-                            "node_id": 375,
-                            "src": "3819:8:0"
+                            "lineno": 121,
+                            "node_id": 386,
+                            "src": "3840:8:0"
                           },
                           "keyword": null,
                           "keywords": [],
-                          "lineno": 120,
-                          "node_id": 374,
-                          "src": "3819:18:0"
+                          "lineno": 121,
+                          "node_id": 385,
+                          "src": "3840:18:0"
                         }
                       },
                       "keyword": null,
                       "keywords": [],
-                      "lineno": 120,
-                      "node_id": 372,
-                      "src": "3819:38:0"
+                      "lineno": 121,
+                      "node_id": 383,
+                      "src": "3840:38:0"
+                    },
+                    {
+                      "args": [
+                        {
+                          "ast_type": "Name",
+                          "col_offset": 47,
+                          "end_col_offset": 52,
+                          "end_lineno": 122,
+                          "id": "_pool",
+                          "lineno": 122,
+                          "node_id": 401,
+                          "src": "3927:5:0"
+                        }
+                      ],
+                      "ast_type": "Call",
+                      "col_offset": 14,
+                      "end_col_offset": 53,
+                      "end_lineno": 122,
+                      "func": {
+                        "ast_type": "Attribute",
+                        "attr": "get_pool_name",
+                        "col_offset": 14,
+                        "end_col_offset": 46,
+                        "end_lineno": 122,
+                        "lineno": 122,
+                        "node_id": 394,
+                        "src": "3894:32:0",
+                        "value": {
+                          "args": [
+                            {
+                              "ast_type": "Name",
+                              "col_offset": 23,
+                              "end_col_offset": 31,
+                              "end_lineno": 122,
+                              "id": "registry",
+                              "lineno": 122,
+                              "node_id": 398,
+                              "src": "3903:8:0"
+                            }
+                          ],
+                          "ast_type": "Call",
+                          "col_offset": 14,
+                          "end_col_offset": 32,
+                          "end_lineno": 122,
+                          "func": {
+                            "ast_type": "Name",
+                            "col_offset": 14,
+                            "end_col_offset": 22,
+                            "end_lineno": 122,
+                            "id": "Registry",
+                            "lineno": 122,
+                            "node_id": 396,
+                            "src": "3894:8:0"
+                          },
+                          "keyword": null,
+                          "keywords": [],
+                          "lineno": 122,
+                          "node_id": 395,
+                          "src": "3894:18:0"
+                        }
+                      },
+                      "keyword": null,
+                      "keywords": [],
+                      "lineno": 122,
+                      "node_id": 393,
+                      "src": "3894:39:0"
                     }
                   ]
                 }
@@ -2628,22 +2767,22 @@
               "ast_type": "Call",
               "col_offset": 11,
               "end_col_offset": 6,
-              "end_lineno": 121,
+              "end_lineno": 123,
               "func": {
                 "ast_type": "Name",
                 "col_offset": 11,
                 "end_col_offset": 19,
-                "end_lineno": 119,
+                "end_lineno": 120,
                 "id": "PoolInfo",
-                "lineno": 119,
-                "node_id": 367,
-                "src": "3790:8:0"
+                "lineno": 120,
+                "node_id": 376,
+                "src": "3811:8:0"
               },
               "keyword": null,
               "keywords": [],
-              "lineno": 119,
-              "node_id": 366,
-              "src": "3790:75:0"
+              "lineno": 120,
+              "node_id": 375,
+              "src": "3811:130:0"
             }
           }
         ],
@@ -2653,50 +2792,50 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 5,
-            "end_lineno": 93,
+            "end_lineno": 94,
             "id": "view",
-            "lineno": 93,
-            "node_id": 382,
-            "src": "2709:4:0"
+            "lineno": 94,
+            "node_id": 403,
+            "src": "2730:4:0"
           },
           {
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 94,
+            "end_lineno": 95,
             "id": "external",
-            "lineno": 94,
-            "node_id": 384,
-            "src": "2715:8:0"
+            "lineno": 95,
+            "node_id": 405,
+            "src": "2736:8:0"
           }
         ],
         "doc_string": {
           "ast_type": "DocStr",
           "col_offset": 4,
           "end_col_offset": 7,
-          "end_lineno": 102,
-          "lineno": 96,
-          "node_id": 388,
-          "src": "2775:255:0",
+          "end_lineno": 103,
+          "lineno": 97,
+          "node_id": 409,
+          "src": "2796:255:0",
           "value": "\n    @notice Get information on a pool\n    @dev Reverts if the pool address is unknown\n    @param _pool Pool address\n    @return balances, underlying balances, decimals, underlying decimals,\n            lp token, amplification coefficient, fees\n    "
         },
         "end_col_offset": 6,
-        "end_lineno": 121,
-        "lineno": 95,
+        "end_lineno": 123,
+        "lineno": 96,
         "name": "get_pool_info",
-        "node_id": 346,
+        "node_id": 355,
         "pos": null,
         "returns": {
           "ast_type": "Name",
           "col_offset": 37,
           "end_col_offset": 45,
-          "end_lineno": 95,
+          "end_lineno": 96,
           "id": "PoolInfo",
-          "lineno": 95,
-          "node_id": 386,
-          "src": "2761:8:0"
+          "lineno": 96,
+          "node_id": 407,
+          "src": "2782:8:0"
         },
-        "src": "2724:1141:0"
+        "src": "2745:1196:0"
       }
     ],
     "col_offset": 0,
@@ -2706,19 +2845,19 @@
       "end_col_offset": 3,
       "end_lineno": 7,
       "lineno": 2,
-      "node_id": 389,
+      "node_id": 410,
       "src": "18:117:0",
       "value": "\n@title Curve Registry PoolInfo\n@license MIT\n@author Curve.Fi\n@notice Large getters designed for off-chain use\n"
     },
     "end_col_offset": 6,
-    "end_lineno": 121,
+    "end_lineno": 123,
     "lineno": 1,
     "name": "vy_contracts/hdk_contracts/PoolInfo.vy",
     "node_id": 0,
-    "src": "0:3865:0"
+    "src": "0:3941:0"
   },
-  "bytecode": "0x60206103ea6101403960206103ea60c03960c05160a01c1561002057600080fd5b610140516000556103d256600436101561000d576103a0565b600035601c52600051341561002157600080fd5b63e030afb88114156100b85760043560a01c1561003d57600080fd5b60206101c0600463a262904b6101605261017c6000545afa61005e57600080fd5b601f3d1161006b57600080fd5b6000506101c051610140526101006101006101e060246392e3cc2d610160526004356101805261017c610140515afa6100a357600080fd5b60ff3d116100b057600080fd5b6000506101e0f35b63100f2c008114156103865760043560a01c156100d457600080fd5b60206101c0600463a262904b6101605261017c6000545afa6100f557600080fd5b601f3d1161010257600080fd5b6000506101c051610140526102e080808080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61013f57600080fd5b60ff3d1161014c57600080fd5b6000506101e0518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61018957600080fd5b60ff3d1161019657600080fd5b6000506101e0602001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa6101d657600080fd5b60ff3d116101e357600080fd5b6000506101e0604001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61022357600080fd5b60ff3d1161023057600080fd5b6000506101e0606001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61027057600080fd5b60ff3d1161027d57600080fd5b6000506101e0608001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa6102bd57600080fd5b60ff3d116102ca57600080fd5b6000506101e060a001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61030a57600080fd5b60ff3d1161031757600080fd5b6000506101e060c001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61035757600080fd5b60ff3d1161036457600080fd5b6000506101e060e001518152505050506101009050905060c05260c0516102e0f35b63ce50c2e781141561039e5760005460005260206000f35b505b60006000fd5b61002c6103d20361002c60003961002c6103d2036000f3",
-  "bytecodeSha1": "d30fd45b4fc45080cad7da12bc046b16c517f354",
+  "bytecode": "0x602061049f61014039602061049f60c03960c05160a01c1561002057600080fd5b6101405160005561048756600436101561000d57610455565b600035601c52600051341561002157600080fd5b63e030afb88114156100b85760043560a01c1561003d57600080fd5b60206101c0600463a262904b6101605261017c6000545afa61005e57600080fd5b601f3d1161006b57600080fd5b6000506101c051610140526101006101006101e060246392e3cc2d610160526004356101805261017c610140515afa6100a357600080fd5b60ff3d116100b057600080fd5b6000506101e0f35b63100f2c0081141561043b5760043560a01c156100d457600080fd5b60206101c0600463a262904b6101605261017c6000545afa6100f557600080fd5b601f3d1161010257600080fd5b6000506101c051610140526103e080610120818080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61014257600080fd5b60ff3d1161014f57600080fd5b6000506101e0518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61018c57600080fd5b60ff3d1161019957600080fd5b6000506101e0602001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa6101d957600080fd5b60ff3d116101e657600080fd5b6000506101e0604001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61022657600080fd5b60ff3d1161023357600080fd5b6000506101e0606001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61027357600080fd5b60ff3d1161028057600080fd5b6000506101e0608001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa6102c057600080fd5b60ff3d116102cd57600080fd5b6000506101e060a001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61030d57600080fd5b60ff3d1161031a57600080fd5b6000506101e060c001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61035a57600080fd5b60ff3d1161036757600080fd5b6000506101e060e00151815250505050610100820191508082528083018060806103606024635c9117416102e052600435610300526102fc610140515afa6103ae57600080fd5b603f3d116103bb57600080fd5b6041610360610360510151106103d057600080fd5b600050610380805160200180838284600060045af16103ee57600080fd5b50508051806020830101818260206001820306601f8201039050033682375050805160200160206001820306601f820103905090509050810190508090509050905060c05260c0516103e0f35b63ce50c2e78114156104535760005460005260206000f35b505b60006000fd5b61002c6104870361002c60003961002c610487036000f3",
+  "bytecodeSha1": "4765b1c62b607f2644e16d11882284c67ea36b24",
   "compiler": {
     "evm_version": "istanbul",
     "version": "0.2.12"
@@ -2732,30 +2871,30 @@
       "0": {
         "PoolInfo.get_pool_coins": {
           "0": [
-            2253,
-            2309
+            2274,
+            2330
           ],
           "1": [
-            2661,
-            2706
+            2682,
+            2727
           ]
         },
         "PoolInfo.get_pool_info": {
           "2": [
-            3035,
-            3091
+            3056,
+            3112
           ],
           "3": [
-            3783,
-            3865
+            3804,
+            3941
           ]
         }
       }
     }
   },
   "dependencies": [],
-  "deployedBytecode": "0x600436101561000d576103a0565b600035601c52600051341561002157600080fd5b63e030afb88114156100b85760043560a01c1561003d57600080fd5b60206101c0600463a262904b6101605261017c6000545afa61005e57600080fd5b601f3d1161006b57600080fd5b6000506101c051610140526101006101006101e060246392e3cc2d610160526004356101805261017c610140515afa6100a357600080fd5b60ff3d116100b057600080fd5b6000506101e0f35b63100f2c008114156103865760043560a01c156100d457600080fd5b60206101c0600463a262904b6101605261017c6000545afa6100f557600080fd5b601f3d1161010257600080fd5b6000506101c051610140526102e080808080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61013f57600080fd5b60ff3d1161014c57600080fd5b6000506101e0518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61018957600080fd5b60ff3d1161019657600080fd5b6000506101e0602001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa6101d657600080fd5b60ff3d116101e357600080fd5b6000506101e0604001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61022357600080fd5b60ff3d1161023057600080fd5b6000506101e0606001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61027057600080fd5b60ff3d1161027d57600080fd5b6000506101e0608001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa6102bd57600080fd5b60ff3d116102ca57600080fd5b6000506101e060a001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61030a57600080fd5b60ff3d1161031757600080fd5b6000506101e060c001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61035757600080fd5b60ff3d1161036457600080fd5b6000506101e060e001518152505050506101009050905060c05260c0516102e0f35b63ce50c2e781141561039e5760005460005260206000f35b505b60006000fd",
-  "deployedSourceMap": "-1:-1:0:-;;;;;:::-;;:::-;:::-;;;;;;;;;;:::-;;;;:::-;1966:740;;;;;:::-;-1:-1;;;;;1966:740;:::-;;;;:::-;2273:36;;;-1:-1;;;;2273:36;;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;-1:-1;2253:56;1966:740;2661:45;2668:38;;;-1:-1;;;2700:5;-1:-1;;;;2677:8;2668:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;2661:45;1966:740::-;2724:1141;;;;;:::-;-1:-1;;;;;2724:1141;:::-;;;;:::-;3055:36;;;-1:-1;;;;3055:36;;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;-1:-1;3035:56;2724:1141;3783:82;-1:-1;;;;;3819:38;;;-1:-1;;;3851:5;-1:-1;;;;3828:8;3819:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;3783:82;3819:38;-1:-1;;;;;;;;;;;;3819:38;;;-1:-1;;;3851:5;-1:-1;;;;3828:8;3819:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3783:82;;-1:-1;;;;;;;;;;;;3819:38;;;-1:-1;;;3851:5;-1:-1;;;;3828:8;3819:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3783:82;;-1:-1;;;;;;;;;;;;3819:38;;;-1:-1;;;3851:5;-1:-1;;;;3828:8;3819:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3783:82;;-1:-1;;;;;;;;;;;;3819:38;;;-1:-1;;;3851:5;-1:-1;;;;3828:8;3819:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3783:82;;-1:-1;;;;;;;;;;;;3819:38;;;-1:-1;;;3851:5;-1:-1;;;;3828:8;3819:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3783:82;;-1:-1;;;;;;;;;;;;3819:38;;;-1:-1;;;3851:5;-1:-1;;;;3828:8;3819:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3783:82;;-1:-1;;;;;;;;;;;;3819:38;;;-1:-1;;;3851:5;-1:-1;;;;3828:8;3819:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3783:82;;-1:-1;;;;;;;;;;3783:82;;;;;;;;2724:1141::-;1823:23;;;;;:::-;-1:-1;1823:23;;;;;;:::-;-1:-1;:::-;;;;",
+  "deployedBytecode": "0x600436101561000d57610455565b600035601c52600051341561002157600080fd5b63e030afb88114156100b85760043560a01c1561003d57600080fd5b60206101c0600463a262904b6101605261017c6000545afa61005e57600080fd5b601f3d1161006b57600080fd5b6000506101c051610140526101006101006101e060246392e3cc2d610160526004356101805261017c610140515afa6100a357600080fd5b60ff3d116100b057600080fd5b6000506101e0f35b63100f2c0081141561043b5760043560a01c156100d457600080fd5b60206101c0600463a262904b6101605261017c6000545afa6100f557600080fd5b601f3d1161010257600080fd5b6000506101c051610140526103e080610120818080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61014257600080fd5b60ff3d1161014f57600080fd5b6000506101e0518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61018c57600080fd5b60ff3d1161019957600080fd5b6000506101e0602001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa6101d957600080fd5b60ff3d116101e657600080fd5b6000506101e0604001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61022657600080fd5b60ff3d1161023357600080fd5b6000506101e0606001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61027357600080fd5b60ff3d1161028057600080fd5b6000506101e0608001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa6102c057600080fd5b60ff3d116102cd57600080fd5b6000506101e060a001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61030d57600080fd5b60ff3d1161031a57600080fd5b6000506101e060c001518152505060208101905080806101006101e060246392e3cc2d610160526004356101805261017c610140515afa61035a57600080fd5b60ff3d1161036757600080fd5b6000506101e060e00151815250505050610100820191508082528083018060806103606024635c9117416102e052600435610300526102fc610140515afa6103ae57600080fd5b603f3d116103bb57600080fd5b6041610360610360510151106103d057600080fd5b600050610380805160200180838284600060045af16103ee57600080fd5b50508051806020830101818260206001820306601f8201039050033682375050805160200160206001820306601f820103905090509050810190508090509050905060c05260c0516103e0f35b63ce50c2e78114156104535760005460005260206000f35b505b60006000fd",
+  "deployedSourceMap": "-1:-1:0:-;;;;;:::-;;:::-;:::-;;;;;;;;;;:::-;;;;:::-;1987:740;;;;;:::-;-1:-1;;;;;1987:740;:::-;;;;:::-;2294:36;;;-1:-1;;;;2294:36;;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;-1:-1;2274:56;1987:740;2682:45;2689:38;;;-1:-1;;;2721:5;-1:-1;;;;2698:8;2689:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;2682:45;1987:740::-;2745:1196;;;;;:::-;-1:-1;;;;;2745:1196;:::-;;;;:::-;3076:36;;;-1:-1;;;;3076:36;;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;-1:-1;3056:56;2745:1196;3804:137;-1:-1;;;;;;3840:38;;;-1:-1;;;3872:5;-1:-1;;;;3849:8;3840:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;3804:137;3840:38;-1:-1;;;;;;;;;;;;3840:38;;;-1:-1;;;3872:5;-1:-1;;;;3849:8;3840:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3804:137;;-1:-1;;;;;;;;;;;;3840:38;;;-1:-1;;;3872:5;-1:-1;;;;3849:8;3840:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3804:137;;-1:-1;;;;;;;;;;;;3840:38;;;-1:-1;;;3872:5;-1:-1;;;;3849:8;3840:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3804:137;;-1:-1;;;;;;;;;;;;3840:38;;;-1:-1;;;3872:5;-1:-1;;;;3849:8;3840:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3804:137;;-1:-1;;;;;;;;;;;;3840:38;;;-1:-1;;;3872:5;-1:-1;;;;3849:8;3840:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3804:137;;-1:-1;;;;;;;;;;;;3840:38;;;-1:-1;;;3872:5;-1:-1;;;;3849:8;3840:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3804:137;;-1:-1;;;;;;;;;;;;3840:38;;;-1:-1;;;3872:5;-1:-1;;;;3849:8;3840:38;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;3804:137;;-1:-1;;;;;;;;;;;;;;;;;;;3894:39;;;-1:-1;;;3927:5;-1:-1;;;;3903:8;3894:39;;;;:::-;;;;:::-;;;;;:::-;;;;:::-;;;;;;;;;:::-;;;;:::-;;;;-1:-1;;;;;;;;;;;;;:::-;;;;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3804:137;;;;;;;;2745:1196::-;1844:23;;;;;:::-;-1:-1;1844:23;;;;;;:::-;-1:-1;:::-;;;;",
   "language": "Vyper",
   "natspec": {
     "author": "Curve.Fi",
@@ -2787,14 +2926,14 @@
   },
   "offset": [
     0,
-    3865
+    3941
   ],
-  "opcodes": "PUSH1 0x4 CALLDATASIZE LT ISZERO PUSH2 0x0D JUMPI PUSH2 0x3A0 JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0x1C MSTORE PUSH1 0x0 MLOAD CALLVALUE ISZERO PUSH2 0x021 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH4 0xE030AFB8 DUP2 EQ ISZERO PUSH2 0x0B8 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x03D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x20 PUSH2 0x1C0 PUSH1 0x4 PUSH4 0xA262904B PUSH2 0x160 MSTORE PUSH2 0x17C PUSH1 0x0 SLOAD GAS STATICCALL PUSH2 0x05E JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1F RETURNDATASIZE GT PUSH2 0x06B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1C0 MLOAD PUSH2 0x140 MSTORE PUSH2 0x10 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x0A3 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x0B0 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 RETURN JUMPDEST PUSH4 0x10F2C0 DUP2 EQ ISZERO PUSH2 0x386 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x0D4 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x20 PUSH2 0x1C0 PUSH1 0x4 PUSH4 0xA262904B PUSH2 0x160 MSTORE PUSH2 0x17C PUSH1 0x0 SLOAD GAS STATICCALL PUSH2 0x0F5 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1F RETURNDATASIZE GT PUSH2 0x12 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1C0 MLOAD PUSH2 0x140 MSTORE PUSH2 0x2E0 DUP1 DUP1 DUP1 DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x13F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x14C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x189 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x196 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0x20 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x1D6 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x1E3 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0x40 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x223 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x230 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0x60 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x270 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x27D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0x80 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x2BD JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x2CA JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0xA0 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x3A JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x317 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0xC0 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x357 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x364 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0xE0 ADD MLOAD DUP2 MSTORE POP POP POP POP PUSH2 0x10 SWAP1 POP SWAP1 POP PUSH1 0xC0 MSTORE PUSH1 0xC0 MLOAD PUSH2 0x2E0 RETURN JUMPDEST PUSH4 0xCE50C2E7 DUP2 EQ ISZERO PUSH2 0x39E JUMPI PUSH1 0x0 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST POP JUMPDEST PUSH1 0x0 PUSH1 0x0 REVERT",
+  "opcodes": "PUSH1 0x4 CALLDATASIZE LT ISZERO PUSH2 0x0D JUMPI PUSH2 0x455 JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0x1C MSTORE PUSH1 0x0 MLOAD CALLVALUE ISZERO PUSH2 0x021 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH4 0xE030AFB8 DUP2 EQ ISZERO PUSH2 0x0B8 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x03D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x20 PUSH2 0x1C0 PUSH1 0x4 PUSH4 0xA262904B PUSH2 0x160 MSTORE PUSH2 0x17C PUSH1 0x0 SLOAD GAS STATICCALL PUSH2 0x05E JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1F RETURNDATASIZE GT PUSH2 0x06B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1C0 MLOAD PUSH2 0x140 MSTORE PUSH2 0x10 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x0A3 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x0B0 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 RETURN JUMPDEST PUSH4 0x10F2C0 DUP2 EQ ISZERO PUSH2 0x43B JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR ISZERO PUSH2 0x0D4 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x20 PUSH2 0x1C0 PUSH1 0x4 PUSH4 0xA262904B PUSH2 0x160 MSTORE PUSH2 0x17C PUSH1 0x0 SLOAD GAS STATICCALL PUSH2 0x0F5 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1F RETURNDATASIZE GT PUSH2 0x12 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1C0 MLOAD PUSH2 0x140 MSTORE PUSH2 0x3E0 DUP1 PUSH2 0x120 DUP2 DUP1 DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x142 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x14F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x18C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x199 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0x20 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x1D9 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x1E6 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0x40 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x226 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x233 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0x60 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x273 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x280 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0x80 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x2C0 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x2CD JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0xA0 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x3D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x31A JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0xC0 ADD MLOAD DUP2 MSTORE POP POP PUSH1 0x20 DUP2 ADD SWAP1 POP DUP1 DUP1 PUSH2 0x10 PUSH2 0x1E0 PUSH1 0x24 PUSH4 0x92E3CC2D PUSH2 0x160 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x180 MSTORE PUSH2 0x17C PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x35A JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xFF RETURNDATASIZE GT PUSH2 0x367 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x1E0 PUSH1 0xE0 ADD MLOAD DUP2 MSTORE POP POP POP POP PUSH2 0x10 DUP3 ADD SWAP2 POP DUP1 DUP3 MSTORE DUP1 DUP4 ADD DUP1 PUSH1 0x80 PUSH2 0x360 PUSH1 0x24 PUSH4 0x5C911741 PUSH2 0x2E0 MSTORE PUSH1 0x4 CALLDATALOAD PUSH2 0x30 MSTORE PUSH2 0x2FC PUSH2 0x140 MLOAD GAS STATICCALL PUSH2 0x3AE JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3F RETURNDATASIZE GT PUSH2 0x3BB JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x41 PUSH2 0x360 PUSH2 0x360 MLOAD ADD MLOAD LT PUSH2 0x3D0 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 POP PUSH2 0x380 DUP1 MLOAD PUSH1 0x20 ADD DUP1 DUP4 DUP3 DUP5 PUSH1 0x0 PUSH1 0x4 GAS CALL PUSH2 0x3EE JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD DUP2 DUP3 PUSH1 0x20 PUSH1 0x1 DUP3 SUB MOD PUSH1 0x1F DUP3 ADD SUB SWAP1 POP SUB CALLDATASIZE DUP3 CALLDATACOPY POP POP DUP1 MLOAD PUSH1 0x20 ADD PUSH1 0x20 PUSH1 0x1 DUP3 SUB MOD PUSH1 0x1F DUP3 ADD SUB SWAP1 POP SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP DUP1 SWAP1 POP SWAP1 POP SWAP1 POP PUSH1 0xC0 MSTORE PUSH1 0xC0 MLOAD PUSH2 0x3E0 RETURN JUMPDEST PUSH4 0xCE50C2E7 DUP2 EQ ISZERO PUSH2 0x453 JUMPI PUSH1 0x0 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST POP JUMPDEST PUSH1 0x0 PUSH1 0x0 REVERT",
   "pcMap": {
     "0": {
       "offset": [
         0,
-        3865
+        3941
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2818,7 +2957,7 @@
     },
     "9": {
       "op": "PUSH2",
-      "value": "0x3A0"
+      "value": "0x455"
     },
     "12": {
       "op": "JUMP"
@@ -2882,8 +3021,8 @@
     "34": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "PUSH4",
       "path": "0",
@@ -2892,8 +3031,8 @@
     "39": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "DUP2",
       "path": "0"
@@ -2901,8 +3040,8 @@
     "40": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "EQ",
       "path": "0"
@@ -2910,8 +3049,8 @@
     "41": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "ISZERO",
       "path": "0"
@@ -2919,8 +3058,8 @@
     "42": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2929,8 +3068,8 @@
     "45": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "JUMPI",
       "path": "0"
@@ -2955,8 +3094,8 @@
     "53": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2965,8 +3104,8 @@
     "56": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "JUMPI",
       "path": "0"
@@ -2974,8 +3113,8 @@
     "57": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2984,8 +3123,8 @@
     "59": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "DUP1",
       "path": "0"
@@ -2993,8 +3132,8 @@
     "60": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "REVERT",
       "path": "0"
@@ -3002,8 +3141,8 @@
     "61": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3011,8 +3150,8 @@
     "62": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3022,8 +3161,8 @@
     "64": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3032,8 +3171,8 @@
     "67": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3057,8 +3196,8 @@
     "81": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3067,8 +3206,8 @@
     "83": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "SLOAD",
       "path": "0"
@@ -3076,8 +3215,8 @@
     "84": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "GAS",
       "path": "0"
@@ -3085,8 +3224,8 @@
     "85": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "STATICCALL",
       "path": "0"
@@ -3094,8 +3233,8 @@
     "86": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3104,8 +3243,8 @@
     "89": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3113,8 +3252,8 @@
     "90": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3123,8 +3262,8 @@
     "92": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "DUP1",
       "path": "0"
@@ -3132,8 +3271,8 @@
     "93": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "REVERT",
       "path": "0"
@@ -3141,8 +3280,8 @@
     "94": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3150,8 +3289,8 @@
     "95": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3160,8 +3299,8 @@
     "97": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "RETURNDATASIZE",
       "path": "0"
@@ -3169,8 +3308,8 @@
     "98": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "GT",
       "path": "0"
@@ -3178,8 +3317,8 @@
     "99": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3188,8 +3327,8 @@
     "102": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3197,8 +3336,8 @@
     "103": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3207,8 +3346,8 @@
     "105": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "DUP1",
       "path": "0"
@@ -3216,8 +3355,8 @@
     "106": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "REVERT",
       "path": "0"
@@ -3225,8 +3364,8 @@
     "107": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3234,8 +3373,8 @@
     "108": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3244,8 +3383,8 @@
     "110": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "POP",
       "path": "0"
@@ -3253,8 +3392,8 @@
     "111": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2273,
-        2309
+        2294,
+        2330
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3266,8 +3405,8 @@
     "115": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2253,
-        2309
+        2274,
+        2330
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3276,8 +3415,8 @@
     "118": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "MSTORE",
       "path": "0"
@@ -3285,8 +3424,8 @@
     "119": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2661,
-        2706
+        2682,
+        2727
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3296,8 +3435,8 @@
     "122": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3306,8 +3445,8 @@
     "125": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3316,8 +3455,8 @@
     "128": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3337,8 +3476,8 @@
     "139": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2700,
-        2705
+        2721,
+        2726
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3361,8 +3500,8 @@
     "149": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2677,
-        2685
+        2698,
+        2706
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3371,8 +3510,8 @@
     "152": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "MLOAD",
       "path": "0"
@@ -3380,8 +3519,8 @@
     "153": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "GAS",
       "path": "0"
@@ -3389,8 +3528,8 @@
     "154": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "STATICCALL",
       "path": "0"
@@ -3398,8 +3537,8 @@
     "155": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3408,8 +3547,8 @@
     "158": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3417,8 +3556,8 @@
     "159": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3427,8 +3566,8 @@
     "161": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "DUP1",
       "path": "0"
@@ -3436,8 +3575,8 @@
     "162": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "REVERT",
       "path": "0"
@@ -3445,8 +3584,8 @@
     "163": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3454,8 +3593,8 @@
     "164": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3464,8 +3603,8 @@
     "166": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "RETURNDATASIZE",
       "path": "0"
@@ -3473,8 +3612,8 @@
     "167": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "GT",
       "path": "0"
@@ -3482,8 +3621,8 @@
     "168": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3492,8 +3631,8 @@
     "171": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3501,8 +3640,8 @@
     "172": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3511,8 +3650,8 @@
     "174": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "DUP1",
       "path": "0"
@@ -3520,8 +3659,8 @@
     "175": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "REVERT",
       "path": "0"
@@ -3529,8 +3668,8 @@
     "176": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3538,8 +3677,8 @@
     "177": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3548,8 +3687,8 @@
     "179": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "POP",
       "path": "0"
@@ -3557,8 +3696,8 @@
     "180": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2668,
-        2706
+        2689,
+        2727
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3567,8 +3706,8 @@
     "183": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        2661,
-        2706
+        2682,
+        2727
       ],
       "op": "RETURN",
       "path": "0"
@@ -3576,8 +3715,8 @@
     "184": {
       "fn": "PoolInfo.get_pool_coins",
       "offset": [
-        1966,
-        2706
+        1987,
+        2727
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3585,8 +3724,8 @@
     "185": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "PUSH4",
       "path": "0",
@@ -3595,8 +3734,8 @@
     "190": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "DUP2",
       "path": "0"
@@ -3604,8 +3743,8 @@
     "191": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "EQ",
       "path": "0"
@@ -3613,8 +3752,8 @@
     "192": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "ISZERO",
       "path": "0"
@@ -3622,18 +3761,18 @@
     "193": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x386"
+      "value": "0x43B"
     },
     "196": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3658,8 +3797,8 @@
     "204": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3668,8 +3807,8 @@
     "207": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3677,8 +3816,8 @@
     "208": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3687,8 +3826,8 @@
     "210": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "DUP1",
       "path": "0"
@@ -3696,8 +3835,8 @@
     "211": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "REVERT",
       "path": "0"
@@ -3705,8 +3844,8 @@
     "212": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3714,8 +3853,8 @@
     "213": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3725,8 +3864,8 @@
     "215": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3735,8 +3874,8 @@
     "218": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3760,8 +3899,8 @@
     "232": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3770,8 +3909,8 @@
     "234": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "SLOAD",
       "path": "0"
@@ -3779,8 +3918,8 @@
     "235": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "GAS",
       "path": "0"
@@ -3788,8 +3927,8 @@
     "236": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "STATICCALL",
       "path": "0"
@@ -3797,8 +3936,8 @@
     "237": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3807,8 +3946,8 @@
     "240": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3816,8 +3955,8 @@
     "241": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3826,8 +3965,8 @@
     "243": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "DUP1",
       "path": "0"
@@ -3835,8 +3974,8 @@
     "244": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "REVERT",
       "path": "0"
@@ -3844,8 +3983,8 @@
     "245": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3853,8 +3992,8 @@
     "246": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3863,8 +4002,8 @@
     "248": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "RETURNDATASIZE",
       "path": "0"
@@ -3872,8 +4011,8 @@
     "249": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "GT",
       "path": "0"
@@ -3881,8 +4020,8 @@
     "250": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3891,8 +4030,8 @@
     "253": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "JUMPI",
       "path": "0"
@@ -3900,8 +4039,8 @@
     "254": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3910,8 +4049,8 @@
     "256": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "DUP1",
       "path": "0"
@@ -3919,8 +4058,8 @@
     "257": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "REVERT",
       "path": "0"
@@ -3928,8 +4067,8 @@
     "258": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -3937,8 +4076,8 @@
     "259": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH1",
       "path": "0",
@@ -3947,8 +4086,8 @@
     "261": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "POP",
       "path": "0"
@@ -3956,8 +4095,8 @@
     "262": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3055,
-        3091
+        3076,
+        3112
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3969,8 +4108,8 @@
     "266": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3035,
-        3091
+        3056,
+        3112
       ],
       "op": "PUSH2",
       "path": "0",
@@ -3979,8 +4118,8 @@
     "269": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        2745,
+        3941
       ],
       "op": "MSTORE",
       "path": "0"
@@ -3988,2837 +4127,3496 @@
     "270": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3804,
+        3941
       ],
       "op": "PUSH2",
       "path": "0",
       "statement": 3,
-      "value": "0x2E0"
+      "value": "0x3E0"
     },
     "273": {
       "op": "DUP1"
     },
     "274": {
-      "op": "DUP1"
-    },
-    "275": {
-      "op": "DUP1"
-    },
-    "276": {
-      "op": "DUP1"
+      "op": "PUSH2",
+      "value": "0x120"
     },
     "277": {
-      "op": "DUP1"
+      "op": "DUP2"
     },
     "278": {
+      "op": "DUP1"
+    },
+    "279": {
+      "op": "DUP1"
+    },
+    "280": {
+      "op": "DUP1"
+    },
+    "281": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x10"
     },
-    "281": {
+    "284": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x1E0"
     },
-    "284": {
+    "287": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x24"
     },
-    "286": {
+    "289": {
       "op": "PUSH4",
       "value": "0x92E3CC2D"
     },
-    "291": {
+    "294": {
       "op": "PUSH2",
       "value": "0x160"
     },
-    "294": {
+    "297": {
       "op": "MSTORE"
     },
-    "295": {
+    "298": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3851,
-        3856
+        3872,
+        3877
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "297": {
+    "300": {
       "op": "CALLDATALOAD"
     },
-    "298": {
+    "301": {
       "op": "PUSH2",
       "value": "0x180"
     },
-    "301": {
+    "304": {
       "op": "MSTORE"
     },
-    "302": {
+    "305": {
       "op": "PUSH2",
       "value": "0x17C"
     },
-    "305": {
+    "308": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3828,
-        3836
+        3849,
+        3857
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x140"
     },
-    "308": {
+    "311": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "MLOAD",
       "path": "0"
     },
-    "309": {
+    "312": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "GAS",
       "path": "0"
     },
-    "310": {
+    "313": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "STATICCALL",
       "path": "0"
     },
-    "311": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x13F"
-    },
     "314": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "315": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x142"
     },
     "317": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "318": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "319": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
     },
     "320": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xFF"
+      "op": "DUP1",
+      "path": "0"
+    },
+    "321": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
     },
     "322": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "RETURNDATASIZE",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "323": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "325": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "326": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
       ],
       "op": "GT",
       "path": "0"
     },
-    "324": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x14C"
-    },
     "327": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "328": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x14F"
     },
     "330": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "331": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
-      ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "332": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "333": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
+    "333": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "334": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
     "335": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3840,
+        3878
       ],
-      "op": "POP",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "336": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x1E0"
-    },
-    "339": {
-      "op": "MLOAD"
-    },
-    "340": {
-      "op": "DUP2"
-    },
-    "341": {
-      "op": "MSTORE"
-    },
-    "342": {
-      "op": "POP"
-    },
-    "343": {
-      "op": "POP"
-    },
-    "344": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "346": {
-      "op": "DUP2"
-    },
-    "347": {
-      "op": "ADD"
-    },
-    "348": {
-      "op": "SWAP1"
-    },
-    "349": {
-      "op": "POP"
-    },
-    "350": {
-      "op": "DUP1"
-    },
-    "351": {
-      "op": "DUP1"
-    },
-    "352": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x10"
-    },
-    "355": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x1E0"
-    },
-    "358": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x24"
-    },
-    "360": {
-      "op": "PUSH4",
-      "value": "0x92E3CC2D"
-    },
-    "365": {
-      "op": "PUSH2",
-      "value": "0x160"
-    },
-    "368": {
-      "op": "MSTORE"
-    },
-    "369": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3851,
-        3856
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x4"
-    },
-    "371": {
-      "op": "CALLDATALOAD"
-    },
-    "372": {
-      "op": "PUSH2",
-      "value": "0x180"
-    },
-    "375": {
-      "op": "MSTORE"
-    },
-    "376": {
-      "op": "PUSH2",
-      "value": "0x17C"
-    },
-    "379": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3828,
-        3836
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x140"
-    },
-    "382": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "MLOAD",
-      "path": "0"
-    },
-    "383": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "GAS",
-      "path": "0"
-    },
-    "384": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "STATICCALL",
-      "path": "0"
-    },
-    "385": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x189"
-    },
-    "388": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "389": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
+    "338": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "339": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1E0"
+    },
+    "342": {
+      "op": "MLOAD"
+    },
+    "343": {
+      "op": "DUP2"
+    },
+    "344": {
+      "op": "MSTORE"
+    },
+    "345": {
+      "op": "POP"
+    },
+    "346": {
+      "op": "POP"
+    },
+    "347": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "349": {
+      "op": "DUP2"
+    },
+    "350": {
+      "op": "ADD"
+    },
+    "351": {
+      "op": "SWAP1"
+    },
+    "352": {
+      "op": "POP"
+    },
+    "353": {
+      "op": "DUP1"
+    },
+    "354": {
+      "op": "DUP1"
+    },
+    "355": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x10"
+    },
+    "358": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1E0"
+    },
+    "361": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "363": {
+      "op": "PUSH4",
+      "value": "0x92E3CC2D"
+    },
+    "368": {
+      "op": "PUSH2",
+      "value": "0x160"
+    },
+    "371": {
+      "op": "MSTORE"
+    },
+    "372": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3872,
+        3877
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "374": {
+      "op": "CALLDATALOAD"
+    },
+    "375": {
+      "op": "PUSH2",
+      "value": "0x180"
+    },
+    "378": {
+      "op": "MSTORE"
+    },
+    "379": {
+      "op": "PUSH2",
+      "value": "0x17C"
+    },
+    "382": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3849,
+        3857
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x140"
+    },
+    "385": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "386": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "GAS",
+      "path": "0"
+    },
+    "387": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "STATICCALL",
+      "path": "0"
+    },
+    "388": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x18C"
+    },
     "391": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "392": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "393": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
     },
     "394": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xFF"
+      "op": "DUP1",
+      "path": "0"
+    },
+    "395": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
     },
     "396": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "RETURNDATASIZE",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "397": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "399": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "400": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
       ],
       "op": "GT",
       "path": "0"
     },
-    "398": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x196"
-    },
     "401": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "402": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x199"
     },
     "404": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "405": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
-      ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "406": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "407": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
+    "407": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "408": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
     "409": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "POP",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "410": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x1E0"
-    },
-    "413": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x20"
-    },
-    "415": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "ADD",
-      "path": "0"
-    },
-    "416": {
-      "op": "MLOAD"
-    },
-    "417": {
-      "op": "DUP2"
-    },
-    "418": {
-      "op": "MSTORE"
-    },
-    "419": {
-      "op": "POP"
-    },
-    "420": {
-      "op": "POP"
-    },
-    "421": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "423": {
-      "op": "DUP2"
-    },
-    "424": {
-      "op": "ADD"
-    },
-    "425": {
-      "op": "SWAP1"
-    },
-    "426": {
-      "op": "POP"
-    },
-    "427": {
-      "op": "DUP1"
-    },
-    "428": {
-      "op": "DUP1"
-    },
-    "429": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x10"
-    },
-    "432": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x1E0"
-    },
-    "435": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x24"
-    },
-    "437": {
-      "op": "PUSH4",
-      "value": "0x92E3CC2D"
-    },
-    "442": {
-      "op": "PUSH2",
-      "value": "0x160"
-    },
-    "445": {
-      "op": "MSTORE"
-    },
-    "446": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3851,
-        3856
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x4"
-    },
-    "448": {
-      "op": "CALLDATALOAD"
-    },
-    "449": {
-      "op": "PUSH2",
-      "value": "0x180"
-    },
-    "452": {
-      "op": "MSTORE"
-    },
-    "453": {
-      "op": "PUSH2",
-      "value": "0x17C"
-    },
-    "456": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3828,
-        3836
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x140"
-    },
-    "459": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "MLOAD",
-      "path": "0"
-    },
-    "460": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "GAS",
-      "path": "0"
-    },
-    "461": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "STATICCALL",
-      "path": "0"
-    },
-    "462": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x1D6"
-    },
-    "465": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "466": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
+    "412": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "413": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1E0"
+    },
+    "416": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "418": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "419": {
+      "op": "MLOAD"
+    },
+    "420": {
+      "op": "DUP2"
+    },
+    "421": {
+      "op": "MSTORE"
+    },
+    "422": {
+      "op": "POP"
+    },
+    "423": {
+      "op": "POP"
+    },
+    "424": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "426": {
+      "op": "DUP2"
+    },
+    "427": {
+      "op": "ADD"
+    },
+    "428": {
+      "op": "SWAP1"
+    },
+    "429": {
+      "op": "POP"
+    },
+    "430": {
+      "op": "DUP1"
+    },
+    "431": {
+      "op": "DUP1"
+    },
+    "432": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x10"
+    },
+    "435": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1E0"
+    },
+    "438": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "440": {
+      "op": "PUSH4",
+      "value": "0x92E3CC2D"
+    },
+    "445": {
+      "op": "PUSH2",
+      "value": "0x160"
+    },
+    "448": {
+      "op": "MSTORE"
+    },
+    "449": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3872,
+        3877
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "451": {
+      "op": "CALLDATALOAD"
+    },
+    "452": {
+      "op": "PUSH2",
+      "value": "0x180"
+    },
+    "455": {
+      "op": "MSTORE"
+    },
+    "456": {
+      "op": "PUSH2",
+      "value": "0x17C"
+    },
+    "459": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3849,
+        3857
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x140"
+    },
+    "462": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "463": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "GAS",
+      "path": "0"
+    },
+    "464": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "STATICCALL",
+      "path": "0"
+    },
+    "465": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1D9"
+    },
     "468": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "469": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "470": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
     },
     "471": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xFF"
+      "op": "DUP1",
+      "path": "0"
+    },
+    "472": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
     },
     "473": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "RETURNDATASIZE",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "474": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "476": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "477": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
       ],
       "op": "GT",
       "path": "0"
     },
-    "475": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x1E3"
-    },
     "478": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "479": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x1E6"
     },
     "481": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "482": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
-      ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "483": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "484": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
+    "484": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "485": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
     "486": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "POP",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "487": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "489": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "490": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x1E0"
     },
-    "490": {
+    "493": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3804,
+        3941
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x40"
     },
-    "492": {
+    "495": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3804,
+        3941
       ],
       "op": "ADD",
       "path": "0"
     },
-    "493": {
+    "496": {
       "op": "MLOAD"
     },
-    "494": {
+    "497": {
       "op": "DUP2"
     },
-    "495": {
+    "498": {
       "op": "MSTORE"
     },
-    "496": {
+    "499": {
       "op": "POP"
     },
-    "497": {
+    "500": {
       "op": "POP"
     },
-    "498": {
+    "501": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "500": {
+    "503": {
       "op": "DUP2"
     },
-    "501": {
+    "504": {
       "op": "ADD"
     },
-    "502": {
+    "505": {
       "op": "SWAP1"
     },
-    "503": {
+    "506": {
       "op": "POP"
     },
-    "504": {
+    "507": {
       "op": "DUP1"
     },
-    "505": {
+    "508": {
       "op": "DUP1"
     },
-    "506": {
+    "509": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x10"
     },
-    "509": {
+    "512": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x1E0"
     },
-    "512": {
+    "515": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x24"
     },
-    "514": {
+    "517": {
       "op": "PUSH4",
       "value": "0x92E3CC2D"
     },
-    "519": {
+    "522": {
       "op": "PUSH2",
       "value": "0x160"
     },
-    "522": {
+    "525": {
       "op": "MSTORE"
     },
-    "523": {
+    "526": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3851,
-        3856
+        3872,
+        3877
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "525": {
+    "528": {
       "op": "CALLDATALOAD"
     },
-    "526": {
+    "529": {
       "op": "PUSH2",
       "value": "0x180"
     },
-    "529": {
+    "532": {
       "op": "MSTORE"
     },
-    "530": {
+    "533": {
       "op": "PUSH2",
       "value": "0x17C"
     },
-    "533": {
+    "536": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3828,
-        3836
+        3849,
+        3857
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x140"
     },
-    "536": {
+    "539": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "MLOAD",
       "path": "0"
     },
-    "537": {
+    "540": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "GAS",
       "path": "0"
     },
-    "538": {
+    "541": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "STATICCALL",
       "path": "0"
     },
-    "539": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x223"
-    },
     "542": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "543": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x226"
     },
     "545": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "546": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "547": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
     },
     "548": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xFF"
+      "op": "DUP1",
+      "path": "0"
+    },
+    "549": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
     },
     "550": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "RETURNDATASIZE",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "551": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "553": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "554": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
       ],
       "op": "GT",
       "path": "0"
     },
-    "552": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x230"
-    },
     "555": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "556": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x233"
     },
     "558": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "559": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
-      ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "560": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "561": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
+    "561": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "562": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
     "563": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "POP",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "564": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "566": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "567": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x1E0"
     },
-    "567": {
+    "570": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3804,
+        3941
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x60"
     },
-    "569": {
+    "572": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3804,
+        3941
       ],
       "op": "ADD",
       "path": "0"
     },
-    "570": {
+    "573": {
       "op": "MLOAD"
     },
-    "571": {
+    "574": {
       "op": "DUP2"
     },
-    "572": {
+    "575": {
       "op": "MSTORE"
     },
-    "573": {
+    "576": {
       "op": "POP"
     },
-    "574": {
+    "577": {
       "op": "POP"
     },
-    "575": {
+    "578": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "577": {
+    "580": {
       "op": "DUP2"
     },
-    "578": {
+    "581": {
       "op": "ADD"
     },
-    "579": {
+    "582": {
       "op": "SWAP1"
     },
-    "580": {
+    "583": {
       "op": "POP"
     },
-    "581": {
+    "584": {
       "op": "DUP1"
     },
-    "582": {
+    "585": {
       "op": "DUP1"
     },
-    "583": {
+    "586": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x10"
     },
-    "586": {
+    "589": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x1E0"
     },
-    "589": {
+    "592": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x24"
     },
-    "591": {
+    "594": {
       "op": "PUSH4",
       "value": "0x92E3CC2D"
     },
-    "596": {
+    "599": {
       "op": "PUSH2",
       "value": "0x160"
     },
-    "599": {
+    "602": {
       "op": "MSTORE"
     },
-    "600": {
+    "603": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3851,
-        3856
+        3872,
+        3877
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "602": {
+    "605": {
       "op": "CALLDATALOAD"
     },
-    "603": {
+    "606": {
       "op": "PUSH2",
       "value": "0x180"
     },
-    "606": {
+    "609": {
       "op": "MSTORE"
     },
-    "607": {
+    "610": {
       "op": "PUSH2",
       "value": "0x17C"
     },
-    "610": {
+    "613": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3828,
-        3836
+        3849,
+        3857
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x140"
     },
-    "613": {
+    "616": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "MLOAD",
       "path": "0"
     },
-    "614": {
+    "617": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "GAS",
       "path": "0"
     },
-    "615": {
+    "618": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "STATICCALL",
       "path": "0"
     },
-    "616": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x270"
-    },
     "619": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "620": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x273"
     },
     "622": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "623": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "624": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
     },
     "625": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xFF"
+      "op": "DUP1",
+      "path": "0"
+    },
+    "626": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
     },
     "627": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "RETURNDATASIZE",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "628": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "630": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "631": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
       ],
       "op": "GT",
       "path": "0"
     },
-    "629": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x27D"
-    },
     "632": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "633": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x280"
     },
     "635": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "636": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
-      ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "637": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "638": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
+    "638": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "639": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
     "640": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "POP",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "641": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "643": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "644": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x1E0"
     },
-    "644": {
+    "647": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3804,
+        3941
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x80"
     },
-    "646": {
+    "649": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3804,
+        3941
       ],
       "op": "ADD",
       "path": "0"
     },
-    "647": {
+    "650": {
       "op": "MLOAD"
     },
-    "648": {
+    "651": {
       "op": "DUP2"
     },
-    "649": {
+    "652": {
       "op": "MSTORE"
     },
-    "650": {
+    "653": {
       "op": "POP"
     },
-    "651": {
+    "654": {
       "op": "POP"
     },
-    "652": {
+    "655": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "654": {
+    "657": {
       "op": "DUP2"
     },
-    "655": {
+    "658": {
       "op": "ADD"
     },
-    "656": {
+    "659": {
       "op": "SWAP1"
     },
-    "657": {
+    "660": {
       "op": "POP"
     },
-    "658": {
+    "661": {
       "op": "DUP1"
     },
-    "659": {
+    "662": {
       "op": "DUP1"
     },
-    "660": {
+    "663": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x10"
     },
-    "663": {
+    "666": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x1E0"
     },
-    "666": {
+    "669": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x24"
     },
-    "668": {
+    "671": {
       "op": "PUSH4",
       "value": "0x92E3CC2D"
     },
-    "673": {
+    "676": {
       "op": "PUSH2",
       "value": "0x160"
     },
-    "676": {
+    "679": {
       "op": "MSTORE"
     },
-    "677": {
+    "680": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3851,
-        3856
+        3872,
+        3877
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "679": {
+    "682": {
       "op": "CALLDATALOAD"
     },
-    "680": {
+    "683": {
       "op": "PUSH2",
       "value": "0x180"
     },
-    "683": {
+    "686": {
       "op": "MSTORE"
     },
-    "684": {
+    "687": {
       "op": "PUSH2",
       "value": "0x17C"
     },
-    "687": {
+    "690": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3828,
-        3836
+        3849,
+        3857
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x140"
     },
-    "690": {
+    "693": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "MLOAD",
       "path": "0"
     },
-    "691": {
+    "694": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "GAS",
       "path": "0"
     },
-    "692": {
+    "695": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "STATICCALL",
       "path": "0"
     },
-    "693": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x2BD"
-    },
     "696": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "697": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x2C0"
     },
     "699": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "700": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "701": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
     },
     "702": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xFF"
+      "op": "DUP1",
+      "path": "0"
+    },
+    "703": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
     },
     "704": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "RETURNDATASIZE",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "705": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "707": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "708": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
       ],
       "op": "GT",
       "path": "0"
     },
-    "706": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x2CA"
-    },
     "709": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "710": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x2CD"
     },
     "712": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "713": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
-      ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "714": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "715": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
+    "715": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "716": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
     "717": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "POP",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "718": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "720": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "721": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x1E0"
     },
-    "721": {
+    "724": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3804,
+        3941
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0xA0"
     },
-    "723": {
+    "726": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3804,
+        3941
       ],
       "op": "ADD",
       "path": "0"
     },
-    "724": {
+    "727": {
       "op": "MLOAD"
     },
-    "725": {
+    "728": {
       "op": "DUP2"
     },
-    "726": {
+    "729": {
       "op": "MSTORE"
     },
-    "727": {
+    "730": {
       "op": "POP"
     },
-    "728": {
+    "731": {
       "op": "POP"
     },
-    "729": {
+    "732": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "731": {
+    "734": {
       "op": "DUP2"
     },
-    "732": {
+    "735": {
       "op": "ADD"
     },
-    "733": {
+    "736": {
       "op": "SWAP1"
     },
-    "734": {
+    "737": {
       "op": "POP"
     },
-    "735": {
+    "738": {
       "op": "DUP1"
     },
-    "736": {
+    "739": {
       "op": "DUP1"
     },
-    "737": {
+    "740": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x10"
     },
-    "740": {
+    "743": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x1E0"
     },
-    "743": {
+    "746": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x24"
     },
-    "745": {
+    "748": {
       "op": "PUSH4",
       "value": "0x92E3CC2D"
     },
-    "750": {
+    "753": {
       "op": "PUSH2",
       "value": "0x160"
     },
-    "753": {
+    "756": {
       "op": "MSTORE"
     },
-    "754": {
+    "757": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3851,
-        3856
+        3872,
+        3877
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "756": {
+    "759": {
       "op": "CALLDATALOAD"
     },
-    "757": {
+    "760": {
       "op": "PUSH2",
       "value": "0x180"
     },
-    "760": {
+    "763": {
       "op": "MSTORE"
     },
-    "761": {
+    "764": {
       "op": "PUSH2",
       "value": "0x17C"
     },
-    "764": {
+    "767": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3828,
-        3836
+        3849,
+        3857
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x140"
     },
-    "767": {
+    "770": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "MLOAD",
       "path": "0"
     },
-    "768": {
+    "771": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "GAS",
       "path": "0"
     },
-    "769": {
+    "772": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "STATICCALL",
       "path": "0"
     },
-    "770": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x3A"
-    },
     "773": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "774": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
+      "op": "PUSH2",
       "path": "0",
-      "value": "0x0"
+      "value": "0x3D"
     },
     "776": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "DUP1",
+      "op": "JUMPI",
       "path": "0"
     },
     "777": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "778": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
     },
     "779": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xFF"
+      "op": "DUP1",
+      "path": "0"
+    },
+    "780": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
     },
     "781": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
-      "op": "RETURNDATASIZE",
+      "op": "JUMPDEST",
       "path": "0"
     },
     "782": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
-      ],
-      "op": "GT",
-      "path": "0"
-    },
-    "783": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x317"
-    },
-    "786": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "787": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
-    "789": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "DUP1",
-      "path": "0"
-    },
-    "790": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "791": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "792": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
-    "794": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "POP",
-      "path": "0"
-    },
-    "795": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x1E0"
-    },
-    "798": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xC0"
-    },
-    "800": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "ADD",
-      "path": "0"
-    },
-    "801": {
-      "op": "MLOAD"
-    },
-    "802": {
-      "op": "DUP2"
-    },
-    "803": {
-      "op": "MSTORE"
-    },
-    "804": {
-      "op": "POP"
-    },
-    "805": {
-      "op": "POP"
-    },
-    "806": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "808": {
-      "op": "DUP2"
-    },
-    "809": {
-      "op": "ADD"
-    },
-    "810": {
-      "op": "SWAP1"
-    },
-    "811": {
-      "op": "POP"
-    },
-    "812": {
-      "op": "DUP1"
-    },
-    "813": {
-      "op": "DUP1"
-    },
-    "814": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x10"
-    },
-    "817": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x1E0"
-    },
-    "820": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x24"
-    },
-    "822": {
-      "op": "PUSH4",
-      "value": "0x92E3CC2D"
-    },
-    "827": {
-      "op": "PUSH2",
-      "value": "0x160"
-    },
-    "830": {
-      "op": "MSTORE"
-    },
-    "831": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3851,
-        3856
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x4"
-    },
-    "833": {
-      "op": "CALLDATALOAD"
-    },
-    "834": {
-      "op": "PUSH2",
-      "value": "0x180"
-    },
-    "837": {
-      "op": "MSTORE"
-    },
-    "838": {
-      "op": "PUSH2",
-      "value": "0x17C"
-    },
-    "841": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3828,
-        3836
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x140"
-    },
-    "844": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "MLOAD",
-      "path": "0"
-    },
-    "845": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "GAS",
-      "path": "0"
-    },
-    "846": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "STATICCALL",
-      "path": "0"
-    },
-    "847": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x357"
-    },
-    "850": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPI",
-      "path": "0"
-    },
-    "851": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
-    "853": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "DUP1",
-      "path": "0"
-    },
-    "854": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "REVERT",
-      "path": "0"
-    },
-    "855": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
-      ],
-      "op": "JUMPDEST",
-      "path": "0"
-    },
-    "856": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0xFF"
     },
-    "858": {
+    "784": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "RETURNDATASIZE",
       "path": "0"
     },
-    "859": {
+    "785": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "GT",
       "path": "0"
     },
-    "860": {
+    "786": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x364"
+      "value": "0x31A"
     },
-    "863": {
+    "789": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "864": {
+    "790": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "866": {
+    "792": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "DUP1",
       "path": "0"
     },
-    "867": {
+    "793": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "REVERT",
       "path": "0"
     },
-    "868": {
+    "794": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
-    "869": {
+    "795": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "871": {
+    "797": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "POP",
       "path": "0"
     },
-    "872": {
+    "798": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3819,
-        3857
+        3840,
+        3878
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x1E0"
     },
+    "801": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "803": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "804": {
+      "op": "MLOAD"
+    },
+    "805": {
+      "op": "DUP2"
+    },
+    "806": {
+      "op": "MSTORE"
+    },
+    "807": {
+      "op": "POP"
+    },
+    "808": {
+      "op": "POP"
+    },
+    "809": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "811": {
+      "op": "DUP2"
+    },
+    "812": {
+      "op": "ADD"
+    },
+    "813": {
+      "op": "SWAP1"
+    },
+    "814": {
+      "op": "POP"
+    },
+    "815": {
+      "op": "DUP1"
+    },
+    "816": {
+      "op": "DUP1"
+    },
+    "817": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x10"
+    },
+    "820": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1E0"
+    },
+    "823": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "825": {
+      "op": "PUSH4",
+      "value": "0x92E3CC2D"
+    },
+    "830": {
+      "op": "PUSH2",
+      "value": "0x160"
+    },
+    "833": {
+      "op": "MSTORE"
+    },
+    "834": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3872,
+        3877
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "836": {
+      "op": "CALLDATALOAD"
+    },
+    "837": {
+      "op": "PUSH2",
+      "value": "0x180"
+    },
+    "840": {
+      "op": "MSTORE"
+    },
+    "841": {
+      "op": "PUSH2",
+      "value": "0x17C"
+    },
+    "844": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3849,
+        3857
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x140"
+    },
+    "847": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "848": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "GAS",
+      "path": "0"
+    },
+    "849": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "STATICCALL",
+      "path": "0"
+    },
+    "850": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x35A"
+    },
+    "853": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "854": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "856": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "857": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "858": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "859": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "861": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "862": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "863": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x367"
+    },
+    "866": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "867": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "869": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "870": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "871": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "872": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "874": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3840,
+        3878
+      ],
+      "op": "POP",
+      "path": "0"
+    },
     "875": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3840,
+        3878
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1E0"
+    },
+    "878": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0xE0"
     },
-    "877": {
+    "880": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        3783,
-        3865
+        3804,
+        3941
       ],
       "op": "ADD",
       "path": "0"
     },
-    "878": {
+    "881": {
       "op": "MLOAD"
     },
-    "879": {
+    "882": {
       "op": "DUP2"
     },
-    "880": {
-      "op": "MSTORE"
-    },
-    "881": {
-      "op": "POP"
-    },
-    "882": {
-      "op": "POP"
-    },
     "883": {
-      "op": "POP"
+      "op": "MSTORE"
     },
     "884": {
       "op": "POP"
     },
     "885": {
+      "op": "POP"
+    },
+    "886": {
+      "op": "POP"
+    },
+    "887": {
+      "op": "POP"
+    },
+    "888": {
       "op": "PUSH2",
       "value": "0x10"
     },
-    "888": {
-      "op": "SWAP1"
-    },
-    "889": {
-      "op": "POP"
-    },
-    "890": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "SWAP1",
-      "path": "0"
-    },
     "891": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "POP",
-      "path": "0"
+      "op": "DUP3"
     },
     "892": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xC0"
+      "op": "ADD"
+    },
+    "893": {
+      "op": "SWAP2"
     },
     "894": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "MSTORE",
-      "path": "0"
+      "op": "POP"
     },
     "895": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0xC0"
+      "op": "DUP1"
+    },
+    "896": {
+      "op": "DUP3"
     },
     "897": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "MLOAD",
-      "path": "0"
+      "op": "MSTORE"
     },
     "898": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "PUSH2",
-      "path": "0",
-      "value": "0x2E0"
+      "op": "DUP1"
+    },
+    "899": {
+      "op": "DUP4"
+    },
+    "900": {
+      "op": "ADD"
     },
     "901": {
-      "fn": "PoolInfo.get_pool_info",
-      "offset": [
-        3783,
-        3865
-      ],
-      "op": "RETURN",
-      "path": "0"
+      "op": "DUP1"
     },
     "902": {
       "fn": "PoolInfo.get_pool_info",
       "offset": [
-        2724,
-        3865
+        3894,
+        3933
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "904": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x360"
+    },
+    "907": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "909": {
+      "op": "PUSH4",
+      "value": "0x5C911741"
+    },
+    "914": {
+      "op": "PUSH2",
+      "value": "0x2E0"
+    },
+    "917": {
+      "op": "MSTORE"
+    },
+    "918": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3927,
+        3932
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "920": {
+      "op": "CALLDATALOAD"
+    },
+    "921": {
+      "op": "PUSH2",
+      "value": "0x30"
+    },
+    "924": {
+      "op": "MSTORE"
+    },
+    "925": {
+      "op": "PUSH2",
+      "value": "0x2FC"
+    },
+    "928": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3903,
+        3911
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x140"
+    },
+    "931": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "932": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "GAS",
+      "path": "0"
+    },
+    "933": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "STATICCALL",
+      "path": "0"
+    },
+    "934": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3AE"
+    },
+    "937": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "938": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "940": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "941": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "942": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
-    "903": {
+    "943": {
+      "fn": "PoolInfo.get_pool_info",
       "offset": [
-        1823,
-        1846
+        3894,
+        3933
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3F"
+    },
+    "945": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "946": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "947": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3BB"
+    },
+    "950": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "951": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "953": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "954": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "955": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "956": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x41"
+    },
+    "958": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x360"
+    },
+    "961": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x360"
+    },
+    "964": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "965": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "966": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "967": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "968": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3D0"
+    },
+    "971": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "972": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "974": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "975": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "976": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "977": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "979": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "980": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3894,
+        3933
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x380"
+    },
+    "983": {
+      "op": "DUP1"
+    },
+    "984": {
+      "op": "MLOAD"
+    },
+    "985": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "987": {
+      "op": "ADD"
+    },
+    "988": {
+      "op": "DUP1"
+    },
+    "989": {
+      "op": "DUP4"
+    },
+    "990": {
+      "op": "DUP3"
+    },
+    "991": {
+      "op": "DUP5"
+    },
+    "992": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "994": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "996": {
+      "op": "GAS"
+    },
+    "997": {
+      "op": "CALL"
+    },
+    "998": {
+      "op": "PUSH2",
+      "value": "0x3EE"
+    },
+    "1001": {
+      "op": "JUMPI"
+    },
+    "1002": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1004": {
+      "op": "DUP1"
+    },
+    "1005": {
+      "op": "REVERT"
+    },
+    "1006": {
+      "op": "JUMPDEST"
+    },
+    "1007": {
+      "op": "POP"
+    },
+    "1008": {
+      "op": "POP"
+    },
+    "1009": {
+      "op": "DUP1"
+    },
+    "1010": {
+      "op": "MLOAD"
+    },
+    "1011": {
+      "op": "DUP1"
+    },
+    "1012": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1014": {
+      "op": "DUP4"
+    },
+    "1015": {
+      "op": "ADD"
+    },
+    "1016": {
+      "op": "ADD"
+    },
+    "1017": {
+      "op": "DUP2"
+    },
+    "1018": {
+      "op": "DUP3"
+    },
+    "1019": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1021": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1023": {
+      "op": "DUP3"
+    },
+    "1024": {
+      "op": "SUB"
+    },
+    "1025": {
+      "op": "MOD"
+    },
+    "1026": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1028": {
+      "op": "DUP3"
+    },
+    "1029": {
+      "op": "ADD"
+    },
+    "1030": {
+      "op": "SUB"
+    },
+    "1031": {
+      "op": "SWAP1"
+    },
+    "1032": {
+      "op": "POP"
+    },
+    "1033": {
+      "op": "SUB"
+    },
+    "1034": {
+      "op": "CALLDATASIZE"
+    },
+    "1035": {
+      "op": "DUP3"
+    },
+    "1036": {
+      "op": "CALLDATACOPY"
+    },
+    "1037": {
+      "op": "POP"
+    },
+    "1038": {
+      "op": "POP"
+    },
+    "1039": {
+      "op": "DUP1"
+    },
+    "1040": {
+      "op": "MLOAD"
+    },
+    "1041": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1043": {
+      "op": "ADD"
+    },
+    "1044": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1046": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1048": {
+      "op": "DUP3"
+    },
+    "1049": {
+      "op": "SUB"
+    },
+    "1050": {
+      "op": "MOD"
+    },
+    "1051": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1053": {
+      "op": "DUP3"
+    },
+    "1054": {
+      "op": "ADD"
+    },
+    "1055": {
+      "op": "SUB"
+    },
+    "1056": {
+      "op": "SWAP1"
+    },
+    "1057": {
+      "op": "POP"
+    },
+    "1058": {
+      "op": "SWAP1"
+    },
+    "1059": {
+      "op": "POP"
+    },
+    "1060": {
+      "op": "SWAP1"
+    },
+    "1061": {
+      "op": "POP"
+    },
+    "1062": {
+      "op": "DUP2"
+    },
+    "1063": {
+      "op": "ADD"
+    },
+    "1064": {
+      "op": "SWAP1"
+    },
+    "1065": {
+      "op": "POP"
+    },
+    "1066": {
+      "op": "DUP1"
+    },
+    "1067": {
+      "op": "SWAP1"
+    },
+    "1068": {
+      "op": "POP"
+    },
+    "1069": {
+      "op": "SWAP1"
+    },
+    "1070": {
+      "op": "POP"
+    },
+    "1071": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "1072": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "1073": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "1075": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "1076": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "1078": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "1079": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3E0"
+    },
+    "1082": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        3804,
+        3941
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "1083": {
+      "fn": "PoolInfo.get_pool_info",
+      "offset": [
+        2745,
+        3941
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "1084": {
+      "offset": [
+        1844,
+        1867
       ],
       "op": "PUSH4",
       "path": "0",
       "value": "0xCE50C2E7"
     },
-    "908": {
+    "1089": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "DUP2",
       "path": "0"
     },
-    "909": {
+    "1090": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "EQ",
       "path": "0"
     },
-    "910": {
+    "1091": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "ISZERO",
       "path": "0"
     },
-    "911": {
+    "1092": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x39E"
+      "value": "0x453"
     },
-    "914": {
+    "1095": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "915": {
+    "1096": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "917": {
+    "1098": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "SLOAD",
       "path": "0"
     },
-    "918": {
+    "1099": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "920": {
+    "1101": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "MSTORE",
       "path": "0"
     },
-    "921": {
+    "1102": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x20"
     },
-    "923": {
+    "1104": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "925": {
+    "1106": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "RETURN",
       "path": "0"
     },
-    "926": {
+    "1107": {
       "offset": [
-        1823,
-        1846
+        1844,
+        1867
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
-    "927": {
+    "1108": {
       "op": "POP"
     },
-    "928": {
+    "1109": {
       "op": "JUMPDEST"
     },
-    "929": {
+    "1110": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "931": {
+    "1112": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "933": {
+    "1114": {
       "op": "REVERT"
     }
   },
-  "sha1": "2bdedd47304225fa2b0e76015eff916ac09d9bfd",
-  "source": "# @version 0.2.12\n\"\"\"\n@title Curve Registry PoolInfo\n@license MIT\n@author Curve.Fi\n@notice Large getters designed for off-chain use\n\"\"\"\n\nMAX_COINS: constant(int128) = 8\n\n\ninterface AddressProvider:\n    def get_registry() -> address: view\n    def admin() -> address: view\n\ninterface Registry:\n    def get_coins(_pool: address) -> address[MAX_COINS]: view\n    def get_underlying_coins(_pool: address) -> address[MAX_COINS]: view\n    def get_decimals(_pool: address) -> uint256[MAX_COINS]: view\n    def get_underlying_decimals(_pool: address) -> uint256[MAX_COINS]: view\n    def get_balances(_pool: address) -> uint256[MAX_COINS]: view\n    def get_underlying_balances(_pool: address) -> uint256[MAX_COINS]: view\n    def get_rates(_pool: address) -> uint256[MAX_COINS]: view\n    def get_lp_token(_pool: address) -> address: view\n    def get_parameters(_pool: address) -> PoolParams: view\n    def is_meta(_pool: address) -> bool: view\n    def get_pool_name(_pool: address) -> String[64]: view\n\n\nstruct PoolParams:\n    A: uint256\n    future_A: uint256\n    fee: uint256\n    admin_fee: uint256\n    future_fee: uint256\n    future_admin_fee: uint256\n    future_owner: address\n    initial_A: uint256\n    initial_A_time: uint256\n    future_A_time: uint256\n\n# Original Curve.fi implementation\n# struct PoolInfo:\n#     balances: uint256[MAX_COINS]\n#     underlying_balances: uint256[MAX_COINS]\n#     decimals: uint256[MAX_COINS]\n#     underlying_decimals: uint256[MAX_COINS]\n#     rates: uint256[MAX_COINS]\n#     lp_token: address\n#     params: PoolParams\n#     is_meta: bool\n#     name: String[64]\n\nstruct PoolInfo:\n    balances: uint256[MAX_COINS]\n\nstruct PoolCoins:\n    coins: address[MAX_COINS]\n    underlying_coins: address[MAX_COINS]\n    decimals: uint256[MAX_COINS]\n    underlying_decimals: uint256[MAX_COINS]\n\n\naddress_provider: public(AddressProvider)\n\n\n@external\ndef __init__(_provider: address):\n    self.address_provider = AddressProvider(_provider)\n\n\n@view\n@external\ndef get_pool_coins(_pool: address) -> uint256[8]:\n    \"\"\"\n    @notice Get information on coins in a pool\n    @dev Empty values in the returned arrays may be ignored\n    @param _pool Pool address\n    @return Coin addresses, underlying coin addresses, underlying coin decimals\n    \"\"\"\n    registry: address = self.address_provider.get_registry()\n\n    # Original Curve.fi implementation\n    # return PoolCoins({\n    #     coins: Registry(registry).get_coins(_pool),\n    #     underlying_coins: Registry(registry).get_underlying_coins(_pool),\n    #     decimals: Registry(registry).get_decimals(_pool),\n    #     underlying_decimals: Registry(registry).get_underlying_decimals(_pool),\n    # })\n\n    return Registry(registry).get_balances(_pool)\n\n@view\n@external\ndef get_pool_info(_pool: address) -> PoolInfo:\n    \"\"\"\n    @notice Get information on a pool\n    @dev Reverts if the pool address is unknown\n    @param _pool Pool address\n    @return balances, underlying balances, decimals, underlying decimals,\n            lp token, amplification coefficient, fees\n    \"\"\"\n    registry: address = self.address_provider.get_registry()\n\n    # Original Curve.fi implementation\n    # return PoolInfo({\n    #     balances: Registry(registry).get_balances(_pool),\n    #     underlying_balances: Registry(registry).get_underlying_balances(_pool),\n    #     decimals: Registry(registry).get_decimals(_pool),\n    #     underlying_decimals: Registry(registry).get_underlying_decimals(_pool),\n    #     rates: Registry(registry).get_rates(_pool),\n    #     lp_token: Registry(registry).get_lp_token(_pool),\n    #     params: Registry(registry).get_parameters(_pool),\n    #     is_meta: Registry(registry).is_meta(_pool),\n    #     name: Registry(registry).get_pool_name(_pool),\n    # })\n\n    # Failing on Godwoken-kicker v0.7.1-rc1\n    return PoolInfo({\n        balances: Registry(registry).get_balances(_pool),\n    })",
+  "sha1": "e4077b6dda4a7adbe3de5bdda416a5320e68794b",
+  "source": "# @version 0.2.12\n\"\"\"\n@title Curve Registry PoolInfo\n@license MIT\n@author Curve.Fi\n@notice Large getters designed for off-chain use\n\"\"\"\n\nMAX_COINS: constant(int128) = 8\n\n\ninterface AddressProvider:\n    def get_registry() -> address: view\n    def admin() -> address: view\n\ninterface Registry:\n    def get_coins(_pool: address) -> address[MAX_COINS]: view\n    def get_underlying_coins(_pool: address) -> address[MAX_COINS]: view\n    def get_decimals(_pool: address) -> uint256[MAX_COINS]: view\n    def get_underlying_decimals(_pool: address) -> uint256[MAX_COINS]: view\n    def get_balances(_pool: address) -> uint256[MAX_COINS]: view\n    def get_underlying_balances(_pool: address) -> uint256[MAX_COINS]: view\n    def get_rates(_pool: address) -> uint256[MAX_COINS]: view\n    def get_lp_token(_pool: address) -> address: view\n    def get_parameters(_pool: address) -> PoolParams: view\n    def is_meta(_pool: address) -> bool: view\n    def get_pool_name(_pool: address) -> String[64]: view\n\n\nstruct PoolParams:\n    A: uint256\n    future_A: uint256\n    fee: uint256\n    admin_fee: uint256\n    future_fee: uint256\n    future_admin_fee: uint256\n    future_owner: address\n    initial_A: uint256\n    initial_A_time: uint256\n    future_A_time: uint256\n\n# Original Curve.fi implementation\n# struct PoolInfo:\n#     balances: uint256[MAX_COINS]\n#     underlying_balances: uint256[MAX_COINS]\n#     decimals: uint256[MAX_COINS]\n#     underlying_decimals: uint256[MAX_COINS]\n#     rates: uint256[MAX_COINS]\n#     lp_token: address\n#     params: PoolParams\n#     is_meta: bool\n#     name: String[64]\n\nstruct PoolInfo:\n    balances: uint256[MAX_COINS]\n    name: String[64]\n\nstruct PoolCoins:\n    coins: address[MAX_COINS]\n    underlying_coins: address[MAX_COINS]\n    decimals: uint256[MAX_COINS]\n    underlying_decimals: uint256[MAX_COINS]\n\n\naddress_provider: public(AddressProvider)\n\n\n@external\ndef __init__(_provider: address):\n    self.address_provider = AddressProvider(_provider)\n\n\n@view\n@external\ndef get_pool_coins(_pool: address) -> uint256[8]:\n    \"\"\"\n    @notice Get information on coins in a pool\n    @dev Empty values in the returned arrays may be ignored\n    @param _pool Pool address\n    @return Coin addresses, underlying coin addresses, underlying coin decimals\n    \"\"\"\n    registry: address = self.address_provider.get_registry()\n\n    # Original Curve.fi implementation\n    # return PoolCoins({\n    #     coins: Registry(registry).get_coins(_pool),\n    #     underlying_coins: Registry(registry).get_underlying_coins(_pool),\n    #     decimals: Registry(registry).get_decimals(_pool),\n    #     underlying_decimals: Registry(registry).get_underlying_decimals(_pool),\n    # })\n\n    return Registry(registry).get_balances(_pool)\n\n@view\n@external\ndef get_pool_info(_pool: address) -> PoolInfo:\n    \"\"\"\n    @notice Get information on a pool\n    @dev Reverts if the pool address is unknown\n    @param _pool Pool address\n    @return balances, underlying balances, decimals, underlying decimals,\n            lp token, amplification coefficient, fees\n    \"\"\"\n    registry: address = self.address_provider.get_registry()\n\n    # Original Curve.fi implementation\n    # return PoolInfo({\n    #     balances: Registry(registry).get_balances(_pool),\n    #     underlying_balances: Registry(registry).get_underlying_balances(_pool),\n    #     decimals: Registry(registry).get_decimals(_pool),\n    #     underlying_decimals: Registry(registry).get_underlying_decimals(_pool),\n    #     rates: Registry(registry).get_rates(_pool),\n    #     lp_token: Registry(registry).get_lp_token(_pool),\n    #     params: Registry(registry).get_parameters(_pool),\n    #     is_meta: Registry(registry).is_meta(_pool),\n    #     name: Registry(registry).get_pool_name(_pool),\n    # })\n\n    # Failing on Godwoken-kicker v0.7.1-rc1\n    return PoolInfo({\n        balances: Registry(registry).get_balances(_pool),\n        name: Registry(registry).get_pool_name(_pool),\n    })",
   "sourceMap": "",
   "sourcePath": "vy_contracts/hdk_contracts/PoolInfo.vy",
   "type": "contract"

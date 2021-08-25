@@ -53,6 +53,7 @@ struct PoolParams:
 
 struct PoolInfo:
     balances: uint256[MAX_COINS]
+    name: String[64]
 
 struct PoolCoins:
     coins: address[MAX_COINS]
@@ -118,4 +119,5 @@ def get_pool_info(_pool: address) -> PoolInfo:
     # Failing on Godwoken-kicker v0.7.1-rc1
     return PoolInfo({
         balances: Registry(registry).get_balances(_pool),
+        name: Registry(registry).get_pool_name(_pool),
     })

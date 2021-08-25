@@ -2,7 +2,7 @@ import { constants, Overrides } from 'ethers'
 import { transactionOverrides } from '../../deployment'
 
 import {
-  Registry, StableSwap3Pool, Swaps,
+  Registry, Swaps,
 } from '../../../types/vy_contracts';
 
 import { connectRegistry, connectPool } from '../connect'
