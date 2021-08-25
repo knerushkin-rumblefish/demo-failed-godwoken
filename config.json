@@ -5,7 +5,7 @@
     },
     "godwoken": {
       "rpcUrl": "http://localhost:8024",
-      "networkId": "0x3"
+      "networkId": "0xfa309"
     },
     "indexer": {
       "url": "http://localhost:8116"

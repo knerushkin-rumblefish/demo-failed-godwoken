@@ -76,3 +76,4 @@ processing response error (body="{\"jsonrpc\":\"2.0\",\"id\":51,\"error\":{\"cod
 ```
 
 All error's are visible on WEB3 - no blocking error's on godwoken not visible from application. 
+Pr

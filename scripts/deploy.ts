@@ -7,7 +7,7 @@ async function deploy() {
 
   await poolContractDeploy()
 
-  await simpleStupidDeploy()
+  // await simpleStupidDeploy()
 }
 
 deploy()
